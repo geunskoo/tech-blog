@@ -14,9 +14,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          게시물이 없습니다.
         </p>
       </Layout>
     )
@@ -31,10 +29,9 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
+              <article className="post-list-item"
+                        itemScope
+                        itemType="http://schema.org/Article"
               >
                 <header>
                   <h2>

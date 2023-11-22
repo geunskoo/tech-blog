@@ -1,3 +1,7 @@
+/* 글꼴 추가 - Jua */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
 /* CSS Custom Properties Definitions */
 
 :root {
@@ -31,10 +35,11 @@
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
+  --fontFamily-jua: 'Jua', sans-serif; /* Jua 글꼴 적용 */
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
+  --font-body: var(--fontFamily-jua);
+  --font-heading: var(--fontFamily-jua);
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
   --fontWeight-black: 900;
@@ -239,9 +244,9 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  margin: 0 auto;
+  max-width: 1000px; /* 맥북에서 사용하기 좋은 최대 너비 */
+  padding: 10px 5%; /* 좌우 여백을 전체 너비의 5%로 설정 */
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -317,8 +322,76 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-/* Media queries */
+.bio-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 좌우 간격 조절 */
+}
 
+.bio-avatar {
+  flex-shrink: 0; /* 이미지가 축소되지 않도록 설정 */
+}
+
+.bio-description {
+  list-style-type: none;
+  padding: 0;
+  margin-top: -40px; /* 위쪽으로 이동하는 양을 조절 (원하는 크기로 조절) */  
+}
+
+.bio-description li {
+  margin-bottom: 2px;
+}
+
+.bio-description a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 색상 제거 */
+}
+
+/* App.css */
+
+
+/* 전체 네비게이션 바 스타일 */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  /* background-color: #f8f9fa; 배경 색상은 필요에 따라 수정 가능합니다. */
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 그림자 추가 */
+  font-family: 'Jua', sans-serif; /* Jua 글꼴 적용 */
+}
+
+/* 블로그 제목 스타일 */
+.title {
+  font-size: 1.5rem;
+  color: #212529; /* 텍스트 색상은 필요에 따라 수정 가능합니다. */
+  font-family: 'Jua', sans-serif; /* Jua 글꼴 적용 */
+}
+
+/* 네비게이션 버튼 스타일 */
+.navigation-buttons {
+  display: flex;
+}
+
+/* 각 버튼 스타일 */
+.navigation-buttons button {
+  margin-left: 10px;
+  padding: 8px 8px;
+  border: none; /* 테두리 제거 */
+  background-color: transparent; /* 배경을 투명하게 설정 */
+  color: #000; /* 버튼 텍스트 색상을 검은색으로 변경 */
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif; /* Jua 글꼴 적용 */
+}
+
+/* 버튼 호버 효과 */
+.navigation-buttons button:hover {
+  text-decoration: underline; /* 호버 시 텍스트에 밑줄 추가 */
+}
+
+
+/* Media queries */
 @media (max-width: 42rem) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);

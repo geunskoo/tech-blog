@@ -22,12 +22,21 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header className="global-header">
+        <div className="navigation-bar">
+          <Link to="/"><div className="title">태근 후, 글쓰기</div></Link>
+          <div className="navigation-buttons">
+            <Link to="/bio"><button >Bio</button></Link>
+            <Link to="/blog"><button>Blog</button></Link>
+            <Link to="/book"><button>Book</button></Link>
+            <Link to="/others"><button>others</button></Link>
+          </div>
+        </div>
+      </header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © Tae Geun, Kim
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
   )
