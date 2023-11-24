@@ -71,7 +71,7 @@ const Banner = () => {
     return () => {
       clearTimeout(typing);
     };
-  }, [repeatCount]);
+  }, [repeatCount, currentIteration]);
 
   return (
     <div className="banner-container">

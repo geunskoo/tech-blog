@@ -16,7 +16,7 @@ const CareerCard = ({ imageName, startDate, endDate }) => {
         src={imgSrc}
         width={160}
         height={160}
-        alt="Profile picture"
+        alt="profile"
       />
       <p style={{marginBottom: '0px', fontSize: '18px' }}>안전관리시스템 구축 TF</p>
       <p style={{color: '#808080', marginBottom: '10px' }}>{startDate} ~ {endDate}</p>

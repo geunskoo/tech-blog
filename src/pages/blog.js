@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Category from "../components/Category"
 import Seo from "../components/seo"
@@ -24,47 +23,48 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
+          const title = post.frontmatter.title
+          const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
           return (
             <li key={post.fields.slug}>
               <Link to={post.fields.slug} itemProp="url" style={{ textDecoration: "none", color: "inherit" }}>
                 <article className="post-list-item"
                           itemScope
                           itemType="http://schema.org/Article" >
-                    <StaticImage src="../images/water.png"
-                                  alt="thumbnail img"
-                                  style={{
-                                    borderRadius: "10px",
-                                    border: "1px solid #ddd",
-                                    marginBottom: "0px",
-                                    width:"160px",
-                                    height:"160px"
-                                  }}/>
                     <div>
-                    <header>
-                      <h2>
-                        <span itemProp="headline">{title}</span>
-                      </h2>
-                    </header>
-                    <section>
-                      <p dangerouslySetInnerHTML={{
-                          __html: post.frontmatter.description || post.excerpt,
-                        }}
-                        itemProp="description" />
-                    </section>
-                    <section>
-                      <Category categorys = {post.frontmatter.category} />
-                    </section>
-                    <small style={{color: "gray"}}>{post.frontmatter.date}</small>
-                  </div>
-                </article>
-              </Link>
-            </li>
-          )
-        })}
-      </ol>
-    </Layout>
+                      <GatsbyImage image={thumbnail}
+                                    alt="thumbnail"
+                                    style={{borderRadius: "10px",
+                                            border: "1px solid #ddd",
+                                            marginBottom: "0px",
+                                            width: "130px",
+                                            height: "130px",
+                                    }}/>
+                    </div>                                  
+                    <div>
+                      <header>
+                        <h2>
+                          <span itemProp="headline">{title}</span>
+                        </h2>
+                      </header>
+                      <section>
+                        <p dangerouslySetInnerHTML={{
+                            __html: post.frontmatter.description || post.excerpt,
+                          }}
+                          itemProp="description" />
+                      </section>
+                      <section>
+                        <Category categorys = {post.frontmatter.category} />
+                      </section>
+                      <small style={{color: "gray"}}>{post.frontmatter.date}</small>
+                    </div>
+                  </article>
+                </Link>
+              </li>
+              )
+          })}
+        </ol>
+      </Layout>
   )
 }
 
@@ -95,6 +95,11 @@ export const pageQuery = graphql`
           title
           description
           category
+          thumbnail{
+            childImageSharp{
+              gatsbyImageData
+            }
+          }
         }
       }
     }

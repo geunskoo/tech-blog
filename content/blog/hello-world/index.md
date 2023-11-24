@@ -3,7 +3,7 @@ title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 category: 개발
-thumnail: "/images/water.png" # 이미지의 상대 경로
+thumbnail: "./egg.jpg" # 이미지의 상대 경로
 ---
 
 This is my first post on my new fake blog! How exciting!

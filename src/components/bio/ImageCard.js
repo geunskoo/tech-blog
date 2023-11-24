@@ -17,13 +17,20 @@ const ImageCard = () => {
                     alt="Profile picture"
       />
       <div className="social-icons">
-        <a href="https://github.com/geunskoo" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/geunskoo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub">
           <FaGithub size={25} />
         </a>
-        <a href="https://www.instagram.com/geunskoo" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/geunskoo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram">
           <FaInstagram size={25} />
         </a>
       </div>
+
     </div>
   );
 };

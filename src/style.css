@@ -269,6 +269,8 @@ a:focus {
   gap: 30px;
   border: 1px solid #ddd; /* 각 카테고리별로 테두리 스타일 지정 */
   border-radius: 10px; /* 20px를 rem으로 변환한 값 */
+  align-items: center;
+  /* padding-left: 1rem; 원하는 여백 크기를 지정합니다. */
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
 }
@@ -281,11 +283,11 @@ a:focus {
   font-size: var(--fontSize-4);
   color: var(--color-primary);
   margin-bottom: var(--spacing-2);
-  margin-top: var(--spacing-8);
+  margin-top: var(--spacing-2);
 }
 
 .post-list-item header {
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-0);
 }
 
 .header-link-home {
@@ -579,5 +581,9 @@ a:focus {
 /* 확대 효과 클래스 */
 .transition-container.zoom-in {
   transform: scale(1.5); /* 원하는 확대 정도로 조절 */
+}
+
+.custom-gatsby-image {
+  object-fit: cover !important;
 }
 
