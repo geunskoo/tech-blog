@@ -1,16 +1,20 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { navigate } from "gatsby";
+import { useLocation } from "@reach/router";
 
 const NavigationButton = ({ to, children }) => {
-    const isActive = window.location.pathname === to; // 현재 URL이 to와 일치하는지 확인
+    const location = useLocation();
+    const isActive = location.pathname === to;
+
+    const handleClick = () => {
+        navigate(to);
+    };
 
     return (
-        <Link to={to}>
-        <button className={`nav-button ${isActive ? "active" : ""}`}>
-            {children}
-        </button>
-        </Link>
+        <button className={`nav-button ${isActive ? "active" : ""}`} onClick={handleClick}>
+            {children} 
+        </button> 
     );
 };
 
-export default NavigationButton
+export default NavigationButton;
