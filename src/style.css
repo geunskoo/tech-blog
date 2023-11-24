@@ -188,6 +188,7 @@ ol li {
 
 li > p {
   margin-bottom: calc(var(--spacing-8) / 2);
+  margin-bottom: calc(var(--spacing-8) / 2);
 }
 
 li *:last-child {
@@ -263,6 +264,11 @@ a:focus {
 }
 
 .post-list-item {
+  display: flex;
+  flex-direction: row; /* 위아래로 배치하도록 설정 */
+  gap: 30px;
+  border: 1px solid #ddd; /* 각 카테고리별로 테두리 스타일 지정 */
+  border-radius: 10px; /* 20px를 rem으로 변환한 값 */
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
 }
@@ -275,7 +281,7 @@ a:focus {
   font-size: var(--fontSize-4);
   color: var(--color-primary);
   margin-bottom: var(--spacing-2);
-  margin-top: var(--spacing-0);
+  margin-top: var(--spacing-8);
 }
 
 .post-list-item header {
@@ -322,33 +328,70 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.bio-container {
+
+
+.about-me-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.about-me-profile {
   display: flex;
   align-items: center;
-  gap: 15px; /* 좌우 간격 조절 */
+  flex-direction: column; /* 위아래로 배치하도록 설정 */
+  gap: 30px;
 }
 
-.bio-avatar {
-  flex-shrink: 0; /* 이미지가 축소되지 않도록 설정 */
-}
-
-.bio-description {
+.about-me-description {
   list-style-type: none;
   padding: 0;
-  margin-top: -40px; /* 위쪽으로 이동하는 양을 조절 (원하는 크기로 조절) */  
+  flex-direction: column; /* 위아래로 배치하도록 설정 */
+  align-items: center; /* 가운데 정렬 */
 }
 
-.bio-description li {
-  margin-bottom: 2px;
+.about-me-paragraph {
+  line-height: 0.5;
+  font-size: 1.25rem;
 }
 
-.bio-description a {
-  text-decoration: none; /* 링크의 밑줄 제거 */
-  color: inherit; /* 링크의 색상 제거 */
+.about-me-hightlight {
+  color: #074d89;
+  font-size: 1.5rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me-avatar {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-me-description {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+  .about-me-container {
+    flex-direction: row;
+  }
 }
 
 /* App.css */
-
 
 /* 전체 네비게이션 바 스타일 */
 .navigation-bar {
@@ -368,13 +411,8 @@ a:focus {
   font-family: 'Jua', sans-serif; /* Jua 글꼴 적용 */
 }
 
-/* 네비게이션 버튼 스타일 */
-.navigation-buttons {
-  display: flex;
-}
-
 /* 각 버튼 스타일 */
-.navigation-buttons button {
+.nav-button {
   margin-left: 10px;
   padding: 8px 8px;
   border: none; /* 테두리 제거 */
@@ -383,13 +421,52 @@ a:focus {
   font-size: 20px;
   cursor: pointer;
   font-family: 'Jua', sans-serif; /* Jua 글꼴 적용 */
+  transition: transform 0.3s ease-in-out; /* 트랜지션 효과 추가 */
+}
+
+.nav-button.active {
+  color: #074d89;
 }
 
 /* 버튼 호버 효과 */
-.navigation-buttons button:hover {
+.nav-button:hover {
   text-decoration: underline; /* 호버 시 텍스트에 밑줄 추가 */
+  transform: translateY(-5px); /* translateY 값 조절 */
 }
 
+.banner-container {
+  text-align: center;
+  border: 1px solid #ddd; /* 각 카테고리별로 테두리 스타일 지정 */
+  border-radius: 10px; /* 20px를 rem으로 변환한 값 */
+  padding: 3rem; /* 20px를 rem으로 변환한 값 */
+  /* background-color: #f2f2f2; */
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  max-width: 100rem; /* 600px를 rem으로 변환한 값 */
+  margin: 0 auto;
+}
+
+.banner-heading {
+  color: #074d89;
+  font-size: 2.8125rem; /* 45px를 rem으로 변환한 값 */
+}
+
+.banner-paragraph {
+  line-height: 1.25; /* 20px를 rem으로 변환한 값 */
+  font-size: 1.25rem; /* 20px를 rem으로 변환한 값 */
+  color: #333333;
+}
+
+.banner-heading::after {
+  content: '';
+  margin-left: .6rem;
+  border-right: 2px solid #777;
+  animation: cursor .9s infinite steps(2);
+}
+
+@keyframes cursor {
+  from { border-right: 2px solid #222; }
+  to { border-right: 2px solid #777; }
+}
 
 /* Media queries */
 @media (max-width: 42rem) {
@@ -402,3 +479,105 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* 다시 작성 */
+/* style.css */
+
+.hist-card-container {
+  display: flex;
+  flex-direction: row; /* 기본적으로 가로로 나타나도록 변경 */
+  text-align: center; /* 기본적으로 텍스트를 가운데 정렬 */
+}
+
+.hist-card-container p {
+  margin: 0; /* 기본 마진 제거 */
+  margin-right: 10px; /* 각 p 태그 사이의 간격 조절을 위한 마진 추가 */
+}
+
+.hist-card-container p::before {
+  content: "\00a0\00a0\00a0\00a0"; /* 공백 4칸 삽입 */
+}
+
+/* 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .hist-card-container {
+    flex-direction: column; /* 세로로 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+  }
+
+  .hist-card-container p {
+    margin-right: 0; /* 화면이 좁을 때는 마진 제거 */
+    margin-bottom: 10px; /* 세로 배치될 때 간격 조절을 위한 마진 추가 */
+  }
+}
+
+.category-container {
+  border: 1px solid #ddd; /* 각 카테고리별로 테두리 스타일 지정 */
+  border-radius: 10px; /* 테두리 둥글게 만들기 */
+  padding: 10px; /* 테두리와 내용 사이의 간격 조절 */
+  margin-bottom: 10px; /* 각 카테고리별로 아래쪽 간격 조절 */
+}
+
+.hist-cards-title,
+.hist-card {
+  margin: 5px 0; /* 위아래 간격을 조절 */
+}
+
+.image-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px
+}
+
+.geunskoo-avatar {
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
+}
+
+.social-icons {
+  display: flex;
+  width: 130px;
+  gap: 25px; /* 아이콘들 사이의 간격 조절 */
+  align-items: center; /* 아이콘들을 세로로 가운데 정렬 */
+  justify-content: center; /* 아이콘들을 가로로 가운데 정렬 */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row; /* 가로로 배치 */
+  gap: 15px;
+  border: 1px solid #ddd; /* 각 카테고리별로 테두리 스타일 지정 */
+  border-radius: 10px; /* 테두리 둥글게 만들기 */
+  padding: 10px; /* 테두리와 내용 사이의 간격 조절 */
+  
+}
+
+.about-container p{
+  margin-bottom: 10px; /* 각 카테고리별로 아래쪽 간격 조절 */
+}
+/* 추가적인 스타일을 필요에 따라 설정할 수 있습니다. */
+
+.category {
+  display: inline-block; /* 텍스트에 핏하게 테두리를 적용하기 위해 inline-block으로 설정 */
+  font-size: 13px;
+  border: 1px solid #ddd; /* 각 카테고리별로 테두리 스타일 지정 */
+  border-radius: 10px; /* 테두리 둥글게 만들기 */
+  padding: 1px 8px; /* 테두리와 텍스트 간의 간격 조정 */
+}
+
+.transition-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 50rem;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out; /* transform에 대한 트랜지션 효과 추가 */
+}
+
+/* 확대 효과 클래스 */
+.transition-container.zoom-in {
+  transform: scale(1.5); /* 원하는 확대 정도로 조절 */
+}
+

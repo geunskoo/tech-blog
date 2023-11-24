@@ -1,0 +1,31 @@
+import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
+import { FaGithub, FaInstagram } from "react-icons/fa";
+
+
+const ImageCard = () => {
+
+  return (
+    <div className="image-card-container">
+      <StaticImage className="geunskoo-avatar"
+                    layout="fixed" 
+                    formats={["auto", "webp", "avif"]}
+                    src="../../images/geunskoo.png"
+                    width={130} 
+                    height= {130}
+                    quality={100}
+                    alt="Profile picture"
+      />
+      <div className="social-icons">
+        <a href="https://github.com/geunskoo" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={25} />
+        </a>
+        <a href="https://www.instagram.com/geunskoo" target="_blank" rel="noopener noreferrer">
+          <FaInstagram size={25} />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default ImageCard
