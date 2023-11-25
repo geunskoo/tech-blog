@@ -1,7 +1,7 @@
 ---
 title: Jekyll에서 Gatsby로 블로그 이전하기!
 date: "2023-11-22T12:59:00"
-description: 백엔드 개발자 지망생에겐 루비 온 레일즈는 너무 가혹해 ~
+description: 블로그 주인장의 개발블로그 선정 및 이전 이야기...
 category: 블로그
 thumbnail: "./thumbnail.png"
 ---
@@ -39,13 +39,12 @@ thumbnail: "./thumbnail.png"
 
 그러게요 🥲   
 
-뉴비 시절 저는 Jekyll, Gatsby 그런거 모르겠고, 그냥 좋은 교보재있는 걸로 가즈아 !!! 했었고...  
-당시 테디노트님의 github.io 블로그 만들기 유튜브강의가 접근성이 좋았고, 좋은 선생님이 있었기 때문입니다.  
-그리고 식빵맘님의 훌륭한 커스텀 가이드도 있었습니다.  
+뉴비 시절 저는 Jekyll, Gatsby 그런거 모르겠고, 그냥 좋은 교보재있는 걸로 가즈아!!!([나의 jekyll 블로그](https://ansohxxn.github.io/) ) 했었고...  
+당시 [테디노트](https://www.youtube.com/results?search_query=%ED%85%8C%EB%94%94%EB%85%B8%ED%8A%B8+%EA%B9%83%ED%97%88%EB%B8%8C+%EB%B8%94%EB%A1%9C%EA%B7%B8)님의 github.io 블로그 만들기 유튜브강의가 접근성이 좋았고, 좋은 선생님이 있었기 때문입니다.  
+그리고 [식빵맘](https://ansohxxn.github.io/)님의 훌륭한 커스텀 가이드도 있었습니다.  
 
 <center>오야지들 신세 많이지고 갑니다..!</center>
 <img src="oyag.png">
-
 
 ### Jekll vs Gatsby
 ---
