@@ -26,7 +26,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
-
+    `gatsby-plugin-meta-redirect`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -117,7 +117,7 @@ module.exports = {
       options: {
         name: `Gatsby Starter Blog`,
         short_name: `Gatsby`,
-        start_url: `/bio`,
+        start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/

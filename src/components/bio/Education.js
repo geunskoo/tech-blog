@@ -11,8 +11,8 @@ const Education = () => {
       {/* 학교 */}
       <div className="category-container">
         <p className="hist-cards-title">🎓 학교</p>
-        <HistCard startDate="2016.03.01" endDate="" content="부산대학교 수학과"/> 
-        <HistCard startDate="2021.09.01" endDate="" content="부산대학교 컴퓨터공학과"/>
+        <HistCard startDate="2016.03.01" endDate="2024.02.23" content="부산대학교 수학과"/> 
+        <HistCard startDate="2021.09.01" endDate="2024.02.23" content="부산대학교 컴퓨터공학과"/>
       </div>
 
       {/* 학부연구생 */}

@@ -518,6 +518,12 @@ a:focus {
   border-radius: 10px; /* 테두리 둥글게 만들기 */
   padding: 10px; /* 테두리와 내용 사이의 간격 조절 */
   margin-bottom: 10px; /* 각 카테고리별로 아래쪽 간격 조절 */
+
+  transition: transform 0.3s ease; /* 확대 효과에 애니메이션을 부여하는 CSS 속성 */
+}
+
+.category-container:hover {
+  transform: scale(1.05); /* 마우스를 올렸을 때 5% 확대 */
 }
 
 .hist-cards-title,
@@ -586,4 +592,3 @@ a:focus {
 .custom-gatsby-image {
   object-fit: cover !important;
 }
-

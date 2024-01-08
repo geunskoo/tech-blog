@@ -45,7 +45,7 @@ thumbnail: "./thumbnail.png"
 
 <center>오야지들 신세 많이지고 갑니다..!</center>
 <img src="oyag.png">
-
+  
 ### Jekll vs Gatsby
 ---
 어느정도 개발을 해보고, 좋고 싫음을 구분할 수 있는 상태가 되었습니다.  

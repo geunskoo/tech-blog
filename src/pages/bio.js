@@ -10,8 +10,10 @@ import AboutMe from "../components/bio/AboutMe"
 import Career from "../components/bio/Career"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
 
+  console.log("data", data, location);
+
+  const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '50rem', margin: '0 auto' }}>
@@ -29,25 +31,25 @@ export default BlogIndex
 
 export const Head = () => <Seo title="All posts" />
 
-export const pageQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+  export const pageQuery = graphql`
+    {
+      site {
+        siteMetadata {
           title
-          description
+        }
+      }
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+        nodes {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
         }
       }
     }
-  }
-`
+  `
