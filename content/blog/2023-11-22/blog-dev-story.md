@@ -6,7 +6,7 @@ category: 블로그
 thumbnail: "./thumbnail.png"
 ---
 
-### Jekyll 왜 썼어 ?
+## Jekyll 왜 썼어 ?
 ---
 블로그 개편기에 앞서 첫! 게시물인만큼 저의 대한 이야기로 간단히 시작하겠습니다.
 
@@ -46,7 +46,7 @@ thumbnail: "./thumbnail.png"
 <center>오야지들 신세 많이지고 갑니다..!</center>
 <img src="oyag.png">
   
-### Jekll vs Gatsby
+## Jekll vs Gatsby
 ---
 어느정도 개발을 해보고, 좋고 싫음을 구분할 수 있는 상태가 되었습니다.  
 
