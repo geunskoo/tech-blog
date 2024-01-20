@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from 'react';
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -8,21 +9,41 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const [filteredPosts, setFilteredPosts] = useState(posts);
+  const [selectedCategory, setSelectedCategory] = useState('전체');
+  const categories = Array.from(new Set(posts.map(post => post.frontmatter.category)));
+  const filterPostsByCategory = (category) => {
+    if (category) {
+      const filtered = posts.filter(post => post.frontmatter.category === category);
+      setFilteredPosts(filtered);
+      setSelectedCategory(category);
+    } else {
+      setFilteredPosts(posts);
+      setSelectedCategory('전체');
+    }
+  };
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <p>
-          게시물이 없습니다.
-        </p>
-      </Layout>
-    )
-  }
+  const categoryCounts = {};
+  posts.forEach(post => {
+    const category = post.frontmatter.category;
+    categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+  });
 
   return (
     <Layout location={location} title={siteTitle}>
+      <div>
+        <button className="category-button" style={{border: selectedCategory === '전체' ? 'solid #074d89' : 'solid #ddd' , color: selectedCategory === '전체' ? '#074d89' : 'black'}}
+        onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})</button>
+        {categories.map(category => (
+          <button className="category-button" style={{border: selectedCategory === category ? 'solid #074d89' : 'solid #ddd' ,color: selectedCategory === category ? '#074d89' : 'black'}}
+          key={category}
+          onClick={() => filterPostsByCategory(category)}>
+            {category} ({categoryCounts[category]}) 
+          </button>
+        ))}
+      </div>
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+        {filteredPosts.map(post => {
           const title = post.frontmatter.title
           const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
           return (

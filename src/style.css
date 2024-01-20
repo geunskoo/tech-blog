@@ -592,3 +592,12 @@ a:focus {
 .custom-gatsby-image {
   object-fit: cover !important;
 }
+
+.category-button {
+  background: none;
+  border-radius: 0.5rem;
+  border: solid #ddd;
+  margin-left: 0.25rem;
+  width: 5rem;
+  height: 2.5rem;
+}
