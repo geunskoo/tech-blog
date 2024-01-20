@@ -594,6 +594,7 @@ a:focus {
 }
 
 .category-button {
+  cursor: pointer;
   background: none;
   border-radius: 0.5rem;
   border: solid #ddd;
