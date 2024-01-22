@@ -14,8 +14,8 @@ module.exports = {
       name: `김태근`,
       summary: `퇴근 후 틈틈히 작성해보자!`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `안녕하세요.`,
+    siteUrl: `https://geunskoo.com`,
     social: {
       github: `geunskoo`,
       instagram: `geunskoo`,
