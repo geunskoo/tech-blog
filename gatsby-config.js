@@ -27,6 +27,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-plugin-meta-redirect`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
