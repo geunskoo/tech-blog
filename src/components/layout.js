@@ -9,7 +9,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">
         <div className="navigation-bar">
           <Link to="/bio/">
-            <div className="title">태근 후, 글쓰기</div>
+            <div className="title">태근 후, 글쓰기 📝</div>
           </Link>
           <div>
             <NavigationButton to="/bio/">Bio</NavigationButton>
