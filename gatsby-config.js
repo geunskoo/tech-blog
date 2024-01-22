@@ -29,6 +29,21 @@ module.exports = {
     `gatsby-plugin-meta-redirect`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://geunskoo.com`,
+        sitemap: `https://geunskoo.com/sitemap-0.xml`,
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://geunskoo.com`,
+        stripQueryString: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
