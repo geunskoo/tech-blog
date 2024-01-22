@@ -42,6 +42,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ['G-N65R1555BM'],
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
