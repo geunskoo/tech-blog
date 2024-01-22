@@ -10,13 +10,13 @@ const ImageCard = () => {
       <StaticImage className="geunskoo-avatar"
                     layout="fixed" 
                     formats={["auto", "webp", "avif"]}
-                    src="../../images/geunskoo.png"
-                    width={130} 
-                    height= {130}
+                    src="../../images/geun.png"
+                    width={150} 
+                    height= {200}
                     quality={100}
                     alt="Profile picture"
       />
-      <div className="social-icons">
+      {/* <div className="social-icons">
         <a href="https://github.com/geunskoo"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,8 +29,7 @@ const ImageCard = () => {
             aria-label="Instagram">
           <FaInstagram size={25} />
         </a>
-      </div>
-
+      </div> */}
     </div>
   );
 };

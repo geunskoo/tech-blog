@@ -444,7 +444,6 @@ a:focus {
   /* background-color: #f2f2f2; */
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
   max-width: 100rem; /* 600px를 rem으로 변환한 값 */
-  margin: 0 auto;
 }
 
 .banner-heading {
