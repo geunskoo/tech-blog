@@ -48,7 +48,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title
           const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
           return (
-            <li key={post.fields.slug}>
+            <li className="post-container" key={post.fields.slug}>
               <Link to={post.fields.slug} itemProp="url" style={{ textDecoration: "none", color: "inherit" }}>
                 <article className="post-list-item"
                           itemScope
