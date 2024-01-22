@@ -11,10 +11,10 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [selectedCategory, setSelectedCategory] = useState('전체');
-  const categories = Array.from(new Set(posts.map(post => post.frontmatter.category)));
+  const categories = Array.from(new Set(posts.flatMap(post => post.frontmatter.category)));
   const filterPostsByCategory = (category) => {
     if (category) {
-      const filtered = posts.filter(post => post.frontmatter.category === category);
+      const filtered = posts.filter(post => post.frontmatter.category.includes(category));
       setFilteredPosts(filtered);
       setSelectedCategory(category);
     } else {
@@ -25,8 +25,9 @@ const BlogIndex = ({ data, location }) => {
 
   const categoryCounts = {};
   posts.forEach(post => {
-    const category = post.frontmatter.category;
-    categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+    post.frontmatter.category.forEach(category => {
+      categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+    })
   });
 
   return (
@@ -59,8 +60,7 @@ const BlogIndex = ({ data, location }) => {
                                             border: "1px solid #ddd",
                                             marginBottom: "0px",
                                             width: "130px",
-                                            height: "130px",
-                                    }}/>
+                                            height: "130px",}}/>
                     </div>                                  
                     <div>
                       <header>

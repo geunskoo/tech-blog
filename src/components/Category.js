@@ -3,8 +3,10 @@ import * as React from "react"
 const Category = ({ categorys }) => {
 
     return (
-        <div className="category">
-            {categorys}
+        <div>
+            {categorys.map(category => (
+                <div key={category} className="category">{category}</div>
+            ))}
         </div>
     );
 };

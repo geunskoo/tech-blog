@@ -2,7 +2,9 @@
 title: "[지원 후기] 스파로스아카데미 솔직 후기"
 date: "2024-01-15T18:59:00"
 description: "[지원 후기] 스파로스아카데미 솔직 후기"
-category: 후기글
+category: 
+    - 후기
+    - 회고
 thumbnail: "./thumbnail.png"
 ---
 
