@@ -53,7 +53,7 @@ const BlogPage = ({ data, location }) => {
               <li className="post-container" key={post.fields.slug}>
                 <Link className="post-container-link" to={post.fields.slug} itemProp="url">
                   <article className="post-article" itemScope itemType="http://schema.org/Article" >
-                    { lastPost === post && (<StaticImage className="post-new-tag-image" src="../images/newtag.png" alt="newtag" width={60} height= {60} quality={100}/>)}
+                    { lastPost === post && (<StaticImage className="post-new-tag-image" src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]} width={60} height= {60} quality={100}/>)}
                     <GatsbyImage className="post-article-image" image={thumbnail} alt="thumbnail"/>
                     <div className="post-article-content">
                       <header>
