@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
