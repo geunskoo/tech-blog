@@ -476,6 +476,13 @@ a:focus {
   margin-bottom: var(--spacing-0);
 }
 
+.post-new-tag-image{
+  z-index: 1;
+  position: absolute;
+  margin-top: -5.25rem;
+  margin-left: -0.35rem;
+}
+
 .post-article-image{
   border-radius: 1.25rem;
   border: 1px solid #ddd;
