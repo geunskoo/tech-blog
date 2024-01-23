@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Education from "../components/bio/Education"
 import Banner from "../components/bio/Banner"
 

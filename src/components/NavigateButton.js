@@ -4,7 +4,14 @@ import { useLocation } from "@reach/router";
 
 const NavigationButton = ({ to, children }) => {
     const location = useLocation();
-    const isActive = location.pathname === to;
+
+    let isActive;
+    if (['/bio/','/blog/','/book/','/byeond/'].includes(location.pathname)){
+        isActive = location.pathname === to;
+    }else{
+        const markdownPage = location.pathname.split('-')[0]+'/'
+        isActive = markdownPage === to;
+    }
 
     const handleClick = () => {
         navigate(to);

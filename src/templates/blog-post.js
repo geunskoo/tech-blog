@@ -2,18 +2,15 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Seo from "../components/seo"
 import Utterances from "../components/Utterances"
 
 const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+  data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
@@ -60,10 +57,7 @@ const BlogPostTemplate = ({
 
 export const Head = ({ data: { markdownRemark: post } }) => {
   return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    />
+    <Seo title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt}/>
   )
 }
 
