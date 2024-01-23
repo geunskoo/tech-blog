@@ -454,6 +454,7 @@ a:focus {
 .post-article {
   display: flex;
   flex-direction: row;
+  position: relative;
   border: 1px solid #ddd;
   border-radius: 1.25rem; 
   align-items: center;
@@ -484,7 +485,6 @@ a:focus {
 }
 
 .post-article-image{
-  position: absolute;
   border-radius: 1.25rem;
   border: 1px solid #ddd;
   margin-bottom: 0px;
@@ -494,7 +494,6 @@ a:focus {
 }
 
 .post-article-content{
-  margin-left: 9.5rem;
 }
 
 .post-article-date{
