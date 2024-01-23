@@ -55,7 +55,7 @@ const BlogPage = ({ data, location }) => {
                   <article className="post-article" itemScope itemType="http://schema.org/Article" >
                     { lastPost === post && (<StaticImage className="post-new-tag-image" src="../images/newtag.png" alt="newtag" width={60} height= {60} quality={100}/>)}
                     <GatsbyImage className="post-article-image" image={thumbnail} alt="thumbnail"/>
-                    <div>
+                    <div className="post-article-content">
                       <header>
                         <h2><span itemProp="headline">{title}</span></h2>
                       </header>

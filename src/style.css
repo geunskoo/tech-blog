@@ -484,12 +484,17 @@ a:focus {
 }
 
 .post-article-image{
+  position: absolute;
   border-radius: 1.25rem;
   border: 1px solid #ddd;
   margin-bottom: 0px;
   margin-right: 1.5rem;
   width: 130px;
   height: 130px;
+}
+
+.post-article-content{
+  margin-left: 9.5rem;
 }
 
 .post-article-date{
