@@ -6,11 +6,11 @@ import Layout from "../components/layout"
 import Category from "../components/Category"
 import Seo from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const BlogPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [selectedCategory, setSelectedCategory] = useState('전체');
+  
   const categories = Array.from(new Set(posts.flatMap(post => post.frontmatter.category)));
   const filterPostsByCategory = (category) => {
     if (category) {
@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
   });
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <div>
         <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
         </button>
@@ -73,15 +73,9 @@ const BlogIndex = ({ data, location }) => {
       </Layout>
   )
 }
+export default BlogPage
 
-export default BlogIndex
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="All posts" />
+export const Head = () => <Seo title="Blog" />
 
 export const pageQuery = graphql`
   {

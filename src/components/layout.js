@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import NavigationButton from "./NavigateButton"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
 
   return (
     <div className="layout-wrapper">

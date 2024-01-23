@@ -1,5 +1,4 @@
 import * as React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Education from "../components/bio/Education"
@@ -9,13 +8,9 @@ import Seo from "../components/seo"
 import AboutMe from "../components/bio/AboutMe"
 import Career from "../components/bio/Career"
 
-const BlogIndex = ({ data, location }) => {
-
-  console.log("data", data, location);
-
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const BioPage = ({ data, location }) => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} >
       <div className="bio-wrapper">
         <Banner/>
         <AboutMe/>
@@ -23,33 +18,8 @@ const BlogIndex = ({ data, location }) => {
         <Education/>
       </div>
     </Layout>
-    
   )
 }
+export default BioPage
 
-export default BlogIndex
-
-export const Head = () => <Seo title="All posts" />
-
-  export const pageQuery = graphql`
-    {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-        nodes {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  `
+export const Head = () => <Seo title="Bio" />

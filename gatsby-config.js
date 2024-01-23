@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `태근 후, 블로그`,
+    title: `태근 후 글쓰기`,
     author: {
       name: `김태근`,
       summary: `퇴근 후 틈틈히 작성해보자!`,
