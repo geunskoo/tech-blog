@@ -477,13 +477,14 @@ a:focus {
 }
 
 .post-new-tag-image{
-  z-index: 3;
+  z-index: 2;
   position: absolute;
   margin-top: -5.25rem;
   margin-left: -0.35rem;
 }
 
 .post-article-image{
+  z-index: 1;
   border-radius: 1.25rem;
   border: 1px solid #ddd;
   margin-bottom: 0px;
