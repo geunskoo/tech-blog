@@ -11,7 +11,7 @@ const NavigationButton = ({ to, children }) => {
     };
 
     return (
-        <button className={`nav-button ${isActive ? "active" : ""}`} onClick={handleClick}>
+        <button className={`layout-nav-button ${isActive ? "active" : ""}`} onClick={handleClick}>
             {children} 
         </button> 
     );

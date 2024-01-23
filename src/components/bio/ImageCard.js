@@ -1,13 +1,11 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { FaGithub, FaInstagram } from "react-icons/fa";
-
 
 const ImageCard = () => {
 
   return (
     <div className="image-card-container">
-      <StaticImage className="geunskoo-avatar"
+      <StaticImage className="image-card-avatar"
                     layout="fixed" 
                     formats={["auto", "webp", "avif"]}
                     src="../../images/geun.png"

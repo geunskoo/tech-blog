@@ -33,58 +33,43 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <div>
-        <button className="category-button" style={{border: selectedCategory === '전체' ? 'solid #074d89' : 'solid #ddd' , color: selectedCategory === '전체' ? '#074d89' : 'black'}}
-        onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})</button>
+        <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
+        </button>
         {categories.map(category => (
-          <button className="category-button" style={{border: selectedCategory === category ? 'solid #074d89' : 'solid #ddd' ,color: selectedCategory === category ? '#074d89' : 'black'}}
-          key={category}
-          onClick={() => filterPostsByCategory(category)}>
+          <button className={`category-button ${selectedCategory === category ? "active" : ""}`} key={category} onClick={() => filterPostsByCategory(category)}>
             {category} ({categoryCounts[category]}) 
           </button>
         ))}
       </div>
-      <ol style={{ listStyle: `none` }}>
-        {filteredPosts.map(post => {
-          const title = post.frontmatter.title
-          const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
-          return (
-            <li className="post-container" key={post.fields.slug}>
-              <Link to={post.fields.slug} itemProp="url" style={{ textDecoration: "none", color: "inherit" }}>
-                <article className="post-list-item"
-                          itemScope
-                          itemType="http://schema.org/Article" >
-                    <div>
-                      <GatsbyImage image={thumbnail}
-                                    alt="thumbnail"
-                                    style={{borderRadius: "10px",
-                                            border: "1px solid #ddd",
-                                            marginBottom: "0px",
-                                            width: "130px",
-                                            height: "130px",}}/>
-                    </div>                                  
+      <div className="post-wrapper">
+        <ol>
+          {filteredPosts.map(post => {
+            const title = post.frontmatter.title
+            const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
+            return (
+              <li className="post-container" key={post.fields.slug}>
+                <Link className="post-container-link" to={post.fields.slug} itemProp="url">
+                  <article className="post-article" itemScope itemType="http://schema.org/Article" >
+                    <GatsbyImage className="post-article-image" image={thumbnail} alt="thumbnail"/>
                     <div>
                       <header>
-                        <h2>
-                          <span itemProp="headline">{title}</span>
-                        </h2>
+                        <h2><span itemProp="headline">{title}</span></h2>
                       </header>
                       <section>
-                        <p dangerouslySetInnerHTML={{
-                            __html: post.frontmatter.description || post.excerpt,
-                          }}
-                          itemProp="description" />
+                        <p dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt}} itemProp="description" />
                       </section>
                       <section>
-                        <Category categorys = {post.frontmatter.category} />
+                        <Category categorys={post.frontmatter.category}/>
                       </section>
-                      <small style={{color: "gray"}}>{post.frontmatter.date}</small>
+                      <small className="post-article-date">{post.frontmatter.date}</small>
                     </div>
-                  </article>
-                </Link>
-              </li>
-              )
-          })}
-        </ol>
+                    </article>
+                  </Link>
+                </li>
+                )
+            })}
+          </ol>
+        </div>
       </Layout>
   )
 }

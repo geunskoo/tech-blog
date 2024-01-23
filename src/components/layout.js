@@ -5,11 +5,11 @@ import NavigationButton from "./NavigateButton"
 const Layout = ({ location, title, children }) => {
 
   return (
-    <div className="global-wrapper">
-      <header className="global-header">
-        <div className="navigation-bar">
+    <div className="layout-wrapper">
+      <header className="layout-header">
+        <div className="layout-header-bar">
           <Link to="/bio/">
-            <div className="title">태근 후, 글쓰기 📝</div>
+            <div className="layout-header-title">태근 후, 글쓰기 📝</div>
           </Link>
           <div>
             <NavigationButton to="/bio/">Bio</NavigationButton>

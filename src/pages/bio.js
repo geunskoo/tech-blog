@@ -16,7 +16,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '50rem', margin: '0 auto' }}>
+      <div className="bio-wrapper">
         <Banner/>
         <AboutMe/>
         <Career/>

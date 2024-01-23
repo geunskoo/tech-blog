@@ -14,32 +14,18 @@ const BlogPostTemplate = ({
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
     <Layout location={location} title={siteTitle}>
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
         <section style={{display: "flex", justifyContent: "left"}}>
-          <GatsbyImage image={thumbnail}
-                      alt="thumbnail"
-                      style={{borderRadius: "10px",
-                              border: "1px solid #ddd",
-                              marginBottom: "0px",
-                              width: "150px",
-                              height: "150px"}}/>
+          <GatsbyImage className="blog-post-article-image" image={thumbnail} alt="thumbnail"/>
         </section>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
-        <Utterances />
+        <Utterances/>
         <footer>
-
         </footer>
       </article>
       <nav className="blog-post-nav">

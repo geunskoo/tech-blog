@@ -9,14 +9,6 @@ const Career = () => {
         <div>
             <CareerCard imageName="shinsegae" startDate="2023.07.18" endDate="현재"/>  
         </div>
-
-      
-        {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <p>◦</p>
-        <p>◦</p>
-        <p>◦</p>
-        <p>What's Next ?</p>
-        </div> */}
     </div>
   )
 }
