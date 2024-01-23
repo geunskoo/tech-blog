@@ -304,9 +304,8 @@ a:focus {
 
 .banner-heading::after {
   content: '';
-  margin-left: .6rem;
-  border-right: 2px solid #777;
-  animation: cursor .9s infinite steps(2);
+  margin-left: 0.6rem;
+  animation: cursor 0.9s infinite steps(2);
 }
 
 .banner-paragraph {
@@ -331,21 +330,12 @@ a:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px
 }
 
 .image-card-avatar {
-  border-radius: 10%;
+  border-radius: 1.25rem;
   width: 150px;
   height: 150px;
-}
-
-.social-icons {
-  display: flex;
-  width: 130px;
-  gap: 25px;
-  align-items: center; 
-  justify-content: center; 
 }
 
 .career-card-container {
@@ -400,8 +390,8 @@ a:focus {
 }
 
 .hist-card-container p {
-  margin: 0;
-  margin-right: 10px;
+  margin-bottom: 0rem;
+  margin-right: 1rem;
 }
 
 .hist-card-container p::before {
@@ -416,14 +406,14 @@ a:focus {
   }
 
   .hist-card-container p {
-    margin-right: 0; /* 화면이 좁을 때는 마진 제거 */
-    margin-bottom: 10px; /* 세로 배치될 때 간격 조절을 위한 마진 추가 */
+    margin-right: 0rem; /* 화면이 좁을 때는 마진 제거 */
+    margin-bottom: 1rem; /* 세로 배치될 때 간격 조절을 위한 마진 추가 */
   }
 }
 
 .hist-cards-title,
 .hist-card {
-  margin: 5px 0;
+  margin: 0.2rem 0rem;
 }
 
 /******************************************************/
@@ -464,9 +454,8 @@ a:focus {
 .post-article {
   display: flex;
   flex-direction: row;
-  gap: 30px;
   border: 1px solid #ddd;
-  border-radius: 10px; 
+  border-radius: 1.25rem; 
   align-items: center;
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
@@ -488,23 +477,24 @@ a:focus {
 }
 
 .post-article-image{
-  border-radius: 10px;
+  border-radius: 1.25rem;
   border: 1px solid #ddd;
   margin-bottom: 0px;
+  margin-right: 1.5rem;
   width: 130px;
   height: 130px;
 }
 
 .post-article-date{
-  color: gray;
+  color: #808080;
 }
 
 .category {
   display: inline-block;
-  font-size: 13px;
+  font-size: 0.85rem;
   border: 1px solid #ddd; 
-  border-radius: 10px;
-  padding: 1px 8px;
+  border-radius: 1.25rem;
+  padding: 0.1rem 0.4rem;
   margin-right: 0.2rem;
 }
 
@@ -525,9 +515,9 @@ a:focus {
 }
 
 .blog-post-article-image{
-  border-radius: 10px;
+  border-radius: 1.25rem;
   border: 1px solid #ddd;
-  margin-bottom: 0px;
+  margin-bottom: 0rem;
   width: 150px;
   height: 150px
 }
