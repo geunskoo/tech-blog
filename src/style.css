@@ -454,7 +454,6 @@ a:focus {
 .post-article {
   display: flex;
   flex-direction: row;
-  position: relative;
   border: 1px solid #ddd;
   border-radius: 1.25rem; 
   align-items: center;
