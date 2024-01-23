@@ -9,7 +9,7 @@ const Layout = ({ location, children }) => {
       <header className="layout-header">
         <div className="layout-header-bar">
           <Link to="/bio/">
-            <div className="layout-header-title">태근 후, 글쓰기 📝</div>
+            <div className="layout-header-title">태근 후 글쓰기 📝</div>
           </Link>
           <div>
             <NavigationButton to="/bio/">Bio</NavigationButton>
