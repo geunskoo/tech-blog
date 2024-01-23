@@ -454,7 +454,6 @@ a:focus {
 .post-article {
   display: flex;
   flex-direction: row;
-  position: relative;
   border: 1px solid #ddd;
   border-radius: 1.25rem; 
   align-items: center;
@@ -479,20 +478,26 @@ a:focus {
 
 .post-new-tag-image{
   z-index: 2;
-  position: absolute;
   margin-top: -5.25rem;
   margin-left: -0.35rem;
 }
 
 .post-article-image{
   z-index: 1;
-  position: absolute;
   border-radius: 1.25rem;
   border: 1px solid #ddd;
   margin-bottom: 0px;
   margin-right: 1.5rem;
   width: 130px;
   height: 130px;
+}
+
+.post-article-image.left{
+  left: -55px;
+}
+
+.post-article-content.left{
+  margin-left: -55px;
 }
 
 .post-article-date{
