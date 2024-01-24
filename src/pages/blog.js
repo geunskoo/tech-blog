@@ -50,12 +50,13 @@ const BlogPage = ({ data, location }) => {
             const title = post.frontmatter.title
             const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
             return (
-              <li className="post-container" key={post.fields.slug}>
+              <div className="post-container" >
+              { lastPost === post && (<StaticImage className="post-new-tag-image" src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]} width={60} height= {60} quality={100}/>)}
+              <li key={post.fields.slug}>
                 <Link className="post-container-link" to={post.fields.slug} itemProp="url">
-                  <article className="post-article" itemScope itemType="http://schema.org/Article" >
-                    { lastPost === post && (<StaticImage className="post-new-tag-image" src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]} width={60} height= {60} quality={100}/>)}
-                    <GatsbyImage className={`post-article-image ${lastPost === post ? "left" : ""}`} image={thumbnail} alt="thumbnail"/>
-                    <div className={`post-article-content ${lastPost === post ? "left" : ""}`}>
+                  <article className="post-article" itemScope itemType="http://schema.org/Article" >                      
+                    <GatsbyImage className="post-article-image" image={thumbnail} alt="thumbnail"/>
+                    <div className="post-article-content">
                       <header>
                         <h2><span itemProp="headline">{title}</span></h2>
                       </header>
@@ -70,6 +71,7 @@ const BlogPage = ({ data, location }) => {
                     </article>
                   </Link>
                 </li>
+                </div>
                 )
             })}
           </ol>

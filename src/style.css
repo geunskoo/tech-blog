@@ -476,10 +476,15 @@ a:focus {
   margin-bottom: var(--spacing-0);
 }
 
+.post-article-image-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .post-new-tag-image{
   z-index: 2;
-  margin-top: -5.25rem;
-  margin-left: -0.35rem;
+  margin-bottom: -5.25rem;
+  margin-left: -0.25rem; 
 }
 
 .post-article-image{
@@ -490,14 +495,6 @@ a:focus {
   margin-right: 1.5rem;
   width: 130px;
   height: 130px;
-}
-
-.post-article-image.left{
-  left: -55px;
-}
-
-.post-article-content.left{
-  margin-left: -55px;
 }
 
 .post-article-date{
