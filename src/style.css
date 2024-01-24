@@ -481,16 +481,6 @@ a:focus {
   flex-direction: column;
 }
 
-.post-article-image{
-  z-index: 1;
-  border-radius: 1.25rem;
-  border: 1px solid #ddd;
-  margin-bottom: 0px;
-  margin-right: 1.5rem;
-  width: 130px;
-  height: 130px;
-}
-
 .post-article-date{
   color: #808080;
 }
