@@ -56,7 +56,7 @@ const BlogPage = ({ data, location }) => {
                 <Link className="post-container-link" to={post.fields.slug} itemProp="url">
                   <article className="post-article" itemScope itemType="http://schema.org/Article" >                      
                     <GatsbyImage image={thumbnail} alt="thumbnail" style={{ zIndex: "1", borderRadius: "1.25rem", border: "1px solid #ddd", marginBottom: "0px", marginRight: "1.5rem", width: "130px", height: "130px"}}/>
-                    <div className="post-article-content">
+                    <div style={{marginLeft: "0rem"}}>
                       <header>
                         <h2><span itemProp="headline">{title}</span></h2>
                       </header>
