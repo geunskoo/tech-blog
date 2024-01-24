@@ -481,12 +481,6 @@ a:focus {
   flex-direction: column;
 }
 
-.post-new-tag-image{
-  z-index: 2;
-  margin-bottom: -5.25rem;
-  margin-left: -0.25rem; 
-}
-
 .post-article-image{
   z-index: 1;
   border-radius: 1.25rem;

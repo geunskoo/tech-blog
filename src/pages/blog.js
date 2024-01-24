@@ -51,7 +51,7 @@ const BlogPage = ({ data, location }) => {
             const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
             return (
               <div className="post-container" >
-              { lastPost === post && (<StaticImage className="post-new-tag-image" src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]} width={60} height= {60} quality={100}/>)}
+              { lastPost === post && (<StaticImage style={{zIndex: "2", marginBottom: "-5.25rem", marginLeft: "-0.25rem"}} src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]} width={60} height= {60} quality={100}/>)}
               <li key={post.fields.slug}>
                 <Link className="post-container-link" to={post.fields.slug} itemProp="url">
                   <article className="post-article" itemScope itemType="http://schema.org/Article" >                      
