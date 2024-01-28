@@ -3,7 +3,7 @@ import CareerCard from "./CareerCard"
 
 const Career = () => {
   return (
-    <div>
+    <div className="career-wrapper">
         <h3>Career</h3>
         {/* 신세계아이앤씨 */}
         <div>

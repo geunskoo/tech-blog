@@ -5,7 +5,7 @@ import Experience from "./Experience"
 const AboutMe = () => {
 
   return (
-    <div>
+    <div className="about-wrapper">
       <h3>AboutMe</h3>
       <div className="about-container">
         <ImageCard/>
