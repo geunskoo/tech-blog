@@ -11,7 +11,7 @@ const BlogPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [selectedCategory, setSelectedCategory] = useState('전체');
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   const categories = Array.from(new Set(posts.flatMap(post => post.frontmatter.category)));
   const filterPostsByCategory = (category) => {

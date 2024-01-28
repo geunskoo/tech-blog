@@ -659,7 +659,7 @@ a:focus {
     justify-content: flex-start;
     overflow: hidden; /* 내용이 나타나지 않도록 함 */
     max-height: 1000px;
-    transition: max-height 0.6s ease-in-out; 
+    transition: max-height 0.3s ease-in-out; 
   }
   .category-button-container.none{
     max-height: 0;
