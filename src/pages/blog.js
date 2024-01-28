@@ -1,5 +1,4 @@
-import * as React from "react"
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -8,10 +7,12 @@ import Category from "../components/Category"
 import Seo from "../components/seo"
 
 const BlogPage = ({ data, location }) => {
+
   const posts = data.allMarkdownRemark.nodes
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [selectedCategory, setSelectedCategory] = useState('전체');
-  
+  const [isHidden, setIsHidden] = useState(false);
+
   const categories = Array.from(new Set(posts.flatMap(post => post.frontmatter.category)));
   const filterPostsByCategory = (category) => {
     if (category) {
@@ -33,16 +34,24 @@ const BlogPage = ({ data, location }) => {
 
   const lastPost = posts[0];
 
+  const clickCategoryToggle = () => {
+    setIsHidden(!isHidden);
+  }
+
   return (
     <Layout location={location}>
-      <div className="category-button-container">
-        <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
-        </button>
-        {categories.map(category => (
-          <button className={`category-button ${selectedCategory === category ? "active" : ""}`} key={category} onClick={() => filterPostsByCategory(category)}>
-            {category} ({categoryCounts[category]}) 
-          </button>
-        ))}
+      <div>
+        <div>
+          <button className="category-mobile-button" onClick={clickCategoryToggle}>{isHidden ? '▼ 카테고리' : '▲ 오므리기'}</button>
+        </div>
+        <div className={`category-button-container ${isHidden ? 'none': ''}`}>
+          <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})</button>
+          {categories.map(category => (
+            <button className={`category-button ${selectedCategory === category ? "active" : ""}`} key={category} onClick={() => filterPostsByCategory(category)}>
+              {category} ({categoryCounts[category]}) 
+            </button>
+          ))}
+        </div>
       </div>
       <div className="post-wrapper">
         <ol>
