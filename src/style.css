@@ -281,7 +281,7 @@ a:focus {
   transform: translateY(-5px); /* translateY 값 조절 */
 }
 
-@media (max-width: 42rem) {
+@media (max-width: 520px) {
 
   .layout-header-bar {
     display: flex;
@@ -301,7 +301,7 @@ a:focus {
     margin-left: 0.8rem;
     border: none;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out; /* 트랜지션 효과 추가 */
   }
@@ -329,7 +329,7 @@ a:focus {
 }
 
 .banner-heading {
-   font-size: 2.65 rem;
+   font-size: 2.65rem;
 }
 
 .banner-heading::after {
@@ -428,8 +428,27 @@ a:focus {
   content: "\00a0\00a0\00a0\00a0"; /* 공백 4칸 삽입 */
 }
 
-/* 미디어 쿼리: 화면 너비가 768px 이하일 때 */
-@media screen and (max-width: 768px) {
+@media (max-width: 520px) {
+
+  .banner-container h1{ 
+    font-size: 2rem;
+  }
+
+  .banner-heading {
+    font-size: 2rem;
+  }
+  
+  .banner-heading::after {
+    content: '';
+    margin-left: 0.6rem;
+    animation: cursor 0.9s infinite steps(2);
+  }
+
+  .banner-paragraph {
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+
   .hist-card-container {
     flex-direction: column; /* 세로로 배치 */
     align-items: center; /* 세로 가운데 정렬 */
@@ -579,7 +598,7 @@ a:focus {
 }
 
 /* Media queries */
-@media (max-width: 42rem) {
+@media (max-width: 520px) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
