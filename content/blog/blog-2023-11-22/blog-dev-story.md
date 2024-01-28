@@ -1,6 +1,7 @@
 ---
 title: Jekyll에서 Gatsby로 블로그 이전하기!
 date: "2023-11-22T12:59:00"
+type: blog
 description: 블로그 주인장의 개발블로그 선정 및 이전 이야기...
 category: 
   - 블로그

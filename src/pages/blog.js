@@ -90,7 +90,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { type: { eq: "blog" } } }
+      ) {
       nodes {
         excerpt
         fields {
@@ -99,6 +102,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "YYYY, MM/DD")
           title
+          type
           description
           category
           thumbnail{

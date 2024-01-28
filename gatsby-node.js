@@ -117,6 +117,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       category: [String]
+      type: String
     }
 
     type Fields {
