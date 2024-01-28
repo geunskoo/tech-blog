@@ -270,6 +270,7 @@ a:focus {
   font-size: 1.25rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out; /* 트랜지션 효과 추가 */
+  color: #000;
 }
 
 .layout-nav-button.active {
@@ -298,7 +299,7 @@ a:focus {
   }
 
   .layout-header-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
   }
 
@@ -306,8 +307,9 @@ a:focus {
     margin-left: 0.8rem;
     border: none;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 1.25rem;
     cursor: pointer;
+    color: #000;
     transition: transform 0.3s ease-in-out; /* 트랜지션 효과 추가 */
   }
   
@@ -441,12 +443,27 @@ a:focus {
     font-size: 1.25rem;
   }
 
-  .banner-container h1{ 
+  .banner-container {
+    padding: 1rem;
+  }
+
+  .banner-container h1{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; 
     font-size: 1.5rem;
   }
 
+  .banner-title {
+    display: block;
+    white-space: pre-line;
+  }
+  
+  .banner-heading{
+    white-space: pre-line; 
+  }
+
   .banner-heading {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .banner-heading::after {
@@ -525,7 +542,7 @@ a:focus {
   .hist-card-container p {
     margin-right: 0rem; /* 화면이 좁을 때는 마진 제거 */
     min-width: 50%;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -544,6 +561,7 @@ a:focus {
   border-radius: 0.5rem;
   border: solid #ddd 1.5px;
   margin-left: 0.25rem;
+  color: #000;
   width: 5rem;
   height: 2.5rem;
 }
@@ -676,9 +694,5 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
-  }
-
-  .layout-header-title {
-    font-size: 1.25rem;
   }
 }

@@ -76,7 +76,7 @@ const Banner = () => {
   return (
     <div className="banner-container">
       <h1>
-        <span>안녕하세요! </span><span ref={textRef} className="banner-heading"></span><span>김태근입니다.</span>
+        <span className="banner-title">안녕하세요! </span><span ref={textRef} className="banner-heading"></span><span>김태근입니다.</span>
       </h1>
       <p className="banner-paragraph">현재 Spring과 Angular를 이용하여 웹개발을 하고 있습니다.</p>
       <p className="banner-paragraph">저는 코드 간의 추상화 수준을 고려하여 유지보수에 용이한 코드개발에 관심이 많습니다.</p>
