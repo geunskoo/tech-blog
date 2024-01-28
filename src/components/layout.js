@@ -11,7 +11,7 @@ const Layout = ({ location, children }) => {
           <Link to="/bio/">
             <div className="layout-header-title">태근 후 글쓰기 📝</div>
           </Link>
-          <div>
+          <div className="layout-button-container">
             <NavigationButton to="/bio/">Bio</NavigationButton>
             <NavigationButton to="/blog/">Blog</NavigationButton>
             <NavigationButton to="/book/">Book</NavigationButton>

@@ -35,7 +35,7 @@ const BlogPage = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <div>
+      <div className="category-button-container">
         <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
         </button>
         {categories.map(category => (
@@ -51,11 +51,16 @@ const BlogPage = ({ data, location }) => {
             const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
             return (
               <div className="post-container" >
-              { lastPost === post && (<StaticImage style={{zIndex: "2", marginBottom: "-5.25rem", marginLeft: "-0.25rem"}} src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]} width={60} height= {60} quality={100}/>)}
+              { lastPost === post && (
+              <div className="post-new-tag">
+                <StaticImage style={{zIndex: "2", marginBottom: "-5.25rem", marginLeft: "-0.25rem", width: "60px", height: "60px"}} src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]}/>
+              </div>
+              )}
               <li key={post.fields.slug}>
                 <Link className="post-container-link" to={post.fields.slug} itemProp="url">
                   <article className="post-article" itemScope itemType="http://schema.org/Article" >                      
-                    <GatsbyImage image={thumbnail} alt="thumbnail" style={{ zIndex: "1", borderRadius: "1.25rem", border: "1px solid #ddd", marginBottom: "0px", marginRight: "1.5rem", width: "130px", height: "130px"}}/>
+                    <GatsbyImage image={thumbnail} alt="thumbnail" style={{ zIndex: "1", borderRadius: "1.25rem", border: "1px solid #ddd", marginBottom: "0px", marginRight: "1.5rem", width: "130px", height: "130px", minWidth:"130px"}}/>
+                    <style>{`@media (max-width: 520px) {.post-article .gatsby-image-wrapper {width: 100px !important; min-width: 100px !important; height: 100px !important; margin-right: 0.5rem !important;}}`}</style>
                     <div style={{marginLeft: "0rem"}}>
                       <header>
                         <h2><span itemProp="headline">{title}</span></h2>
