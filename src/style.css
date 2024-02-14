@@ -57,7 +57,7 @@
   --fontSize-7: 2.986rem;
   --color-primary: #2e353f; /* #005b99; */
   --color-text: #2e353f;
-  --color-text-light: #4f5969;
+  --color-text-light: #3e4756;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
@@ -91,9 +91,20 @@ footer {
 }
 
 hr {
-  background: var(--color-accent);
-  height: 1px;
-  border: 0;
+  background: #254653;
+  height: 2px;
+  border: none;
+  margin: -0.5rem 0rem 1.5rem 0rem;
+}
+
+/* 코드 블럭 커스텀 */
+code{
+  font-family: var(--font-body) !important;
+  font-size: var(--fontSize-2) !important;
+  color: var(--color-text) !important;
+  border-radius: 1.25rem !important;
+  background: none !important;
+  color: #289e8e !important;
 }
 
 /* Heading */
@@ -164,7 +175,7 @@ p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-6) var(--spacing-0);
   padding: var(--spacing-0);
 }
 
@@ -181,12 +192,12 @@ ol {
 ul li,
 ol li {
   padding-left: var(--spacing-0);
-  margin-bottom: calc(var(--spacing-8) / 2);
+  margin-bottom: calc(var(--spacing-6) / 2);
 }
 
 li > p {
-  margin-bottom: calc(var(--spacing-8) / 2);
-  margin-bottom: calc(var(--spacing-8) / 2);
+  margin-bottom: calc(var(--spacing-6) / 2);
+  margin-bottom: calc(var(--spacing-6) / 2);
 }
 
 li *:last-child {
@@ -200,13 +211,11 @@ li > ul {
 
 blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
-  font-style: italic;
-  margin-bottom: var(--spacing-8);
+  margin: 1rem 0 1rem 0;
+  padding: var(--spacing-6) var(--spacing-10) var(--spacing-6) var(--spacing-10);
+  font-size: var(--fontSize-1);
+  background: #f3fefb;
+  border-radius: 0.85rem;
 }
 
 blockquote > :last-child {
@@ -220,13 +229,25 @@ blockquote > ol {
 
 table {
   width: 100%;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-2);
+  padding: 1rem;
   border-collapse: collapse;
   border-spacing: 0.25rem;
+  border: 0.2rem solid white;
 }
 
-table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
+th {
+  padding: 0.5rem;
+  background: #254653;
+  color: white;
+  font-size: 1.25rem;
+  border: 1px solid #ccc;
+}
+
+td {
+  padding: 0.5rem;
+  background: #f3fefb;
+  border: 1px solid #ccc;
 }
 
 a {
