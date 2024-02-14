@@ -577,11 +577,14 @@ a:focus {
 }
 
 .post-container {
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
+    border-radius: 1.25rem; 
+
 }
 
 .post-container:hover {
   transform: scale(1.05);
+  border-radius: 1.25rem; 
 }
 
 .post-container-link {
@@ -594,6 +597,7 @@ a:focus {
   flex-direction: row;
   border: 1px solid #ddd;
   border-radius: 1.25rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   align-items: center;
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
@@ -619,8 +623,21 @@ a:focus {
   flex-direction: column;
 }
 
+.post-article-footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .post-article-date{
   color: #808080;
+  margin-right: 1rem;
+  font-size: 0.85rem;
+}
+
+.post-article-view{
+  color: #808080;
+  font-size: 0.8rem;
 }
 
 .category {

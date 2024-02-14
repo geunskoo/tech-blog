@@ -1,20 +1,24 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Utterances from "../components/Utterances"
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post }, location,}) => {
+const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
     <Layout location={location}>
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div style={{display: "flex", alignItems:"center", justifyContent: "flex-end"}}>
+            <div style={{marginRight: "2rem"}}>{post.frontmatter.date}</div>
+            <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view" formats={["auto", "webp", "avif"]}/>
+            <div className="post-article-view">{post.fields.viewCount}</div>
+          </div>
         </header>
         <section style={{display: "flex", justifyContent: "left"}}>
           <GatsbyImage className="blog-post-article-image" image={thumbnail} alt="thumbnail"/>
@@ -78,6 +82,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields{
+        viewCount
+      }
       frontmatter {
         title
         date(formatString: "YYYY, MM/DD")

@@ -80,7 +80,12 @@ const BlogPage = ({ data, location }) => {
                       <section>
                         <Category categorys={post.frontmatter.category}/>
                       </section>
-                      <small className="post-article-date">{post.frontmatter.date}</small>
+                      <div className="post-article-footer">
+                        <div className="post-article-date">{post.frontmatter.date}</div>
+                        <StaticImage style={{ marginBottom:"0.15rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view" formats={["auto", "webp", "avif"]}/>
+                        <style>{`@media (max-width: 520px) {.post-article-footer .gatsby-image-wrapper {width: 15px !important; min-width: 15px !important; height: 15px !important; margin-right: 0.2rem !important; margin-bottom: 0.15rem !important;}}`}</style>
+                        <div className="post-article-view">{post.fields.viewCount}</div>
+                      </div>
                     </div>
                     </article>
                   </Link>
@@ -97,6 +102,7 @@ export default BlogPage
 
 export const Head = () => <Seo title="Blog" />
 
+
 export const pageQuery = graphql`
   {
     site {
@@ -112,6 +118,7 @@ export const pageQuery = graphql`
         excerpt
         fields {
           slug
+          viewCount
         }
         frontmatter {
           date(formatString: "YYYY, MM/DD")

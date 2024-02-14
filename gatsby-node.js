@@ -1,22 +1,14 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+require(`dotenv`).config({ path: './credential.env' });
+const { BetaAnalyticsDataClient } = require('@google-analytics/data');
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
-/**
- * @type {import('gatsby').GatsbyNode['createPages']}
- */
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Get all markdown blog posts sorted by date
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
@@ -65,17 +57,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 /**
  * @type {import('gatsby').GatsbyNode['onCreateNode']}
  */
-exports.onCreateNode = ({ node, actions, getNode }) => {
+
+const postPrefix = '/';
+
+exports.onCreateNode = async ({ node, actions, getNode, cache }) => {
   const { createNodeField } = actions
+
+  const viewCountList = await cache.get('viewCount');
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
+    const totalCount = (viewCountList.filter((item) => item.path === value)[0] || { totalCount: 0 }).totalCount;
+    createNodeField({ name: 'viewCount', node, value: parseInt(totalCount) });
+    createNodeField({ name: `slug`, node, value });
   }
 }
 
@@ -85,12 +79,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
-  // Explicitly define the siteMetadata {} object
-  // This way those will always be defined even if removed from gatsby-config.js
-
-  // Also explicitly define the Markdown frontmatter
-  // This way the "MarkdownRemark" queries will return `null` even when no
-  // blog posts are stored inside "content/blog" instead of returning an error
   createTypes(`
     type SiteSiteMetadata {
       author: Author
@@ -121,7 +109,56 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Fields {
+      viewCount: Int
       slug: String
     }
   `)
 }
+
+
+const getViewCount = async () => {
+  let analyticsResult = [];
+  try {
+    const analyticsDataClient = new BetaAnalyticsDataClient({
+      credentials: JSON.parse(process.env.ANALYTICS_CREDENTIALS),
+    });
+
+    analyticsResult = await analyticsDataClient.runReport({
+      property: `properties/${process.env.ANALYTICS_PROPERTY_ID}`,
+      dateRanges: [{ startDate: '2022-01-01', endDate: 'today' }],
+      dimensions: [{ name: 'pagePath' }],
+      metrics: [{ name: 'screenPageViews' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'pagePath',
+          stringFilter: {
+            matchType: 'BEGINS_WITH',
+            value: `${postPrefix}`,
+          },
+        },
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+
+  // analytics data arrange
+  return (
+    analyticsResult
+      .filter((item) => item !== null && item.rows)
+      .map((item) => {
+        return item.rows.map((row) => {
+          return {
+            path: row.dimensionValues[0].value,
+            totalCount: row.metricValues[0].value,
+          };
+        });
+      })[0] || []
+  );
+};
+
+exports.onPluginInit = async ({ cache }) => {
+  await cache.set('viewCount', await getViewCount());
+};
+
+
