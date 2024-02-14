@@ -193,6 +193,7 @@ ul li,
 ol li {
   padding-left: var(--spacing-0);
   margin-bottom: calc(var(--spacing-6) / 2);
+  margin-left: var(--spacing-6);
 }
 
 li > p {
@@ -251,7 +252,8 @@ td {
 }
 
 a {
-  color: var(--color-primary);
+  color: #074d89;
+  text-decoration: none;
 }
 
 a:hover,

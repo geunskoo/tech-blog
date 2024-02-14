@@ -65,7 +65,7 @@ const BlogPage = ({ data, location }) => {
                 <StaticImage style={{zIndex: "2", marginBottom: "-5.25rem", marginLeft: "-0.25rem", width: "60px", height: "60px"}} src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]}/>
               </div>
               )}
-              <li key={post.fields.slug}>
+              <li style={{marginLeft: "0rem"}} key={post.fields.slug}>
                 <Link className="post-container-link" to={post.fields.slug} itemProp="url">
                   <article className="post-article" itemScope itemType="http://schema.org/Article" >                      
                     <GatsbyImage image={thumbnail} alt="thumbnail" style={{ zIndex: "1", borderRadius: "1.25rem", border: "1px solid #ddd", marginBottom: "0px", marginRight: "1.5rem", width: "130px", height: "130px", minWidth:"130px"}}/>
