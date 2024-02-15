@@ -12,16 +12,6 @@ const BlogIndex = ({ data, location }) => {
     window.location.replace("/bio/");
   }, []);
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <p>
-          게시물이 없습니다.
-        </p>
-      </Layout>
-    )
-  }
-
   return (
     <Layout location={location} title={siteTitle}></Layout>
   )

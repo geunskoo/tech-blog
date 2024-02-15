@@ -11,7 +11,7 @@ const Banner = () => {
     // 글자 모음
     const letters = [
       { text: "백엔드 개발자", color: "#074d89" },
-      { text: "클린코드 개발자", color: "#cc3333" }
+      { text: "클린코드 개발자", color: "#289e8e" }
     ];
 
     // 글자 입력 속도

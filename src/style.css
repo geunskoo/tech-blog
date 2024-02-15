@@ -586,7 +586,7 @@ a:focus {
   margin-left: 0.25rem;
   margin-top: 0.25rem;
   color: #000;
-  width: 5rem;
+  width: auto;
   height: 2.5rem;
 }
 
