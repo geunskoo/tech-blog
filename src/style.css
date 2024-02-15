@@ -211,11 +211,12 @@ li > ul {
 }
 
 blockquote {
-  color: var(--color-text-light);
+  color: #25897b;
   margin: 1rem 0 1rem 0;
-  padding: var(--spacing-6) var(--spacing-10) var(--spacing-6) var(--spacing-10);
-  font-size: var(--fontSize-1);
-  background: #f3fefb;
+  padding: var(--spacing-3) var(--spacing-3) var(--spacing-3) var(--spacing-3);
+  font-size: 1rem;
+  background: #e5f6f3;
+  border: 2px dashed #289e8e;
   border-radius: 0.85rem;
 }
 
@@ -783,4 +784,81 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+
+/**
+ * If you only want to use line numbering
+ */
+
+ .gatsby-code-title{
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  height: 2.5rem;
+  padding: 0 0 0 0.5rem;
+  color: #b6b6b6;
+  background-color: #1e1e1e;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+ }
+
+ .gatsby-highlight {
+  background-color: #2d2d2d;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+  font-size: var(--fontSize-2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+  font-size: 0.85rem !important;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #000;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  border-left: 0.5rem solid #f1bd20;
+}
+.gatsby-code-button-icon{
+  display: none;
+}
+
+.gatsby-code-button {
+  cursor: pointer;
+  color: #b6b6b6;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  margin-right: 0.8rem;
+  margin-top: -3.6rem;
+  pointer-events: initial;
+}
+
+.gatsby-code-button-toaster {
+  font-family: var(--fontFamily-jua);
+  position: fixed;
+  height: 4rem;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -2rem;
+  margin-left: -20rem;
+  z-index: 100;
+  border-radius: 0.5rem;
 }

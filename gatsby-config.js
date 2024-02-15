@@ -81,12 +81,32 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'gatsby-code-title',
+            },
+          },
+          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-code-buttons`,
+            options: {
+            buttonText: `코드복사`,          
+            toasterTextClass: `gatsby-code-button-toaster`,
+            toasterText: `코드가 복사되었습니다 🎉`,
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true,
+              noInlineHighlight: true,
+            }
+          },
         ],
       },
     },
