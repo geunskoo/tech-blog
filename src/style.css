@@ -253,8 +253,8 @@ td {
 }
 
 a {
-  color: #074d89;
-  text-decoration: none;
+  color: var(--color-primary);
+  
 }
 
 a:hover,
@@ -284,6 +284,7 @@ a:focus {
 }
 
 .layout-header-title {
+  text-decoration: none;
   font-size: 1.5rem;
 }
 
