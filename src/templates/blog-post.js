@@ -10,7 +10,7 @@ import Utterances from "../components/Utterances"
 const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
-    <Layout location={location}>
+    <div>
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
@@ -55,7 +55,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
           </li>
         </ul>
       </nav>
-    </Layout>
+    </div>
   )
 }
 

@@ -65,6 +65,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/layout.js'),
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
         trackingIds: ['G-N65R1555BM'],
