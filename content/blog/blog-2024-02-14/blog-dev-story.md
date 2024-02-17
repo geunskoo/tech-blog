@@ -1,5 +1,5 @@
 ---
-title: gatsby, netlify 배포 후 css 미적용 문제(1)
+title: gatsby, netlify 배포 후 css 미적용 문제
 date: "2024-02-14T18:00:00"
 type: blog
 description: netlify로 배포했는데, 왜 css 적용이 안될까?
