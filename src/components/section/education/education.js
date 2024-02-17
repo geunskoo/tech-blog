@@ -1,5 +1,5 @@
 import * as React from "react"
-import HistCard from "./HistCard"
+import HistCard from "../../component/hist-card/hist-card"
 
 
 const Education = () => {

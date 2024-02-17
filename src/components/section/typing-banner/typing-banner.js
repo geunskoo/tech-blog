@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./typing-banner.css"
 
 const Banner = () => {
   const textRef = useRef(null);

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
-import Category from "../components/Category"
-import Seo from "../components/seo"
+import Category from "../../components/component/category/category.js"
+import Seo from "../../components/seo.js"
 
 const BlogPage = ({ data, location }) => {
 
@@ -39,7 +38,7 @@ const BlogPage = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location}>
+    <div>
       <div>
         <div>
           <button className="category-mobile-button" onClick={clickCategoryToggle}>{isHidden ? '▼ 카테고리' : '▲ 오므리기'}</button>
@@ -62,7 +61,7 @@ const BlogPage = ({ data, location }) => {
               <div className="post-container" >
               { lastPost === post && (
               <div className="post-new-tag">
-                <StaticImage style={{zIndex: "2", marginBottom: "-5.25rem", marginLeft: "-0.25rem", width: "60px", height: "60px"}} src="../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]}/>
+                <StaticImage style={{zIndex: "2", marginBottom: "-5.25rem", marginLeft: "-0.25rem", width: "60px", height: "60px"}} src="../../images/newtag.png" alt="newtag" layout="fixed" formats={["auto", "webp", "avif"]}/>
               </div>
               )}
               <li style={{marginLeft: "0rem"}} key={post.fields.slug}>
@@ -82,7 +81,7 @@ const BlogPage = ({ data, location }) => {
                       </section>
                       <div className="post-article-footer">
                         <div className="post-article-date">{post.frontmatter.date}</div>
-                        <StaticImage style={{ marginBottom:"0.15rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view" formats={["auto", "webp", "avif"]}/>
+                        <StaticImage style={{ marginBottom:"0.15rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../../images/grayView.png" alt="view" formats={["auto", "webp", "avif"]}/>
                         <style>{`@media (max-width: 520px) {.post-article-footer .gatsby-image-wrapper {width: 15px !important; min-width: 15px !important; height: 15px !important; margin-right: 0.2rem !important; margin-bottom: 0.15rem !important;}}`}</style>
                         <div className="post-article-view">{post.fields.viewCount}</div>
                       </div>
@@ -95,7 +94,7 @@ const BlogPage = ({ data, location }) => {
             })}
           </ol>
         </div>
-      </Layout>
+      </div>
   )
 }
 export default BlogPage

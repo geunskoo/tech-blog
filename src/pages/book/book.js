@@ -3,9 +3,8 @@ import { useState } from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
-import Category from "../components/Category"
-import Seo from "../components/seo"
+import Category from "../../components/component/category/category.js"
+import Seo from "../../components/seo.js"
 
 const BookPage = ({ data, location }) => {
 
@@ -34,8 +33,8 @@ const BookPage = ({ data, location }) => {
 
   const lastPost = posts[0];
 
-  return (
-    <Layout location={location}>
+  return  (
+    <div>
       <div>
         <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
         </button>
@@ -72,7 +71,7 @@ const BookPage = ({ data, location }) => {
             })}
           </ol>
         </div>
-    </Layout>
+      </div>
   )
 }
 

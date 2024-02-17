@@ -1,13 +1,11 @@
 import * as React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Seo from "../../components/seo.js"
 
 const ByeondPage = ({ data, location }) => {
 
   return (
-    <Layout location={location}>
-      
-    </Layout>
+    <div>
+    </div>
   )
 }
 

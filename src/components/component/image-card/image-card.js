@@ -8,7 +8,7 @@ const ImageCard = () => {
       <StaticImage className="image-card-avatar"
                     layout="fixed" 
                     formats={["auto", "webp", "avif"]}
-                    src="../../images/geun.png"
+                    src="../../../images/geun.png"
                     width={150} 
                     height= {200}
                     quality={100}

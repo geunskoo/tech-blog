@@ -52,6 +52,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  /* bio 페이지 */
+  createPage({
+    path: '/bio/',
+    component: path.resolve(`./src/pages/bio/bio.js`)
+  });
+
+  /* blog 페이지 */
+  createPage({
+    path: '/blog/',
+    component: path.resolve(`./src/pages/blog/blog.js`)
+  });
+
+   /* book 페이지 */
+   createPage({
+    path: '/book/',
+    component: path.resolve(`./src/pages/book/book.js`)
+  });
+
+    /* book 페이지 */
+    createPage({
+    path: '/byeond/',
+    component: path.resolve(`./src/pages/byeond/byeond.js`)
+  });
+    
 }
 
 /**

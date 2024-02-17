@@ -5,9 +5,9 @@ const CareerCard = ({ imageName, startDate, endDate }) => {
 
   // 이미지 이름에 따라 이미지를 import
   if (imageName === "shinsegae") {
-    imgSrc = require("../../images/shinsegaeinc.png").default;
+    imgSrc = require("../../../images/shinsegaeinc.png").default;
   } else if (imageName === "water") {
-    imgSrc = require("../../images/water.png").default;
+    imgSrc = require("../../../images/water.png").default;
   }
 
   return (

@@ -1,5 +1,5 @@
 import React from "react"
-import CareerCard from "./CareerCard"
+import CareerCard from "../../component/career-card/career-card"
 
 const Career = () => {
   return (

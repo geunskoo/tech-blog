@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   }, []);
 
   return (
-    <Layout location={location} title={siteTitle}></Layout>
+    <div>안녕!</div>
   )
 }
 

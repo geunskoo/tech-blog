@@ -1,9 +1,8 @@
 import * as React from "react"
-import ImageCard from "./ImageCard"
-import Experience from "./Experience"
+import ImageCard from "../../component/image-card/image-card"
+import Experience from "../../component/experience/experience"
 
 const AboutMe = () => {
-
   return (
     <div className="about-wrapper">
       <h3>AboutMe</h3>
