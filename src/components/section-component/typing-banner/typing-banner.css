@@ -6,6 +6,11 @@
   max-width: 100rem;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  transition: transform 0.5s ease;
+}
+
+.banner-container:hover {
+  transform: scale(1.1);
 }
 
 .banner-heading {

@@ -1,4 +1,6 @@
-import * as React from "react"
+import * as React from "react";
+import "./bio.css";
+
 import Banner from "../../components/section-component/typing-banner/typing-banner.js"
 import Career from "../../components/section-component/career/career.js"
 import Education from "../../components/section-component/education/education.js"

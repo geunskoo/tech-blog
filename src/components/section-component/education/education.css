@@ -3,11 +3,11 @@
     border-radius: 1.25rem;
     padding: 1rem; 
     margin-bottom: 0.85rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
   
   .education-card-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   .education-card-title {
