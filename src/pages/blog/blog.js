@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Category from "../../components/common-component/category/category.js"
 import Seo from "../../components/core-component/seo.js"
 
-const BlogPage = ({ data, location }) => {
+const BlogPage = ({ data }) => {
 
   const posts = data.allMarkdownRemark.nodes
   const [filteredPosts, setFilteredPosts] = useState(posts);

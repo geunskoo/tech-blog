@@ -1,7 +1,7 @@
 import * as React from "react"
 import Seo from "../components/core-component/seo"
 
-const NotFoundPage = ({ data, location }) => {
+const NotFoundPage = () => {
   return (
       <div>
         <h1>404: Not Found</h1>

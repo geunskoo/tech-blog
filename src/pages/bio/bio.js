@@ -7,9 +7,7 @@ import Education from "../../components/section-component/education/education.js
 import AboutMe from "../../components/section-component/about-me/about-me.js"
 import Seo from "../../components/core-component/seo.js"
 
-
-
-const BioPage = ({ data, location }) => {
+const BioPage = () => {
   return (
     <div className="bio-wrapper">
       <Banner/>
