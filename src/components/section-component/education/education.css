@@ -1,0 +1,26 @@
+.education-card-container {
+    border: 1px solid #ddd;
+    border-radius: 1.25rem;
+    padding: 1rem; 
+    margin-bottom: 0.85rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .education-card-container:hover {
+    transform: scale(1.05);
+  }
+
+  .education-card-title {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 520px) {
+      
+    .education-card-container {
+        padding: 0.5rem; 
+        margin-bottom: 0.8rem;
+    }
+
+}

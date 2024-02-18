@@ -1,8 +1,9 @@
 import React from "react";
+import "./nav-button.css";
 import { Link } from "gatsby";
 import { useLocation } from "@reach/router";
 
-const NavigationButton = ({ to, children }) => {
+const NavButton = ({ to, children }) => {
     const location = useLocation();
 
     let isActive;
@@ -14,10 +15,12 @@ const NavigationButton = ({ to, children }) => {
     }
 
     return (
-        <Link className={`layout-nav-button ${isActive ? "active" : ""}`} to={to}>
-            {children} 
-        </Link> 
+        <div className="nav-button-wrapper">
+            <Link className={`nav-button ${isActive ? "active" : ""}`} to={to}>
+                {children} 
+            </Link> 
+        </div>
     );
 };
 
-export default NavigationButton;
+export default NavButton;

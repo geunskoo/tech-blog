@@ -1,5 +1,5 @@
 import * as React from "react"
-import Seo from "../../components/seo.js"
+import Seo from "../../components/core-component/seo.js"
 
 const ByeondPage = ({ data, location }) => {
 

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Category from "../../components/component/category/category.js"
-import Seo from "../../components/seo.js"
+import Category from "../../components/common-component/category/category.js"
+import Seo from "../../components/core-component/seo.js"
 
 const BlogPage = ({ data, location }) => {
 

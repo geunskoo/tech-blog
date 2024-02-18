@@ -3,9 +3,8 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Utterances from "../components/Utterances"
+import Seo from "../components/core-component/seo"
+import Utterances from "../components/core-component/Utterances"
 
 const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)

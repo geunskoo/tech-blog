@@ -1,9 +1,10 @@
-import * as React from "react"
+import * as React from "react";
+import "./hist-card.css";
 
 const HistCard = ({startDate, endDate, content}) => {
 
   return (
-      <div className="hist-card-container">
+      <div className="hist-card-wrapper">
         <p>{startDate} ~ {endDate}</p>
         <p>{content}</p>
       </div>

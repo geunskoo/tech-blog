@@ -1,9 +1,9 @@
 import * as React from "react"
-import Banner from "../../components/section/typing-banner/typing-banner.js"
-import Career from "../../components/section/career/career.js"
-import Education from "../../components/section/education/education.js"
-import AboutMe from "../../components/section/about-me/about-me.js"
-import Seo from "../../components/seo.js"
+import Banner from "../../components/section-component/typing-banner/typing-banner.js"
+import Career from "../../components/section-component/career/career.js"
+import Education from "../../components/section-component/education/education.js"
+import AboutMe from "../../components/section-component/about-me/about-me.js"
+import Seo from "../../components/core-component/seo.js"
 
 
 

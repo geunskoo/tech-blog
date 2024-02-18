@@ -1,0 +1,17 @@
+.experience-container {
+    padding: 1rem;
+}
+
+.experience-container p { 
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 520px) {
+
+    .experience-container{
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 1.25rem;
+        margin-top: 1rem;
+    }
+}

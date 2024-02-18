@@ -1,4 +1,5 @@
 import * as React from "react"
+import "./experience.css"
 
 const Experience = () => {
   
