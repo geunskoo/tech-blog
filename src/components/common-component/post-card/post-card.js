@@ -29,7 +29,7 @@ const PostCard = ({ post, lastPost }) => {
     width: "162px",
     height: "162px"
   }
-  const thumbnailMobileStyle = `@media (max-width: 520px) {.post-article-container .gatsby-image-wrapper {width: 100px !important; min-width: 100px !important; height: 100px !important; margin-right: 0.5rem !important;}}`
+  const thumbnailMobileStyle = `@media (max-width: 520px) {.post-article .gatsby-image-wrapper {width: 100px !important; min-width: 100px !important; height: 100px !important; margin-right: 0.5rem !important;}}`
 
   const grayViewSrc = "../../../images/grayView.png";
   const grayViewStyle = {
@@ -45,7 +45,7 @@ const PostCard = ({ post, lastPost }) => {
       {lastPost && (<StaticImage style={newTagStyle} src={newTagSrc} alt="newtag" layout="fixed"/>)}
       <li key={post.fields.slug}>
         <Link className="post-link-container" to={post.fields.slug} itemProp="url">
-          <article className="post-article-container" itemScope itemType="http://schema.org/Article" >
+          <article className="post-article" itemScope itemType="http://schema.org/Article">
             {/* 썸네일 */}
             <div className='post-article-thumbnail'>
               <GatsbyImage image={thumbnail} alt="thumbnail" style={thumbnailStyle} />
