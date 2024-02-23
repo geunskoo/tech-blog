@@ -14,7 +14,6 @@
 
 .category-button:hover {
   transform: translateY(-5px);
-
 }
 
 .category-button.active {
@@ -52,9 +51,10 @@
   .category-button-container.none{
     max-height: 0;
   }
-  
+
   .category-button {
     width: 100%;
     padding: 0.2rem;
+    color: var(--color-primary);
   }
 }
