@@ -14,5 +14,6 @@
 }
 
 .nav-button.active {
+    text-decoration: none;
     color: #074d89;
 }

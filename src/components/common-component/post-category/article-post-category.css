@@ -1,0 +1,15 @@
+/* 전역에 마지막 li 아래 margin 삭제조건 걸려있음 따라서 important필요 */
+.article-post-category-wrapper{
+    margin: 0 0 0.5rem 0 !important;
+}
+
+.article-post-category {
+    display: inline-block;
+    font-size: var(--fontSize-0);
+    border: var(--border-light); 
+    border-radius: var(--radius-1);
+
+    padding: 0.1rem 0.4rem;
+    margin-right: 0.2rem;   
+}
+

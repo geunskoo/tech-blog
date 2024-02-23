@@ -1,9 +1,11 @@
-import * as React from "react"
+import * as React from "react";
+import "./book.css";
+
 import { useState } from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Category from "../../components/common-component/category/category.js"
+import ArticlePostCategory from "../../components/common-component/post-category/article-post-category.js"
 import Seo from "../../components/core-component/seo.js"
 
 const BookPage = ({ data }) => {
@@ -34,7 +36,7 @@ const BookPage = ({ data }) => {
   const lastPost = posts[0];
 
   return  (
-    <div>
+    <div className="book-wrapper">
       <div>
         <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
         </button>
@@ -45,7 +47,7 @@ const BookPage = ({ data }) => {
         ))}
       </div>
       <div>
-        <ol className="book-wrapper">
+        <ol className="book-wrapperrrr">
           {filteredPosts.map(post => {
             const title = post.frontmatter.title
             const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
@@ -60,7 +62,7 @@ const BookPage = ({ data }) => {
                         <h5 style={{marginTop: "0rem"}}><span itemProp="headline">{title}</span></h5>
                       </header>
                       <section style={{display: "flex", justifyContent:"center", alignItems: "center", marginTop:"0.2rem"}}>
-                        <Category categorys={post.frontmatter.category}/>
+                        <ArticlePostCategory categorys={post.frontmatter.category}/>
                       </section>
                     </div>
                     </article>
