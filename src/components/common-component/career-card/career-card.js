@@ -14,7 +14,9 @@ const CareerCard = ({ imageName, startDate, endDate }) => {
 
   return (
     <div className="career-card-wrapper">
-      <img className="career-card-image" src={imgSrc} alt="profile" width={150} height={150}/>
+      <div className="career-card-image-container">
+        <img className="career-card-image" src={imgSrc} alt="profile" width={150} height={150}/>
+      </div>
       <div className="career-card-content-container">
         <h4 className="career-card-title">신세계아이앤씨, 안전관리시스템 구축TF</h4>
         <p className="career-card-date">{startDate} ~ {endDate}</p>

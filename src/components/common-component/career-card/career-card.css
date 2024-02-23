@@ -39,6 +39,24 @@
 
 @media (max-width: 520px) {
 
+    .career-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+
+    .career-card-image-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .career-card-content-container{
+        border: var(--border-light);
+        border-radius: var(--radius-1);
+    }
+
     .career-card-container {
         display: flex;
         flex-direction: column;
@@ -49,7 +67,6 @@
     }
   
     .career-card-title {
-        font-size: 1rem;
         display: flex;
         justify-content: center;
         margin-bottom: 0rem;

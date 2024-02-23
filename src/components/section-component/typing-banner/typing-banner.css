@@ -54,19 +54,4 @@
 
     animation: cursor 0.9s infinite steps(2);
   }
-
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    border-radius: 1.25rem;
-    align-items: center;
-    padding-top: 1rem
-  }
-
-  .about-container p{
-    font-size: 0.85rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-  }
 }

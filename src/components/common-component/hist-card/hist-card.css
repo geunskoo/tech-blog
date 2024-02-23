@@ -14,6 +14,7 @@
 
 @media (max-width: 520px) {
     .hist-card-wrapper p {
+        font-size: var(--fontSize-0);
         margin:0 0 0 0; /* 화면이 좁을 때는 마진 제거 */
         min-width: 50%;
     }
