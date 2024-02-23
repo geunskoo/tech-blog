@@ -66,6 +66,10 @@
 }
 
 @media (max-width: 520px){
+
+  .post-article {
+    height: 100px;
+  }
   
   .post-article-container{
     height: 100px;
