@@ -1,0 +1,30 @@
+
+.category-button {
+  cursor: pointer;
+  background: none;
+  border-radius: 0.5rem;
+  border: solid #ddd 1.5px;
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+  color: #000;
+  width: auto;
+  height: 2.5rem;
+}
+
+.category-button.active {
+  color: #074d89;
+  border: solid #074d89 1.5px;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.85rem;
+  border: 1px solid #ddd; 
+  border-radius: 1.25rem;
+  padding: 0.1rem 0.4rem;
+  margin-right: 0.2rem;
+}
+
+.category-mobile-button{
+  display: none;
+}

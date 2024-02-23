@@ -1,6 +1,8 @@
-/* TODO: h태그의 전체적인 크기 축소는 전역에서 잡아주도록하자  */
+.section-card-title-wrapper{
+  font-size: var(--fontSize-4);
+}
+
+
 @media (max-width: 520px) {
-    .section-card-title-wrapper{
-      font-size: 1.25rem;
-    }
+ 
 }

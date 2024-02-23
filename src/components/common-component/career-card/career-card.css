@@ -1,40 +1,65 @@
 .career-card-wrapper {
     display: flex;
     flex-direction: row;
-    border-radius: 1.25rem;
-    border: 1px solid #ddd; /* 테두리 미적용 */
+    border: var(--border-light);
+    border-radius: var(--radius-1);
+    transition: var(--transition-ease);
+
     padding: 1rem;
-    margin-bottom: 2.5rem;
-    transition: transform 0.5s ease;
+    margin: 0 0 2.5rem 0;
 }
 
 .career-card-wrapper:hover {
-  transform: scale(1.1);
+    transform: var(--transform-scale);
+}
+
+.career-card-image {
+    margin: 1rem;
 }
 
 .career-card-content-container{
     padding: 1rem;
 }
-  
-.career-card-image {
-    margin: 1rem;
-}
 
 .career-card-title {
-    font-size: 1.25rem;
     margin-top: 0rem;
     margin-bottom: 0.5rem;
 }
 
 .career-card-date {
-    color: #808080;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-    margin-left: 0.5rem;
+    color: var(--color-deep-gray);
+    font-size: var(--fontSize-1);
+
+    margin: 0 0 1rem 0.5rem;
 }
 
 .career-card-content p {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 520px) {
+
+    .career-card-container {
+        display: flex;
+        flex-direction: column;
+        border: var(--border-light);
+        border-radius: var(--radius-1);
+
+        padding: 1rem;
+    }
   
+    .career-card-title {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0rem;
+    }
+    
+    .career-card-date {
+        display: flex;
+        justify-content: center;
+        color: var(--color-deep-gray);
+        font-size: var(--fontSize-0);
+        margin-bottom: 0.8rem;
+    }
+  }

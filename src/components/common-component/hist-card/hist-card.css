@@ -5,24 +5,16 @@
 }
 
 .hist-card-wrapper p {
-    margin-bottom: 0rem;
-    margin-right: 1rem;
+    margin: 0 0 0rem 1rem;
 }
 
 .hist-card-wrapper p::before {
     content: "\00a0\00a0\00a0\00a0"; /* 공백 4칸 삽입 */
 }
 
-/* .hist-cards-title,
-.hist-card {
-  margin: 0.1rem 0rem;
-  font-size: 0.85rem;
-} */
-
 @media (max-width: 520px) {
-    .hist-card-container p {
-        margin-right: 0rem; /* 화면이 좁을 때는 마진 제거 */
+    .hist-card-wrapper p {
+        margin:0 0 0 0; /* 화면이 좁을 때는 마진 제거 */
         min-width: 50%;
-        font-size: 0.65rem;
     }
 }

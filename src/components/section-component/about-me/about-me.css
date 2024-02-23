@@ -1,20 +1,25 @@
+.about-wrapper {
+    width: 100%;
+}
+
 .about-container {
     display: flex;
     flex-direction: row;
-    border: 1px solid #ddd;
-    border-radius: 1.25rem;
     align-items: center;
-    margin-bottom: 2.5rem;
-    transition: transform 0.5s ease;
+    border: var(--border-light);
+    border-radius: var(--radius-1);
+
+    margin: 0 0 2.5rem 0;
+    transition: var(--transition-ease);
 }
 
 .about-container:hover {
-  transform: scale(1.1);
+  transform: var(--transform-scale);
 }
 
+/* 모바일 버전 */
 @media (max-width: 520px) {
-
-    .about-container{
+    .about-container {
         flex-direction: column;
         border: none;
     }

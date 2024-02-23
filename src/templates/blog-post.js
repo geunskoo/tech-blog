@@ -1,4 +1,6 @@
-import * as React from "react"
+import * as React from "react";
+import "./blog-post.css";
+
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"

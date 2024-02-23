@@ -1,30 +1,72 @@
 .banner-container {
   text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 1.25rem; 
+  border: var(--border-light);
+  border-radius: var(--radius-1); 
+  transition: var(--transition-ease);
+
   padding: 2rem;
-  max-width: 100rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  transition: transform 0.5s ease;
+  margin: 2.5rem 0rem 2.5rem 0rem;
 }
 
 .banner-container:hover {
-  transform: scale(1.1);
+  transform: var(--transform-scale);
 }
 
-.banner-heading {
-  font-size: 2.65rem;
+.banner-title {
+  font-size: var(--fontSize-7);
+}
+
+.banner-typing {
+  font-size: var(--fontSize-7);
   font-family: var(--fontFamily-dohyeon)
 }
 
-.banner-heading::after {
+.banner-typing::after {
   content: '';
-  margin-left: 0.6rem;
   animation: cursor 0.9s infinite steps(2);
+
+  margin: 0rem 0rem 0rem 0.6rem;
 }
 
 .banner-paragraph {
-  line-height: 1.25rem;
-  font-size: 1.25rem;
+  font-size: var(--fontSize-2);
+}
+
+@media (max-width: 520px) {
+
+  .banner-container {
+    padding: 1rem;
+  }
+
+  .banner-title {
+    display: block;
+    white-space: pre-line;
+  }
+
+  .banner-typing{
+    white-space: pre-line; 
+
+  }
+
+  .banner-typing::after {
+    content: '';
+    margin-left: 0 0 0 0.6rem;
+
+    animation: cursor 0.9s infinite steps(2);
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 1.25rem;
+    align-items: center;
+    padding-top: 1rem
+  }
+
+  .about-container p{
+    font-size: 0.85rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
 }
