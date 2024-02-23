@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./blog.css";
 
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 
 import Seo from "../../components/core-component/seo.js"
 import PostCategory from '../../components/section-component/post-category/post-category';
