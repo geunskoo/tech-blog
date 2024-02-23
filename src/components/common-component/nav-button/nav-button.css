@@ -9,11 +9,13 @@
 }
 
 .nav-button {   
+
     font-size: 1.25rem;
     text-decoration: none;
 }
 
 .nav-button.active {
+    
     text-decoration: none;
     color: #074d89;
 }
