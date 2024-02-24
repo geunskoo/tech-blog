@@ -3,10 +3,20 @@ import "./layout.css";
 import { Link } from "gatsby";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import NavButton from "../../common-component/nav-button/nav-button";
+import { FaGithub } from "react-icons/fa";
+
+
 
 /* 화면 레이아웃 */
 /* gatsby-config.js에 layout으로 등록 */
 const Layout = ({ location, children }) => {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+  }
 
   return (
     <div className="layout-wrapper">
@@ -28,6 +38,17 @@ const Layout = ({ location, children }) => {
         {/* <p>로딩중...</p> */}
         {/* </div> */}
       </TransitionGroup>
+      {/* <div className="slack-chat">
+        <button>💬</button>
+      </div> */}
+      <a className="github" href="https://github.com/geunskoo" target="_blank">
+        <FaGithub size={25} />
+      </a>
+      <div className="scroll-to-top">
+        <button onClick={scrollToTop}>
+          <span>⇪</span>
+        </button>
+      </div>
       <footer>
         © Tae Geun, Kim
         {` `}

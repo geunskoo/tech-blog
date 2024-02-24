@@ -51,9 +51,9 @@
   --color-light-green: #f3fefb;
   --color-dark-green: #25897b;
   --color-deep-green: #254653;
-
   --color-blue: #074d89;
 
+  
   --color-primary: #2e353f;
   --color-primary-light: #3e4756;
 
@@ -450,4 +450,50 @@ code[class*="language-"], pre[class*="language-"] {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.button-module--button--faf2a {
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: var(--color-blue);
+    color: white;
+    box-shadow: none
+}
+
+.widget-module--root--f512c {
+  position: fixed;
+  z-index: 1000;
+  bottom: 150px;
+  right: 30px;
+  margin: 0;
+}
+
+.button-module--closed--35798 .button-module--line1--ab617 {
+  top: 15px;
+}
+
+.button-module--closed--35798 .button-module--line2--c4046 {
+  top: 20px;
+}
+
+.button-module--closed--35798 .button-module--line3--10050 {
+  top: 30px;
+}
+
+.button-module--line--1dbed {
+  position: absolute;
+  background: white;
+  height: 5px;
+  left: 14px;
+  display: block;
+  transition: all 0.6s ease-in-out;
+}
+
+.dialog-module--root--a203b {
+  right: 75px !important;
+  bottom: 30px !important;
 }

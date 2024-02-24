@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 
 import Seo from "../components/core-component/seo"
 
+
+
 const BlogIndex = () => {
 
   useEffect(() => {

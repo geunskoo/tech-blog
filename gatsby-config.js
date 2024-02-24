@@ -28,6 +28,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-meta-redirect`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-support-chat`,
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
