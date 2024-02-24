@@ -6,22 +6,19 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+  const output = getConfig().output || {}
+
   actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          use: 'ts-loader',
-          exclude: /node_modules/,
-        },
-      ],
-    },
+    output,
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      alias: {
+        components: path.resolve(__dirname, "src/components"),
+        pages: path.resolve(__dirname, "src/pages"),
+      },
     },
-  });
-};
+  })
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -82,7 +79,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
    /* book 페이지 */
    createPage({
     path: '/book/',
-    component: path.resolve(`./src/pages/book/book.js`)
+    component: path.resolve(`./src/pages/book/book.tsx`)
   });
 
     /* book 페이지 */

@@ -40,7 +40,7 @@ const BookPage = ({ data }) => {
       <div>
         <button className={`category-button ${selectedCategory === '전체' ? "active" : ""}`} onClick={() => filterPostsByCategory(null)}>전체 ({posts.length})
         </button>
-        {categories.map(category => (
+        {categories.map((category: any) => (
           <button className={`category-button ${selectedCategory === category ? "active" : ""}`} key={category} onClick={() => filterPostsByCategory(category)}>
             {category} ({categoryCounts[category]}) 
           </button>

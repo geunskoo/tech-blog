@@ -1,16 +1,33 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "esnext",
-      "jsx": "preserve",
-      "lib": ["dom", "esnext"],
-      "baseUrl": ".",
-      "strict": true,
-      "noEmit": true,
-      "isolatedModules": true, 
-      "esModuleInterop": true,
-      "noUnusedLocals": false,
-      "allowJs": true
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",
+    "jsx": "preserve",
+
+    /* Modules */
+    "module": "commonjs",
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["./components/*"],
+      "utils/*": ["./utils/*"],
+      "hooks/*": ["./hooks/*"],
+      "icons/*": ["../static/icons/*"]
     },
-    "exclude": ["node_modules", "public", ".cache"]
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
