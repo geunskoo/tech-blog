@@ -6,7 +6,6 @@ import NavButton from "../../common-component/nav-button/nav-button";
 import { FaGithub } from "react-icons/fa";
 
 
-
 /* 화면 레이아웃 */
 /* gatsby-config.js에 layout으로 등록 */
 const Layout = ({ location, children }) => {
@@ -17,6 +16,7 @@ const Layout = ({ location, children }) => {
         behavior: 'smooth'
     });
   }
+  
 
   return (
     <div className="layout-wrapper">

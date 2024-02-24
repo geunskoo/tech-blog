@@ -6,7 +6,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
-
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     module: {
