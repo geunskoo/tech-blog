@@ -6,6 +6,24 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
+      ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
+  });
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
