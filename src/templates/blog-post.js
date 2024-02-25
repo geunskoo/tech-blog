@@ -11,7 +11,7 @@ import Utterances from "../components/core-component/Utterances"
 const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
-    <div>
+    <div className="blog-post-wrapper">
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
