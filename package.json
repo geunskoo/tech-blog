@@ -26,7 +26,6 @@
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.12.0",
     "gatsby-plugin-sitemap": "^6.13.0",
-    "gatsby-plugin-support-chat": "^0.0.4",
     "gatsby-plugin-typescript": "^5.12.1",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-images": "^7.12.0",
