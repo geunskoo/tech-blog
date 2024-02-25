@@ -99,12 +99,16 @@ const postPrefix = '/';
 exports.onCreateNode = async ({ node, actions, getNode, cache }) => {
   const { createNodeField } = actions
 
+  /*캐시에서 조회수를 가져옴 */
   const viewCountList = await cache.get('viewCount');
 
   if (node.internal.type === `MarkdownRemark`) {
+    /*조회수 생성로직 추가 */
     const value = createFilePath({ node, getNode })
     const totalCount = (viewCountList.filter((item) => item.path === value)[0] || { totalCount: 0 }).totalCount;
     createNodeField({ name: 'viewCount', node, value: parseInt(totalCount) });
+
+    /* slug 파일 생성 */
     createNodeField({ name: `slug`, node, value });
   }
 }
@@ -178,7 +182,6 @@ const getViewCount = async () => {
     console.error(error);
   }
 
-  // analytics data arrange
   return (
     analyticsResult
       .filter((item) => item !== null && item.rows)
