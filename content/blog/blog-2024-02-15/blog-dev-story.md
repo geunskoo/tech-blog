@@ -100,7 +100,8 @@ Gatsby는 정적 웹 생성기로 서버에서 정적인 HTML 파일을 보여�
 
 <center>[ 사용자 추가 화면 ]</center>
 
-![alt text](<스크린샷 2024-02-25 오후 6.41.25.png>)
+![alt text](guide2.png)
+
 <center>이메일 주소는 위의 credentials.json 파일의 client_email 값을 입력해주면 됩니다.</center>
 <center>표준역할은 "뷰어" 토글을 선택해주세요.</center>
 <br>
