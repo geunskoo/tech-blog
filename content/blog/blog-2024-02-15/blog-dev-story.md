@@ -100,7 +100,7 @@ Gatsby는 정적 웹 생성기로 서버에서 정적인 HTML 파일을 보여�
 
 <center>[ 사용자 추가 화면 ]</center>
 
-![alt text](guide2.png)
+![alt text](image-5.png)
 
 <center>이메일 주소는 위의 credentials.json 파일의 client_email 값을 입력해주면 됩니다.</center>
 <center>표준역할은 "뷰어" 토글을 선택해주세요.</center>
@@ -326,3 +326,9 @@ export const pageQuery = graphql`
 
 궁금하신 점이나 이상한 점이 있다면 댓글로 소통해보아요!   
 이상 긴글 읽어주셔서 감사합니다.  
+
+### 참고
+---
+[yeppyshiba님의 블로그](https://blog.yeppyshiba.com/article/adding-view-count-in-gatsby/)  
+[GA4 웹사이트 및 앱용 애널리틱스 설정](https://support.google.com/analytics/answer/9304153?hl=ko)  
+[Gatsbyjs.com onPlugInit 라이프사이클](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#onPluginInit)

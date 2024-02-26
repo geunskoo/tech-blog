@@ -76,10 +76,10 @@
     --fontSize-1: 1rem;
     --fontSize-2: 1rem;     /* 모바일버전 적용 */
     --fontSize-3: 1.25rem;  /* 모바일버전 적용 */
-    --fontSize-4: 1.45rem;  /* 모바일버전 적용 */
-    --fontSize-5: 1.65rem;  /* 모바일버전 적용 */
-    --fontSize-6: 2.5rem;
-    --fontSize-7: 1.6rem;   /* 모바일버전 적용 */
+    --fontSize-4: 1.35rem;  /* 모바일버전 적용 */
+    --fontSize-5: 1.45rem;  /* 모바일버전 적용 */
+    --fontSize-6: 1.85rem;
+    --fontSize-7: 2rem;   /* 모바일버전 적용 */
   }
 }
 

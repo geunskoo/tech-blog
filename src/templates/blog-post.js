@@ -17,7 +17,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <div style={{display: "flex", alignItems:"center", justifyContent: "flex-end"}}>
             <div style={{marginRight: "2rem"}}>{post.frontmatter.date}</div>
-            <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view" formats={["auto", "webp", "avif"]}/>
+            <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view"/>
             <div className="post-article-view">{post.fields.viewCount}</div>
           </div>
         </header>
