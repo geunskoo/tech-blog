@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from 'react';
 import "./layout.css";
 import { Link } from "gatsby";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -10,6 +10,21 @@ import { FaGithub } from "react-icons/fa";
 /* gatsby-config.js에 layout으로 등록 */
 const Layout = ({ location, children }) => {
 
+  useEffect(() => {
+    const updateProgressBar = () => {
+      const progressBar = document.getElementById('progressBar');
+      const maxHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / maxHeight) * 100;
+      progressBar.style.width = scrolled + '%';
+    };
+
+    window.addEventListener('scroll', updateProgressBar);
+
+    return () => {
+      window.removeEventListener('scroll', updateProgressBar);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
         top: 0,
@@ -20,6 +35,7 @@ const Layout = ({ location, children }) => {
 
   return (
     <div className="layout-wrapper">
+      <div className="progress-bar" id="progressBar"></div>
       <header className="layout-header">
         <Link className="layout-header-title" to="/bio/">태근 후 글쓰기 📝</Link>
         <nav className="layout-nav-container">

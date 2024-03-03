@@ -1,0 +1,8 @@
+.book-card-wrapper:hover{
+  
+}
+
+.book-card-article{
+  transform: perspective(100px) rotateX(2deg); /* 입체 효과 */
+  margin: 0 5rem 0 0;
+}

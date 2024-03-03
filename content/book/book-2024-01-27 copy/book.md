@@ -1,7 +1,7 @@
 ---
-title: 함께자라기
+title: 만들면서 배우는 클린아키텍처
 type: book
-date: "2023-11-20T23:46:37.121Z"
+date: "2024-11-20T23:46:37.121Z"
 description: 
 category: 
     - 개발
