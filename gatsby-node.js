@@ -79,7 +79,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
    /* book 페이지 */
    createPage({
     path: '/book/',
-    component: path.resolve(`./src/pages/book/book.tsx`)
+    component: path.resolve(`./src/pages/book/book.js`)
   });
 
     /* book 페이지 */
