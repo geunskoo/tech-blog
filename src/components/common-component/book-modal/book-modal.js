@@ -8,7 +8,7 @@ const BookModal = ({ isOpen, onClose, book }) => {
 
   const title = book.frontmatter.title;
   const date = book.frontmatter.date;
-  const score = 4;
+  const score = book.frontmatter.score;
 
   if (!isOpen) {
     return null;
@@ -21,7 +21,7 @@ const BookModal = ({ isOpen, onClose, book }) => {
         <h2 className='book-modal-title'>{title}</h2>
         <div className='book-modal-content'>
           <p>독서 일시 : {date}</p>
-          <p>추천도 : {'⭐️'.repeat(score)}</p>
+          <p>추천도 : {'⭐️'.repeat(Number(score))}</p>
         </div>
         <div className='move-button-container'>
           <Link className="move-button" to={book.fields.slug} itemProp="url">독후감보기</Link>
