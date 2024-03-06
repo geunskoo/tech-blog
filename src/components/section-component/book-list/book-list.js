@@ -6,7 +6,7 @@ import BookCard from '../../common-component/book-card/book-card';
 const BookList = ({ books, year }) => {
     const [translateValue, setTranslateValue] = useState(0);
     const slideWidth = 25; // 한 슬라이드의 너비 (25%)
-    const step = 25; // 이동 거리 (10%)
+    const step = 50; // 이동 거리 (50%)
 
     const handlePrevClick = () => {
         if (translateValue < 0) {
@@ -20,9 +20,14 @@ const BookList = ({ books, year }) => {
         }
     };
 
+    let isThisYear = false;
+    if (new Date().getFullYear() === Number(year)){
+        isThisYear = true;
+    }
+
     return (
         <li key={year} className="book-list-wrapper">
-            <h2><span className="book-list-title">{year}</span></h2>
+            <h2><span className={`book-list-title ${isThisYear ? `this-year` : ``}`}>{year}</span></h2>
             <div className="book-list-container">
                 <div className='slider' style={{ transform: `translateX(${translateValue}%)`, transition: 'transform 0.5s ease' }}>
                     {books.map((book, index) => (

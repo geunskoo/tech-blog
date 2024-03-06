@@ -1,0 +1,51 @@
+
+.book-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+  background-color: #00000080;
+  }
+.book-modal {
+  width: 40%; 
+  display: flex;
+  flex-direction: column;
+  background-color: #000000c9;
+  color: white;
+  border-radius: var(--radius-0);
+  overflow-y: auto; /* 내용이 넘칠 때 스크롤 표시 */
+  padding: 1rem;
+}
+.book-modal-title {
+  margin: 0.5rem 0 1rem 0.5rem;
+}
+.book-modal-content p{
+  margin: 0 0 0.5rem 1rem;
+}
+.book-modal-close {
+  position: relative;
+  left: 94%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.move-button-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.move-button{
+  display: flex;
+  flex-direction: end;
+  font-style: none;
+  color: var(--color-white);
+}

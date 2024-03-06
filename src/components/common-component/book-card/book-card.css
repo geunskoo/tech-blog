@@ -1,8 +1,12 @@
-.book-card-wrapper:hover{
-  
-}
 
 .book-card-article{
   transform: perspective(100px) rotateX(2deg); /* 입체 효과 */
   margin: 0 5rem 0 0;
+  position: relative;
+  transition: transform 0.5s, top 0.5s; /* 확대 및 이동 애니메이션 설정 */
+}
+
+.book-card-article:hover{
+  transform: scale(1.1) rotateX(0deg); /* 마우스 호버 시 이미지를 1.1배 확대 */
+  top: -20px; /* 마우스 호버 시 이미지를 위로 20px 이동 */
 }

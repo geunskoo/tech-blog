@@ -10,6 +10,7 @@ import Utterances from "../components/core-component/Utterances"
 
 const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
+  console.log(post)
   return (
     <div className="blog-post-wrapper">
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
@@ -21,9 +22,15 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
             <div className="post-article-view">{post.fields.viewCount}</div>
           </div>
         </header>
+        {post.frontmatter.type === 'blog' && 
         <section style={{display: "flex", justifyContent: "left"}}>
           <GatsbyImage className="blog-post-article-image" image={thumbnail} alt="thumbnail"/>
-        </section>
+        </section>}
+
+        {post.frontmatter.type === 'book' && 
+        <section style={{display: "flex", justifyContent: "center"}}>
+          <GatsbyImage className="book-post-article-image" image={thumbnail} alt="thumbnail"/>
+        </section>}
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
         <Utterances/>
@@ -90,6 +97,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY, MM/DD")
         description
+        type
         thumbnail{
           childImageSharp{
             gatsbyImageData
