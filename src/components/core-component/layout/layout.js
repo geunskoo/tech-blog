@@ -5,6 +5,7 @@ import NavButton from "../../common-component/nav-button/nav-button";
 import { FaGithub } from "react-icons/fa";
 import "./layout.css";
 import Footer from '../footer/footer';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 const Layout = ({ location, children }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -36,7 +37,7 @@ const Layout = ({ location, children }) => {
     <div>      
       <div className="layout-wrapper">
         <header className="layout-header">
-          <Link className="layout-header-title" to="/bio/">퇴근 후 태근</Link>
+        <Link className="layout-header-title" to="/bio/"><StaticImage style={{width: "30px", height: "30px", marginRight:"0.5rem"}} src="../../../images/bbbbb.png" alt="newtag" layout="fixed"/>퇴근 후 태근</Link>
           <nav className="layout-nav-container">
             <NavButton to="/bio/">Bio</NavButton>
             <NavButton to="/blog/">Blog</NavButton>

@@ -11,6 +11,9 @@
     margin-bottom: var(--spacing-12);
 }
 .layout-header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.65rem;
     font-family: var(--fontFamily-dohyeon);
     font-weight: var(--fontWeight-bold);
