@@ -4,6 +4,7 @@
     border: var(--border-light);
     border-radius: var(--radius-1);
     transition: var(--transition-ease);
+    box-shadow: 0 4px 8px var(--color-gray);
 
     padding: 1rem;
     margin: 0 0 2.5rem 0;

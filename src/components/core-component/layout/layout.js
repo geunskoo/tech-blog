@@ -37,7 +37,7 @@ const Layout = ({ location, children }) => {
     <div className="layout-wrapper">
       <div className="progress-bar" id="progressBar"></div>
       <header className="layout-header">
-        <Link className="layout-header-title" to="/bio/">태근 후 글쓰기 📝</Link>
+        <Link className="layout-header-title" to="/bio/">태근 후 글쓰기</Link>
         <nav className="layout-nav-container">
           <NavButton to="/bio/">Bio</NavButton>
           <NavButton to="/blog/">Blog</NavButton>
@@ -62,7 +62,7 @@ const Layout = ({ location, children }) => {
       </a>
       <div className="scroll-to-top">
         <button onClick={scrollToTop}>
-          <span>⇪</span>
+          <span>⬆︎</span>
         </button>
       </div>
       <footer>

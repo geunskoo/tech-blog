@@ -5,11 +5,12 @@
 }
 
 .book-list-title {
-    color: var(--color-black);
+    color: var(--color-white);
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px white;
 }
 
-.this-year{
-    
+.this-year::after{
+    content: 📌
 }
 
 .book-list-container{
@@ -18,8 +19,8 @@
     width: 98%;
     display: flex;
     border-radius: var(--radius-0) var(--radius-0) 0 0;
-    background-color: #F0F0F0; /* Book color */
-    box-shadow: inset 0 0 10px var(--color-deep-gray);/* 안쪽으로 들어간 그림자 효과 */
+    /* background-color: #F0F0F0; Book color */
+    /* box-shadow: inset 0 0 10px var(--color-deep-gray);안쪽으로 들어간 그림자 효과 */
     padding: 2rem 2rem 0.2rem 2rem;
     margin: 0 0.5rem 0 0.5rem;
 }

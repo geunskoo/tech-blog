@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import Seo from "../../components/core-component/seo.js"
 import PostCategory from '../../components/section-component/post-category/post-category';
 import PostList from '../../components/section-component/post-list/post-list';
+import GeneralBanner from '../../components/section-component/general-banner/general-banner.js';
 
 const BlogPage = ({ data }) => {
 
