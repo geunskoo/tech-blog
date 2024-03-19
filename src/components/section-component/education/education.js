@@ -2,12 +2,15 @@ import * as React from "react";
 import "./education.css";
 
 import HistCard from "../../common-component/hist-card/hist-card";
+import SectionCardTitle from "../../common-component/section-card-title/section-card-title";
 
 const Education = () => {
+  
+  const sectionCardTitle = "Educations"
 
   return (
     <div className="education-wrapper">
-      <h3>Education</h3>
+      <SectionCardTitle name={sectionCardTitle}/>
       {/* 학교 */}
       <div className="education-card-container">
         <h5 className="education-card-title">🎓 학교</h5>

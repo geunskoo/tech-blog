@@ -6,6 +6,7 @@ import Career from "../../components/section-component/career/career.js"
 import Education from "../../components/section-component/education/education.js"
 import AboutMe from "../../components/section-component/about-me/about-me.js"
 import Seo from "../../components/core-component/seo.js"
+import Project from "../../components/section-component/project/project.js";
 
 const BioPage = () => {
   return (
@@ -13,6 +14,7 @@ const BioPage = () => {
       <TypingBanner/>
       <AboutMe/>
       <Career/>
+      <Project/>
       <Education/>
     </div>
   )

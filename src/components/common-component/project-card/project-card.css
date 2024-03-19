@@ -1,0 +1,104 @@
+.project-card-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    border: var(--border-light);
+    border-radius: var(--radius-1);
+    transition: var(--transition-ease);
+    box-shadow: 0 4px 8px var(--color-gray);
+
+    padding: 1rem;
+    margin: 0 0 1.5rem 0;
+}
+.project-card-wrapper:hover {
+    transform: var(--transform-scale);
+}
+.project-card-year-tag{
+    width: 15%;
+    overflow: hidden;
+}
+.project-card-year-tag h2{
+    height: 3.5rem;
+    color: var(--color-white);
+    text-shadow: 1px 1px 2px var(--color-deep-gray), -1px -1px 2px white;
+    background-color: var(--color-white);
+    margin: 0 0 0 0;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+.vr{
+    height: 100%;
+    border-left: 2px dashed var(--color-gray);
+    margin: 0 0 0rem 2.85rem
+}
+.project-card-image {
+    margin: 1rem 1rem 1rem 0.5rem;
+}
+.project-card-content-container{
+    width: calc(100% - 150px);
+    padding: 1rem;
+}
+.project-card-title {
+    margin: 0 0 0 0;
+}
+.project-card-description {
+    font-family: var(--fontFamily-dohyeon);
+    font-size: 1.2rem;
+    margin: 0 0 0 0;
+}
+.project-card-date {
+    color: var(--color-deep-gray);
+    font-size: var(--fontSize-1);
+    margin: 0 0 1rem 0;
+}
+
+.project-card-content p {
+    margin-bottom: 1rem;
+}
+.project-card-skill{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 520px) {
+
+    .project-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+
+    .project-card-image-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .project-card-content-container{
+        border: var(--border-light);
+        border-radius: var(--radius-1);
+    }
+
+    .project-card-container {
+        display: flex;
+        flex-direction: column;
+        border: var(--border-light);
+        border-radius: var(--radius-1);
+
+        padding: 1rem;
+    }
+  
+    .project-card-title {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .project-card-date {
+        display: flex;
+        justify-content: center;
+        color: var(--color-deep-gray);
+        font-size: var(--fontSize-0);
+        margin-bottom: 0.8rem;
+    }
+  }
