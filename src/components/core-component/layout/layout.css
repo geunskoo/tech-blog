@@ -3,7 +3,6 @@
     max-width: 1000px; /* 맥북에서 사용하기 좋은 최대 너비 */
     padding: 10px 5%; /* 좌우 여백을 전체 너비의 5%로 설정 */
 }
-
 .layout-header {
     display: flex;
     justify-content: space-between;
@@ -11,7 +10,6 @@
     padding: 1rem;
     margin-bottom: var(--spacing-12);
 }
-
 .layout-header-title {
     font-size: 1.65rem;
     font-family: var(--fontFamily-dohyeon);
@@ -20,45 +18,43 @@
 
     text-decoration: none;
 }
-
 .layout-nav-container {
     display: flex;
 }
-
 .layout-conent-container{
     display: flex;
     justify-content: center;
 }
-
 .scroll-to-top {
     position: fixed;
     right: 30px;
     bottom: 30px;
 }
-
 .scroll-to-top button {
-    background-color: var(--color-blue);
-    color: var(--color-white);
+    background-color: var(--color-white);
     border: none;
     border-radius: 50%; /* 동그란 모양으로 만듭니다. */
     width: 50px;
     height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
+    opacity: 1;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.1s ease;
 }
-
+.scroll-to-top.hide {
+    animation: afterHide 0.8s forwards;
+}
+.scroll-to-top.show {
+    animation: afterShow 0.8s forwards;
+}
 .scroll-to-top button:hover {
     transform: scale(1.15);
 }
-
 .scroll-to-top button span {
+    color: var(--color-black);
     font-weight: var(--fontWeight-bold);
 }
-
-
-
 .github {
     position: fixed;
     right: 30px;
@@ -71,19 +67,22 @@
     align-items: center;
     color: var(--color-white);
     border-radius: 50%;
-    background-color: var(--color-blue);
+    background-color: var(--color-black);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
 }
-
+.github.move-down{
+    animation: moveDown 1.2s forwards;
+}
+.github.move-up{
+    animation: moveUp 1.2s forwards;
+}
 .github:hover {
     transform: scale(1.15);
 }
-
 .github button span {
     font-weight: var(--fontWeight-bold);
 }
-
 .slack-chat{
     position: fixed;
     right: 22px;
@@ -93,7 +92,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .slack-chat button {
     border: none;
     background-color: var(--color-transparent);
@@ -101,7 +99,6 @@
     cursor: pointer;
     transition: transform 0.5s ease;
 }
-
 .slack-chat button:hover {
     transform: scale(1.15);
 }
@@ -128,5 +125,42 @@
     
     .layout-nav-container{
         margin-right: 0rem;
+    }
+}
+
+@keyframes afterHide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+@keyframes afterShow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes moveDown {
+    from {
+        bottom: 90px;
+    }
+    to {
+        bottom: 30px;
+    }
+}
+@keyframes moveUp {
+    from {
+        bottom: 30px;
+    }
+    to {
+        bottom: 90px;
     }
 }

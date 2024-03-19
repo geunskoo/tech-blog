@@ -1,43 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import "./layout.css";
 import { Link } from "gatsby";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import NavButton from "../../common-component/nav-button/nav-button";
 import { FaGithub } from "react-icons/fa";
+import "./layout.css";
 
-
-/* 화면 레이아웃 */
-/* gatsby-config.js에 layout으로 등록 */
 const Layout = ({ location, children }) => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
-    const updateProgressBar = () => {
-      const progressBar = document.getElementById('progressBar');
-      const maxHeight = document.body.scrollHeight - window.innerHeight;
-      const scrolled = (window.scrollY / maxHeight) * 100;
-      progressBar.style.width = scrolled + '%';
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
     };
 
-    window.addEventListener('scroll', updateProgressBar);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', updateProgressBar);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+      top: 0,
+      behavior: 'smooth'
     });
   }
-  
 
   return (
     <div className="layout-wrapper">
       <div className="progress-bar" id="progressBar"></div>
       <header className="layout-header">
-        <Link className="layout-header-title" to="/bio/">태근 후 글쓰기</Link>
+        <Link className="layout-header-title" to="/bio/">퇴근 후 태근</Link>
         <nav className="layout-nav-container">
           <NavButton to="/bio/">Bio</NavButton>
           <NavButton to="/blog/">Blog</NavButton>
@@ -49,22 +47,15 @@ const Layout = ({ location, children }) => {
         <CSSTransition key={location.key} classNames="page" timeout={500}>
           <main className="layout-conent-container">{children}</main>
         </CSSTransition>
-        {/* <div className="loading-overlay"> */}
-        {/* <div className="spinner"></div> 로딩 스피너 애니메이션 */}
-        {/* <p>로딩중...</p> */}
-        {/* </div> */}
       </TransitionGroup>
-      {/* <div className="slack-chat">
-        <button>💬</button>
-      </div> */}
-      <a className="github" href="https://github.com/geunskoo" target="_blank">
+      <a className={`github ${showScrollButton ? "move-up" : "move-down"}`} href="https://github.com/geunskoo" target="_blank" rel="noopener noreferrer">
         <FaGithub size={25} />
       </a>
-      <div className="scroll-to-top">
-        <button onClick={scrollToTop}>
-          <span>⬆︎</span>
-        </button>
-      </div>
+        <div className={`scroll-to-top ${showScrollButton ? "show" : "hide"}`} >
+          <button  onClick={scrollToTop}>
+            <span>⬆︎</span>
+          </button>
+        </div>
       <footer>
         © Tae Geun, Kim
         {` `}
