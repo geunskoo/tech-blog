@@ -32,7 +32,7 @@ const ProjectCard = ({ project }) => {
       </div>
       <div className="project-card-wrapper">
         <div className="project-card-image-container">
-          <img className="project-card-image" src={imgSrc} alt="profile" width={80} height={80} style={{borderRadius :"0.85rem"}}/>
+          <img className="project-card-image" src={imgSrc} alt="profile" width={60} height={60} style={{borderRadius :"0.65rem"}}/>
         </div>
         <div className="project-card-content-container">
           <h4 className="project-card-title">{project.name}</h4>
