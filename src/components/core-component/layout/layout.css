@@ -34,6 +34,8 @@
     bottom: 30px;
 }
 .scroll-to-top button {
+    color: var(--color-black);
+    font-weight: var(--fontWeight-bold);
     background-color: var(--color-white);
     border: none;
     border-radius: 50%; /* 동그란 모양으로 만듭니다. */
@@ -53,10 +55,6 @@
 }
 .scroll-to-top button:hover {
     transform: scale(1.15);
-}
-.scroll-to-top button span {
-    color: var(--color-black);
-    font-weight: var(--fontWeight-bold);
 }
 .github {
     position: fixed;

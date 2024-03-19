@@ -37,7 +37,7 @@ const Layout = ({ location, children }) => {
     <div>      
       <div className="layout-wrapper">
         <header className="layout-header">
-        <Link className="layout-header-title" to="/bio/"><StaticImage style={{width: "30px", height: "30px", marginRight:"0.5rem"}} src="../../../images/bbbbb.png" alt="newtag" layout="fixed"/>퇴근 후 태근</Link>
+        <Link className="layout-header-title" to="/bio/"><StaticImage style={{width: "25px", height: "25px", marginRight:"0.5rem", marginBottom:"0.25rem"}} src="../../../images/bbbbb.png" alt="newtag" layout="fixed"/>퇴근 후 태근</Link>
           <nav className="layout-nav-container">
             <NavButton to="/bio/">Bio</NavButton>
             <NavButton to="/blog/">Blog</NavButton>
@@ -54,9 +54,7 @@ const Layout = ({ location, children }) => {
           <FaGithub size={25} />
         </a>
           <div className={`scroll-to-top ${showScrollButton ? "show" : "hide"}`} >
-            <button  onClick={scrollToTop}>
-              <span>⬆︎</span>
-            </button>
+            <button  onClick={scrollToTop}>⬆︎</button>
           </div>
       </div>
         <Footer/>
