@@ -37,7 +37,7 @@ const BookList = ({ books, year }) => {
                 <button className="prev" onClick={handlePrevClick}>❮</button>
                 <button className="next" onClick={handleNextClick}>❯</button>
             </div>
-            <hr className='shelf'/>
+            <hr className='shelf-2'/>
         </li>
     );
 };

@@ -3,13 +3,14 @@
     flex-direction: row; 
     text-align: center; 
 }
-
 .hist-card-wrapper p {
     margin: 0 0 0rem 1rem;
 }
-
 .hist-card-wrapper p::before {
     content: "\00a0\00a0\00a0\00a0"; /* 공백 4칸 삽입 */
+}
+.hist-card-date{
+    color: var(--color-deep-gray);
 }
 
 @media (max-width: 520px) {

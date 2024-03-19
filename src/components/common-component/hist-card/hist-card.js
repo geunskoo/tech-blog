@@ -5,7 +5,7 @@ const HistCard = ({startDate, endDate, content}) => {
 
   return (
       <div className="hist-card-wrapper">
-        <p>{startDate} ~ {endDate}</p>
+        <p className="hist-card-date">{startDate} ~ {endDate}</p>
         <p>{content}</p>
       </div>
   );

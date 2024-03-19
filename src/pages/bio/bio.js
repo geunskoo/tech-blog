@@ -14,8 +14,8 @@ const BioPage = () => {
       <TypingBanner/>
       <AboutMe/>
       <Career/>
-      <Project/>
       <Education/>
+      <Project/>
     </div>
   )
 }

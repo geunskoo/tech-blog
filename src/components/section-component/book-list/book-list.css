@@ -3,16 +3,10 @@
     list-style: none;
     margin: 0 0 0 0;
 }
-
 .book-list-title {
-    color: var(--color-white);
-    text-shadow: 1px 1px 2px #000, -1px -1px 2px white;
+    color: var(--color-super-light-gray);
+    text-shadow: 1px 1px 2px var(--color-deep-gray);
 }
-
-.this-year::after{
-    content: 📌
-}
-
 .book-list-container{
     position: relative;
     overflow: hidden;
@@ -22,16 +16,18 @@
     /* background-color: #F0F0F0; Book color */
     /* box-shadow: inset 0 0 10px var(--color-deep-gray);안쪽으로 들어간 그림자 효과 */
     padding: 2rem 2rem 0.2rem 2rem;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
-.shelf {
-    border: none;
+.shelf-2 {
+    position: relative;
+    z-index: -1;
+    border-top: 10px solid var(--color-light-gray);
     height: 20px;
     background: white;
     box-shadow: 0 12px 20px var(--color-deep-gray);
     border-radius: var(--radius-0);
-    margin: -0.1rem 0 0 0;
+    margin: -0.8rem 0 0 0;
 }
 
 .slider {
@@ -48,11 +44,15 @@
     border: none;
     cursor: pointer;
 }
-  
+ .prev,
+ .next {
+    font-size: 1.65rem;
+    color: var(--color-super-light-gray);
+    text-shadow: 1px 1px 2px var(--color-deep-gray);
+} 
 .prev {
     left: 0;
 }
-
 .next {
     right: 0;
 }

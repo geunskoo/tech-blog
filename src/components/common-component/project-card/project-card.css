@@ -19,8 +19,8 @@
 }
 .project-card-year-tag h2{
     height: 3.5rem;
-    color: var(--color-white);
-    text-shadow: 1px 1px 2px var(--color-deep-gray), -1px -1px 2px white;
+    color: var(--color-super-light-gray);
+    text-shadow: 1px 1px 2px var(--color-deep-gray);
     background-color: var(--color-white);
     margin: 0 0 0 0;
     padding: 0.5rem 1rem 1rem 1rem;

@@ -1,4 +1,3 @@
-// BookModal.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./book-modal.css";
@@ -15,12 +14,12 @@ const BookModal = ({ isOpen, onClose, book }) => {
   }
 
   return ReactDOM.createPortal(
-    <div className="book-modal-overlay" onClick={onClose}>
+    <div className="book-modal-overlay">
       <div className="book-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="book-modal-close" onClick={onClose}>x</button>
+        <button className="book-modal-close" onClick={onClose}>X</button>
         <h2 className='book-modal-title'>{title}</h2>
         <div className='book-modal-content'>
-          <p>독서 일시 : {date}</p>
+          <p>독서일 : {date}</p>
           <p>추천도 : {'⭐️'.repeat(Number(score))}</p>
         </div>
         <div className='move-button-container'>

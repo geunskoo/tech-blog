@@ -11,6 +11,7 @@
   --fontWeight-black: 900;
 
   --fontSize-root: 16px;
+  --fontSize-0-0: 0.8rem;
   --fontSize-0: 0.85rem;
   --fontSize-1: 1rem;
   --fontSize-2: 1.25rem;
@@ -59,7 +60,9 @@
 
   --color-black: #0F0F0F;
   --color-white: #FFFF;
+  --color-super-light-gray: #f6f6f6;
   --color-light-gray: #f2f2f2;
+  --color-mid-light-gray: #e8e8e8;
   --color-gray: #ccc;
   --color-deep-gray: #808080;
 
