@@ -33,7 +33,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
         </section>}
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
-        <Utterances/>
+        <Utterances repo={"geunskoo/tech-blog"}/>
         <footer>
         </footer>
       </article>

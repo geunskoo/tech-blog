@@ -1,37 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
-class Utterances extends React.Component {
-  constructor(props) {
-    super(props)
+const Utterances = ({ repo }) => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    const anchor = document.getElementById('utterances-comments');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', repo);
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
 
-    this.commentsEl = React.createRef()
-    this.state = { status: 'pending' }
-  }
+    anchor.appendChild(script);
 
-  componentDidMount() {
-    const scriptEl = document.createElement('script')
-    scriptEl.onload = () => this.setState({ status: 'success' })
-    scriptEl.onerror = () => this.setState({ status: 'failed' })
-    scriptEl.async = true
-    scriptEl.src = 'https://utteranc.es/client.js'
-    scriptEl.setAttribute('repo', 'geunskoo/tech-blog')
-    scriptEl.setAttribute('issue-term', 'title')
-    scriptEl.setAttribute('theme', 'github-light')
-    scriptEl.setAttribute('crossorigin', 'anonymous')
-    this.commentsEl.current.appendChild(scriptEl)
-  }
+    return () => {
+      anchor.innerHTML = '';
+    };
+  }, [repo]); // repo가 변경될 때마다 useEffect 내부 로직을 다시 실행
 
-  render() {
-    const { status } = this.state
+  return <div id="utterances-comments" />;
+};
 
-    return (
-      <div className="comments-wrapper">
-        {status === 'failed' && <div>Error. Please try again.</div>}
-        {status === 'pending' && <div>Loading script...</div>}
-        <div ref={this.commentsEl} />
-      </div>
-    )
-  }
-}
-
-export default Utterances
+export default Utterances;
