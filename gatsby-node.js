@@ -31,6 +31,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           fields {
             slug
           }
+          frontmatter {
+            type
+          }
         }
       }
     }
@@ -44,10 +47,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  let posts = result.data.allMarkdownRemark.nodes
 
 
   if (posts.length > 0) {
+    posts = posts.filter((post) => post.frontmatter.type === 'blog');
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id

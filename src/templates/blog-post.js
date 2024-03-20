@@ -7,6 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/core-component/seo"
 import Utterances from "../components/core-component/Utterances"
+import LightPostCard from "../components/common-component/light-post-card/light-post-card";
 
 const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
@@ -40,25 +41,19 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
         <ul
           style={{
             display: `flex`,
+            width: `100%`,
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
           }}
         >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
+          <li style={{width: "45%", marginLeft:"0rem"}}>
+            {previous && <span style={{display: "flex"}}>❮ 이전 글</span>}
+            {previous && <LightPostCard post={previous}/>}
           </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
+          <li style={{width: "45%", marginLeft:"0rem"}}>
+            {next && <span style={{display: "flex", flexDirection:"row-reverse"}}>다음 글 ❯</span>}
+            {next && <LightPostCard post={next}/>}
           </li>
         </ul>
       </nav>
@@ -105,19 +100,37 @@ export const pageQuery = graphql`
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
+      excerpt(pruneLength: 160)
       fields {
         slug
       }
       frontmatter {
         title
+        date(formatString: "YYYY, MM/DD")
+        description
+        type
+        thumbnail{
+          childImageSharp{
+            gatsbyImageData
+          }
+        }
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
+      excerpt(pruneLength: 160)
       fields {
         slug
       }
       frontmatter {
         title
+        date(formatString: "YYYY, MM/DD")
+        description
+        type
+        thumbnail{
+          childImageSharp{
+            gatsbyImageData
+          }
+        }
       }
     }
   }
