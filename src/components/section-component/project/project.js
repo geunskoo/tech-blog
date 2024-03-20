@@ -11,7 +11,7 @@ const Project = () => {
   const projects = [
     {
       imageName: "bbbbb",
-      name: "퇴근 후 태근 블로그",
+      name: "퇴근 후 태근, 블로그",
       description: "Gatsby 기반 기술블로그 개발",
       startDate: "2024.01.01",
       endDate: "",

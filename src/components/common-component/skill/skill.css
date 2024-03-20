@@ -8,3 +8,11 @@
     padding: 0 0.5rem 0 0.5rem;
     margin: 0 0.25rem 0.25rem 0;
 }
+
+
+@media (max-width: 520px) {
+    .skill-wrapper{
+        font-size: 0.65rem;
+    }
+    
+}
