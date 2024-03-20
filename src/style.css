@@ -132,7 +132,6 @@ h4{
   margin-left: 1rem;
 }
 
-
 h2,
 h3,
 h4,
@@ -240,7 +239,6 @@ hr {
 
 code{
   color: var(--color-green) !important;
-  font-size: var(--fontSize-2) !important;
   font-family: var(--fontFamily-jua) !important;
   background: none !important;
   border-radius: var(--radius-1) !important;
