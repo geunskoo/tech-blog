@@ -47,25 +47,43 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  let posts = result.data.allMarkdownRemark.nodes
+  const posts = result.data.allMarkdownRemark.nodes;
+  const blogs = posts.filter((post) => post.frontmatter.type === 'blog');
+  const books = posts.filter((post) => post.frontmatter.type === 'book');
 
-
-  if (posts.length > 0) {
-    posts = posts.filter((post) => post.frontmatter.type === 'blog');
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
-
-      createPage({
-        path: post.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-        },
-      })
-    })
+  if (blogs.length > 0) {
+    blogs.forEach((blog, index) => {
+        const previousPostId = index === 0 ? null : blogs[index - 1].id
+        const nextPostId = index === blogs.length - 1 ? null : blogs[index + 1]?.id
+  
+        createPage({
+          path: blog.fields.slug,
+          component: blogPost,
+          context: {
+            id: blog.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      }
+    )
+  }
+  
+  if (books.length > 0) {
+    books.forEach((book, index) => {
+      const nextPostId = null;
+      const previousPostId = null;
+        createPage({
+          path: book.fields.slug,
+          component: blogPost,
+          context: {
+            id: book.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      }
+    )
   }
 
   /* bio 페이지 */
