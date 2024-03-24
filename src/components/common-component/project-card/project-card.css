@@ -4,8 +4,8 @@
     flex-direction: row;
     border: var(--border-light);
     border-radius: var(--radius-1);
-    transition: var(--transition-ease);
     box-shadow: 0 4px 8px var(--color-gray);
+    transition: var(--transition-ease);
     backface-visibility: hidden;
 
     padding: 1rem;
@@ -76,8 +76,9 @@
     left: 0;
     flex-direction: column;
     
-    overflow: scroll;
+    overflow: auto;
     transform: rotateY(180deg);
+    background-color: var(--color-super-light-gray);
 }
 .project-card-back-title{
     margin: 0 0 1rem 0;   
@@ -89,8 +90,8 @@
     margin: 0.25rem 0 0 0.5rem;
 }
 .project-card-back-active{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: var(--fontSize-0-0);
+    font-family: var(--fontFamily-arial);
+    font-size: var(--fontSize-0);
     margin: 0 0 0 0;
 }
 .card-flipper.flip{

@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import "./layout.css";
 import Footer from '../footer/footer';
 import { StaticImage } from 'gatsby-plugin-image';
+import BlockLog from '../../common-component/block-log/block-log';
 
 const Layout = ({ location, children }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -37,7 +38,8 @@ const Layout = ({ location, children }) => {
     <div>      
       <div className="layout-wrapper">
         <header className="layout-header">
-        <Link className="layout-header-title" to="/bio/"><StaticImage style={{width: "25px", height: "25px", marginRight:"0.5rem", marginBottom:"0.25rem"}} src="../../../images/bbbbb.png" alt="newtag" layout="fixed"/>퇴근 후 태근</Link>
+        <Link className="layout-header-title" to="/bio/">
+          <div style={{display:"flex"}}><span style={{fontStyle:"italic", marginTop:"0.25rem"}}>블</span><span className='point-title'>럭</span><span style={{fontStyle:"italic", marginTop:"0.25rem"}}>로그</span></div></Link>
           <nav className="layout-nav-container">
             <NavButton to="/bio/">Bio</NavButton>
             <NavButton to="/blog/">Blog</NavButton>
