@@ -63,6 +63,7 @@
     width: 80%;
 }
 .card-flipper {
+    cursor: pointer;
     transition: transform 0.8s;
     transform-style: preserve-3d;
     position: relative;
