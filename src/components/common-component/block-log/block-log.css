@@ -1,0 +1,28 @@
+.block{
+  min-width: 40px;
+  height: 12px;
+  font-size: 0.35rem;
+  color: #03ff68;
+  background-color: black;
+  border:  0.5px solid var(--color-deep-gray);
+  border-radius: var(--radius-1);
+  box-shadow: 0 4px 8px var(--color-gray);
+
+  animation: diagonalSlide 3s infinite; /* 5초에서 3초로 변경 */
+  position: absolute; /* 추가: 애니메이션 효과를 개선하기 위해 절대 위치 사용 */
+}
+
+@keyframes diagonalSlide {
+  0% {
+    transform: translateY(3vh) translateX(0vw);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(1.5vh) translateX(0vw); /* 더 섬세한 움직임 */
+    opacity: 0.8;
+  }
+  100%{
+    transform: translateY(0vh) translateX(0vw) scale(1.25); /* 더 섬세한 움직임 */
+    opacity: 1;
+  }
+}
