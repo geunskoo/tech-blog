@@ -31,7 +31,8 @@
   position: relative;
   background-color: transparent;
   color: var(--color-white);
-  left: 94%;
+  font-size: var(--fontSize-2);
+  left: 95%;
   width: 1.5rem;
   height: 1.5rem;
 }

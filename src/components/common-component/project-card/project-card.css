@@ -1,16 +1,17 @@
-.project-card-wrapper {
-    width: 80%;
+.project-card-back,
+.project-card-front {
     display: flex;
     flex-direction: row;
     border: var(--border-light);
     border-radius: var(--radius-1);
     transition: var(--transition-ease);
     box-shadow: 0 4px 8px var(--color-gray);
+    backface-visibility: hidden;
 
     padding: 1rem;
     margin: 0 0 1.5rem 0;
 }
-.project-card-wrapper:hover {
+.project-card-front:hover {
     transform: var(--transform-scale);
 }
 .project-card-year-tag{
@@ -58,6 +59,42 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+.card-flip-container {
+    width: 80%;
+}
+.card-flipper {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.project-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    
+    overflow: scroll;
+    transform: rotateY(180deg);
+}
+.project-card-back-title{
+    margin: 0 0 1rem 0;   
+}
+.project-card-back-content{
+    margin: 0 0 0 0;
+}
+.project-card-back-active-container{
+    margin: 0.25rem 0 0 0.5rem;
+}
+.project-card-back-active{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--fontSize-0-0);
+    margin: 0 0 0 0;
+}
+.card-flipper.flip{
+    transform: rotateY(180deg);
+}
 
 @media (max-width: 520px) {
 
@@ -80,7 +117,7 @@
     .project-card-year-tag {
         width: 25%;
     }
-    .project-card-wrapper {
+    .project-card-front {
         width: 75%;
     }
     .vr{

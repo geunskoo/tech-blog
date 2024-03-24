@@ -17,13 +17,12 @@ const BookCard = ({ book }) => {
   };
 
   const closeModal = () => {
-    console.log("닫자");
     setIsModalOpen(false);
     setIsClicked(false);
   };
 
   return (
-    <div className="book-card-wrapper" onClick={openModal}>
+    <div className="book-card-wrapper" onClick={openModal} onKeyDown={(e) => e.key === 'Enter' && openModal()} role="button" tabIndex="0" aria-label="Open book modal">
         <article className={`book-card-article ${isClicked ? 'clicked' : ''}`} itemScope itemType="http://schema.org/Article" >                      
             <GatsbyImage image={thumbnail} alt="thumbnail" style={{ position:"relative", zIndex: "10", width: "130px", height: "195px", border: "solid 0.5px black", boxShadow: "0 4px 8px var(--color-deep-gray)"}}/>
         </article>

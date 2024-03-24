@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-plugin-meta-redirect`,

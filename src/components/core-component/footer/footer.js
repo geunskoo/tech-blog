@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <div className="footer-wrapper">
       <footer className='footer'>
-        © Tae Geun, Kim
-        {` `}
+        Built with Gatsby,<br/>© Copyright 2024 Tae Geun, Kim
       </footer>
     </div>
   )

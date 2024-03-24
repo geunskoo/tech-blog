@@ -5,7 +5,7 @@ import NavButton from "../../common-component/nav-button/nav-button";
 import { FaGithub } from "react-icons/fa";
 import "./layout.css";
 import Footer from '../footer/footer';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Layout = ({ location, children }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -42,7 +42,8 @@ const Layout = ({ location, children }) => {
             <NavButton to="/bio/">Bio</NavButton>
             <NavButton to="/blog/">Blog</NavButton>
             <NavButton to="/book/">Book</NavButton>
-            <NavButton to="/byeond/">Byeond</NavButton>
+            {/* <NavButton to="/byeond/">Byeond</NavButton> */}
+            <NavButton to="">Byeond</NavButton>
           </nav>
         </header>
         <TransitionGroup>
@@ -50,11 +51,11 @@ const Layout = ({ location, children }) => {
             <main className="layout-conent-container">{children}</main>
           </CSSTransition>
         </TransitionGroup>
-        <a className={`github ${showScrollButton ? "move-up" : "move-down"}`} href="https://github.com/geunskoo" target="_blank" rel="noopener noreferrer">
+        <a className={`github ${showScrollButton ? "move-up" : "move-down"}`} href="https://github.com/geunskoo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <FaGithub size={25} />
         </a>
           <div className={`scroll-to-top ${showScrollButton ? "show" : "hide"}`} >
-            <button  onClick={scrollToTop}>⬆︎</button>
+            <button onClick={scrollToTop}>⬆︎</button>
           </div>
       </div>
         <Footer/>

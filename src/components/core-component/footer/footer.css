@@ -8,3 +8,7 @@
     border-top: 2px solid var(--color-mid-light-gray);
     margin: 4rem 0 0 0;
 }
+.footer{
+    text-align: center;
+    font-family: var(--fontFamily-dohyeon);
+}

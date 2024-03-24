@@ -19,22 +19,30 @@
 }
 
 .career-card-content-container{
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1.5rem;
 }
 
 .career-card-title {
     margin: 0 0 0.5rem 0;
 }
-
+.career-card-job-duty{
+    font-family: var(--fontFamily-dohyeon);
+    font-size: var(--fontSize-1);
+    margin: 0 0 0 0;
+}
 .career-card-date {
     color: var(--color-deep-gray);
-    font-size: var(--fontSize-1);
-
-    margin: 0 0 1rem 0.5rem;
+    font-size: var(--fontSize-0);
+    margin: 0 0 1rem 0;
 }
-
 .career-card-content p {
+    color: var(--color-light-black);
     margin-bottom: 1rem;
+}
+.career-card-skill{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 520px) {

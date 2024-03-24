@@ -49,16 +49,16 @@
   /* 포인트 컬러 변수 */
   --color-transparent: transparent;
   --color-green: #289e8e;
-  --color-light-green: #f3fefb;
+  --color-light-green: #f8fdfd;
   --color-dark-green: #25897b;
   --color-deep-green: #254653;
   --color-blue: #074d89;
 
-  
   --color-primary: #2e353f;
   --color-primary-light: #3e4756;
 
   --color-black: #0F0F0F;
+  --color-light-black: #5a5a5a;
   --color-white: #FFFF;
   --color-super-light-gray: #f6f6f6;
   --color-light-gray: #f2f2f2;

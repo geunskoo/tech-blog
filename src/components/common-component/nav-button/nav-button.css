@@ -2,20 +2,15 @@
     margin-left: 0.8rem;
     transition: transform 0.3s ease-in-out;
 }
-
 .nav-button-wrapper:hover {
     transform: translateY(-5px);
     text-decoration: underline 0.125rem;
 }
-
 .nav-button {   
-
     font-size: 1.25rem;
     text-decoration: none;
 }
-
 .nav-button.active {
-
     text-decoration: none;
     color: var(--color-blue);
 }

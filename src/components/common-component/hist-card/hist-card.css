@@ -10,6 +10,7 @@
     content: "\00a0\00a0\00a0\00a0"; /* 공백 4칸 삽입 */
 }
 .hist-card-date{
+    font-size: var(--fontSize-1);
     color: var(--color-deep-gray);
 }
 
