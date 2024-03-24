@@ -14,7 +14,7 @@ const Career = () => {
       name: "신세계아이앤씨",
       jobDuty: "Back-End & Front-End Developer",
       startDate: "2023.07.18",
-      endDate: "현재",
+      endDate: "2024.03.31 (9M)",
       skills:["Java", "Spring", "TypeScript", "Angular", "Oracle", "IBSheet8"],
     },
   ]
