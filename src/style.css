@@ -5,6 +5,7 @@
   /* 폰트 변수 */
   --fontFamily-jua: 'Jua', sans-serif;
   --fontFamily-dohyeon: "Do Hyeon", sans-serif;
+  --fontFamily-courier: 'Courier New', Courier, monospace;
 
   --fontWeight-normal: 400;
   --fontWeight-bold: 600;
