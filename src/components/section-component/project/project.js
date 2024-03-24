@@ -93,7 +93,7 @@ const Project = () => {
   return (
     <div className="project-wrapper">
       <SectionCardTitle name={sectionCardTitle}/>
-      <p style={{fontFamily:"var(--fontFamily-courier)", fontSize:"var(--fontSize-0-0)", display: "flex", flexDirection: "row-reverse"}}>ℹ.카드를 클릭해보세요!</p>
+      <p style={{fontFamily:"var(--fontFamily-arial)", fontSize:"var(--fontSize-0-0)", display: "flex", flexDirection: "row-reverse"}}>ℹ.카드를 클릭해보세요!</p>
       <div className="project-list">
         {projects.map((project, index) => ( <ProjectCard key={index} project={project}/> ))}
       </div>
