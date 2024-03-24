@@ -9,16 +9,14 @@ const ProjectCard = ({ project }) => {
   let imgSrc;
   if (project.imageName === "blocktoon") {
     imgSrc = require("../../../images/blocktoon.png").default;
-  }else if (project.imageName === "blocktoon"){
-    imgSrc = require("../../../images/blocktoon.png").default;
   }else if (project.imageName === "starbucks"){
     imgSrc = require("../../../images/starbucks.png").default;
   }else if (project.imageName === "keeper"){
     imgSrc = require("../../../images/keeper.png").default;
   }else if (project.imageName === "warehouse"){
     imgSrc = require("../../../images/warehouse.png").default;
-  }else if (project.imageName === "bbbbb"){
-    imgSrc = require("../../../images/bbbbb.png").default;
+  }else if (project.imageName === "log"){
+    imgSrc = require("../../../images/log.png").default;
   }
 
   let yearTag = ''

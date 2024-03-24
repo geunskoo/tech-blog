@@ -10,10 +10,10 @@ const Project = () => {
 
   const projects = [
     {
-      imageName: "bbbbb",
-      name: "퇴근 후 태근, 블로그",
+      imageName: "log",
+      name: "기술블로그",
       description: "Gatsby 기반 기술블로그 개발",
-      participants: "개인프로젝트",
+      participants: "개인",
       startDate: "2024.01.01",
       endDate: "ing",
       skills:["Js", "Gastby", "React", "GraphQL", "GA4"],

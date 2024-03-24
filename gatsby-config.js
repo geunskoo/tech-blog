@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `퇴근 후 태근`,
+    title: `블럭로그`,
     author: {
       name: `김태근`,
-      summary: `퇴근 후 틈틈히 작성해보자!`,
+      summary: `나의 개발 일상 로그블럭`,
     },
     description: `안녕하세요.`,
     siteUrl: `https://geunskoo.com`,
