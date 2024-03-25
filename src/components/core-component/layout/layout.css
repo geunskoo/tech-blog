@@ -51,7 +51,7 @@
 .scroll-to-top button {
     color: var(--color-black);
     font-weight: var(--fontWeight-bold);
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     border: none;
     border-radius: 50%; /* 동그란 모양으로 만듭니다. */
     width: 50px;

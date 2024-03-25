@@ -6,7 +6,6 @@ import { FaGithub } from "react-icons/fa";
 import "./layout.css";
 import Footer from '../footer/footer';
 import { StaticImage } from 'gatsby-plugin-image';
-import BlockLog from '../../common-component/block-log/block-log';
 
 const Layout = ({ location, children }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -57,7 +56,7 @@ const Layout = ({ location, children }) => {
           <FaGithub size={25} />
         </a>
           <div className={`scroll-to-top ${showScrollButton ? "show" : "hide"}`} >
-            <button onClick={scrollToTop}>⬆︎</button>
+            <button style={{display:"flex", justifyContent:"center", alignItems:"center"}} onClick={scrollToTop}><StaticImage style={{width:"25px", height:"25px", position:"relative"}} src= "../../../images/arrow.png" alt="newtag" layout="fixed"/></button>
           </div>
       </div>
         <Footer/>
