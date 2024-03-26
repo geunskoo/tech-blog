@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   return ReactDOM.createPortal(
     <div className='modal-outerlayer' onClick={onClose} onKeyDown={handleKeyDown} role="button" tabIndex="0" aria-label="Close modal">
-      <div className='modal-wrapper' onClick={(e) => e.stopPropagation()}  >
+      <div className='modal-wrapper' onClick={(e) => e.stopPropagation()}>
         {children}
         <button onClick={onClose} style={{ marginTop: '20px' }}>Close</button>
       </div>

@@ -4,6 +4,20 @@
     padding: 10px 5%; /* 좌우 여백을 전체 너비의 5%로 설정 */
 }
 .layout-header {
+    max-width: calc(1000px - 10%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+
+    background-color: white;
+
+    border: var(--border-light);
+    border-radius: var(--radius-1);
+    box-shadow: 0 4px 8px var(--color-gray);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +56,35 @@
 .layout-conent-container{
     display: flex;
     justify-content: center;
+    margin-top: 10rem;
+}
+.lock {
+    position: fixed;
+    right: 30px;
+    bottom: 150px;
+}
+.lock button {
+    color: var(--color-black);
+    font-weight: var(--fontWeight-bold);
+    background-color: var(--color-black);
+    border: none;
+    border-radius: 50%; /* 동그란 모양으로 만듭니다. */
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, opacity 0.1s ease;
+}
+.lock.move-up {
+    animation: moveLockUp 1.2s forwards;
+}
+.lock.move-down {
+    animation: moveLockDown 0.8s forwards;
+}
+.lock button:hover {
+    transform: scale(1.15);
 }
 .scroll-to-top {
     position: fixed;
@@ -162,6 +205,22 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+@keyframes moveLockDown {
+    from {
+        bottom: 150px;
+    }
+    to {
+        bottom: 90px;
+    }
+}
+@keyframes moveLockUp {
+    from {
+        bottom: 90px;
+    }
+    to {
+        bottom: 150px;
     }
 }
 @keyframes moveDown {
