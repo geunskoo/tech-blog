@@ -21,9 +21,19 @@
     cursor: auto;
     
     background-color: var(--color-white);
-    padding: 20px;
+    padding: 2.5rem;
     border-radius: var(--radius-1);
     display: inline-block;
-    
- 
+    overflow: auto;
+}
+
+.modal-close{
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+
+    border: 0px solid;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
 }

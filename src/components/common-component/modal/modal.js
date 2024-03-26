@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div className='modal-outerlayer' onClick={onClose} onKeyDown={handleKeyDown} role="button" tabIndex="0" aria-label="Close modal">
       <div className='modal-wrapper' onClick={(e) => e.stopPropagation()}>
         {children}
-        <button onClick={onClose} style={{ marginTop: '20px' }}>Close</button>
+        <button className='modal-close' onClick={onClose}>x</button>
       </div>
     </div>,
     document.body

@@ -80,8 +80,8 @@ const Layout = ({ location, children }) => {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <h2>💬 소통해요! </h2>
-        <p>편안하게 이야기하고 소통해봐요~</p>
+        <h2 style={{margin:"1rem 0 1rem 0"}}>💬 소통해요! </h2>
+        <p style={{margin: "0 0 2rem 1rem"}}>편안하게 이야기하고 소통해보아요~</p>
         <Utterances repo={"geunskoo/tech-blog"}/>
       </Modal>
 
