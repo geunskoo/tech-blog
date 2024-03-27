@@ -428,39 +428,6 @@ code[class*="language-"], pre[class*="language-"] {
   transition: opacity 500ms ease-out, transform 500ms ease-out; /* 페이드 아웃 및 이동 트랜지션 */
 }
 
-
-/* loading-overlay 스타일링 */
-.loading-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-/* spinner 스타일링 */
-.spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #09f;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-/* 스피너 회전 애니메이션 */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 .button-module--button--faf2a {
     position: relative;
     border-radius: 50%;

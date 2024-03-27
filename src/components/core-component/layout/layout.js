@@ -10,6 +10,7 @@ import Modal from '../../common-component/modal/modal';
 import Utterances from '../Utterances';
 
 const Layout = ({ location, children }) => {
+
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,7 +51,7 @@ const Layout = ({ location, children }) => {
   }
 
   return (
-    <div>      
+    <div>
       <div className="layout-wrapper">
         <header className="layout-header">
         <Link className="layout-header-title" to="/bio/">
@@ -68,6 +69,7 @@ const Layout = ({ location, children }) => {
             <main className="layout-conent-container">{children}</main>
           </CSSTransition>
         </TransitionGroup>
+        
         <div className={`lock ${showScrollButton ? "move-up" : "move-down"}`} >
           <button style={{display:"flex", justifyContent:"center", alignItems:"center"}} onClick={handleOpenModal}><StaticImage style={{width:"22.5px", height:"22.5px", position:"relative"}} src= "../../../images/chat.png" alt="newtag" layout="fixed"/></button>
         </div>
@@ -77,14 +79,12 @@ const Layout = ({ location, children }) => {
           <div className={`scroll-to-top ${showScrollButton ? "show" : "hide"}`} >
             <button style={{display:"flex", justifyContent:"center", alignItems:"center"}} onClick={scrollToTop}><StaticImage style={{width:"25px", height:"25px", position:"relative"}} src= "../../../images/arrow.png" alt="newtag" layout="fixed"/></button>
           </div>
-      </div>
-
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <h2 style={{margin:"1rem 0 1rem 0"}}>💬 소통해요! </h2>
-        <p style={{margin: "0 0 2rem 1rem"}}>편안하게 이야기하고 소통해보아요~</p>
-        <Utterances repo={"geunskoo/tech-blog"}/>
-      </Modal>
-
+        </div>
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+          <h2 style={{margin:"1rem 0 1rem 0"}}>💬 소통해요! </h2>
+          <p style={{margin: "0 0 2rem 1rem"}}>편안하게 이야기하고 소통해보아요~</p>
+          <Utterances repo="geunskoo/tech-blog" />
+        </Modal>
         <Footer/>
     </div>
   )
