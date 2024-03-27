@@ -6,10 +6,13 @@ import { FaGithub } from "react-icons/fa";
 import "./layout.css";
 import Footer from '../footer/footer';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useLocation } from "@reach/router";
 import Modal from '../../common-component/modal/modal';
 import Utterances from '../Utterances';
 
 const Layout = ({ location, children }) => {
+
+  const [hideHeader, setHideHeader] = useState(false);
 
   const [showScrollButton, setShowScrollButton] = useState(false);
 
@@ -27,12 +30,19 @@ const Layout = ({ location, children }) => {
     // navigate('/', { replace: true });
   };
 
+  const curLocation = useLocation();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setShowScrollButton(true);
+        const markdownPage = curLocation.pathname.split('-')[1];
+        console.log(markdownPage);
+        if (markdownPage){
+          setHideHeader(true);
+        }
       } else {
         setShowScrollButton(false);
+        setHideHeader(false);
       }
     };
 
@@ -41,7 +51,7 @@ const Layout = ({ location, children }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [curLocation]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -53,7 +63,7 @@ const Layout = ({ location, children }) => {
   return (
     <div>
       <div className="layout-wrapper">
-        <header className="layout-header">
+        <header className={`layout-header ${hideHeader ? 'header-hidden' : ''}`}>
         <Link className="layout-header-title" to="/bio/">
           <div style={{display:"flex"}}><span style={{fontStyle:"italic", marginTop:"0.25rem"}}>블</span><span className='point-title'>럭</span><span style={{fontStyle:"italic", marginTop:"0.25rem"}}>로그</span></div></Link>
           <nav className="layout-nav-container">

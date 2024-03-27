@@ -24,7 +24,13 @@
     padding: 1rem;
     margin-bottom: var(--spacing-12);
 
+    transition: top 0.8s;
 }
+
+.header-hidden {
+    top: -20%; 
+}
+  
 .layout-header-title {
     display: flex;
     justify-content: center;
