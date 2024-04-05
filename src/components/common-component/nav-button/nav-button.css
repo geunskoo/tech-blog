@@ -16,8 +16,5 @@
 }
 .nav-button.active {
     text-decoration: none;
-    border-radius: 0.5rem;
-    padding: 0.45rem;
-    font-style: normal;
-    box-shadow: 0 4px 8px var(--color-gray);
+    color: var(--color-blue);
 }

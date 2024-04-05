@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import NavButton from "../../common-component/nav-button/nav-button";
 import { FaGithub } from "react-icons/fa";
@@ -13,36 +13,41 @@ import Utterances from '../Utterances';
 const Layout = ({ location, children }) => {
 
   const [hideHeader, setHideHeader] = useState(false);
-
   const [showScrollButton, setShowScrollButton] = useState(false);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+
   const handleOpenModal = () => {
-    setIsModalOpen(true);
-    // 선택적: URL을 업데이트하여 모달 상태를 반영하고 싶다면 여기서 navigate를 사용
-    // navigate('/?modal=true', { replace: true });
+    if (location.pathname !== '/bio/'){
+      navigate('/bio/');
+      setTimeout(()=>setIsModalOpen(true), 800);
+    } else {
+      setIsModalOpen(true);
+    }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    // 모달 상태 URL에서 제거
-    // navigate('/', { replace: true });
   };
 
   const curLocation = useLocation();
   useEffect(() => {
+    
+    const queryParams = new URLSearchParams(location.search);
+    const modalState = queryParams.get("modal");
+    setIsModalOpen(modalState === "true");
+
     const handleScroll = () => {
+      if (window.scrollY > 150){
+        setHideHeader(true);
+      } else {
+        setHideHeader(false);
+      }
+
       if (window.scrollY > 0) {
         setShowScrollButton(true);
-        const markdownPage = curLocation.pathname.split('-')[1];
-        console.log(markdownPage);
-        if (markdownPage){
-          setHideHeader(true);
-        }
       } else {
         setShowScrollButton(false);
-        setHideHeader(false);
       }
     };
 
@@ -65,7 +70,8 @@ const Layout = ({ location, children }) => {
       <div className="layout-wrapper">
         <header className={`layout-header ${hideHeader ? 'header-hidden' : ''}`}>
         <Link className="layout-header-title" to="/bio/">
-          <div style={{display:"flex"}}><span style={{fontStyle:"italic", marginTop:"0.25rem"}}>블</span><span className='point-title'>럭</span><span style={{fontStyle:"italic", marginTop:"0.25rem"}}>로그</span></div></Link>
+          <span style={{fontStyle: "italic"}}>태근 후 태근</span>
+          </Link>
           <nav className="layout-nav-container">
             <NavButton to="/bio/">Bio</NavButton>
             <NavButton to="/blog/">Blog</NavButton>

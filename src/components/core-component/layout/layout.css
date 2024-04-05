@@ -12,12 +12,6 @@
     margin: auto;
     z-index: 1000;
 
-    background-color: white;
-
-    border: var(--border-light);
-    border-radius: var(--radius-1);
-    box-shadow: 0 4px 8px var(--color-gray);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,20 +36,20 @@
 
     text-decoration: none;
 }
-.point-title{
+/* .point-title{
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px var(--color-gray);
     transform: rotate(15deg);
     padding: 0 0.2rem 0 0;
     margin: 0 0 1rem 0.25rem;
     transition: transform 0.1s ease;
-}
-.layout-header-title:hover .point-title{
+} */
+/* .layout-header-title:hover .point-title{
     border: none;
     box-shadow: none;
     font-style: italic;
     transform: rotate(0deg);
-}
+} */
 .layout-nav-container {
     display: flex;
 }
