@@ -67,7 +67,7 @@
   --color-gray: #ccc;
   --color-deep-gray: #808080;
 
-  --border-light: 0.5px solid #ddd;
+  --border-light: 0px solid #ddd;
 
   --transition-ease: transform 0.5s ease;
   --transform-scale: scale(1.1);

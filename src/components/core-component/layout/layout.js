@@ -38,7 +38,7 @@ const Layout = ({ location, children }) => {
     setIsModalOpen(modalState === "true");
 
     const handleScroll = () => {
-      if (window.scrollY > 150){
+      if (window.scrollY > 100){
         setHideHeader(true);
       } else {
         setHideHeader(false);
