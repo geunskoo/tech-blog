@@ -6,8 +6,12 @@
 .article-post-category {
     display: inline-block;
     font-size: var(--fontSize-0);
-    border: var(--border-light); 
+    
+    width: fit-content;
+    border: var(--border-light);
     border-radius: var(--radius-1);
+    box-shadow: 0 1px 3px var(--color-gray);
+    font-size: var(--fontSize-0);
 
     padding: 0.1rem 0.4rem;
     margin-right: 0.2rem;   

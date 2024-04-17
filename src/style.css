@@ -15,6 +15,7 @@
   --fontSize-0-0: 0.8rem;
   --fontSize-0: 0.85rem;
   --fontSize-1: 1rem;
+  --fontSize-1-0: 1.1rem;
   --fontSize-2: 1.25rem;
   --fontSize-3: 1.5rem;
   --fontSize-4: 1.65rem;
@@ -68,6 +69,7 @@
   --color-deep-gray: #808080;
 
   --border-light: 0px solid #ddd;
+  --border: 0.5px solid #ddd;
 
   --transition-ease: transform 0.5s ease;
   --transform-scale: scale(1.1);
@@ -106,7 +108,7 @@ html {
 }
 
 body {
-  font-family: var(--fontFamily-jua);
+  font-family: var(--fontFamily-arial);
   font-size: var(--fontSize-1);
   color: var(--color-primary);
 }
@@ -233,23 +235,23 @@ a:focus {
 
 hr {
   border: none;
-  background:var(--color-deep-green);
-  height: calc(2 * var(--spacing-px)); 
+  background:var(--color-light-gray);
+  height: calc(1.5 * var(--spacing-px)); 
   margin: -0.5rem 0rem 1.5rem 0rem;
 }
 
 code{
   color: var(--color-green) !important;
-  font-family: var(--fontFamily-jua) !important;
+  font-size: var(--fontSize-1-0) !important;
+  font-family: var(--fontFamily-dohyeon) !important;
   background: none !important;
   border-radius: var(--radius-1) !important;
 }
 
 blockquote {
-  color: var(--color-dark-green);
   background: var(--color-light-green);
-  border: calc(2 * var(--spacing-px)) dashed var(--color-green);
-  border-radius: var(--radius-0);
+  border: calc(1.5 * var(--spacing-px)) dashed var(--color-green);
+  /* border-radius: var(--radius-0); */
   padding: var(--spacing-3) var(--spacing-3) var(--spacing-3) var(--spacing-3);
   margin: 1rem 0 1rem 0rem;
 }
@@ -270,10 +272,11 @@ table {
   padding: 1rem;
   border-collapse: collapse;
   border-spacing: 0.25rem;
+  font-size: var(--fontSize-0);
+
 }
 
 th {
-  font-size: var(--fontSize-2);
   color: var(--color-white);
   background: var(--color-deep-green);
   border: var(--spacing-px) solid var(--color-gray);
