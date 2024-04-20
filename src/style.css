@@ -284,7 +284,8 @@ th {
 }
 
 td {
-  background: var(--color-light-green);
+  /* background: var(--color-light-green); */
+  
   border: var(--spacing-px) solid var(--color-gray);
   padding: 0.5rem;
 }
@@ -311,7 +312,14 @@ td {
   text-decoration: none;
   color: inherit
 }
+.href-md{
+  display: inline-block;
+  color: #6bacce;
+}
 
+.gatsby-resp-image-wrapper{
+  max-width: 60% !important;
+}
 /******************************************************/
 /* ETC */
 /******************************************************/
