@@ -1,5 +1,5 @@
 ---
-title: gatsby 블로그 조회수 기능 만들기
+title: Gatsby 블로그 조회수 기능 만들기
 date: "2024-02-15T18:00:00"
 type: blog
 description: DB가 없는데 어떻게 조회수를 관리 할까?

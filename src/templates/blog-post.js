@@ -19,9 +19,9 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
           <header className="blog-head-line">
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <div style={{display: "flex", alignItems:"center", justifyContent: "flex-end"}}>
-              <div style={{marginRight: "2rem", color:"var(--color-deep-gray)"}}>{post.frontmatter.date}</div>
-              <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view"/>
-              <div className="post-article-view">{post.fields.viewCount}</div>        
+              <div style={{marginRight: "1rem", color:"var(--color-white)"}}>{post.frontmatter.date}</div>
+              <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/white-view.png" alt="view"/>
+              <div className="post-article-view" style={{color: "var(--color-white)"}}>{post.fields.viewCount}</div>        
               </div>
           </header>
           {true && 
