@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import "./blog-post.css";
 
 import { graphql } from "gatsby"
@@ -10,27 +10,32 @@ import Utterances from "../components/core-component/Utterances"
 import LightPostCard from "../components/common-component/light-post-card/light-post-card";
 
 const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post }, location,}) => {
+
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
     <div className="blog-post-wrapper">
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <div style={{display: "flex", alignItems:"center", justifyContent: "flex-end"}}>
-            <div style={{marginRight: "2rem"}}>{post.frontmatter.date}</div>
-            <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view"/>
-            <div className="post-article-view">{post.fields.viewCount}</div>
-          </div>
-        </header>
-        {post.frontmatter.type === 'blog' && 
-        <section style={{display: "flex", justifyContent: "left"}}>
-          <GatsbyImage className="blog-post-article-image" image={thumbnail} alt="thumbnail"/>
-        </section>}
+        <div className="blog-head-wrapper">
+          <header className="blog-head-line">
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <div style={{display: "flex", alignItems:"center", justifyContent: "flex-end"}}>
+              <div style={{marginRight: "2rem", color:"var(--color-deep-gray)"}}>{post.frontmatter.date}</div>
+              <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/grayView.png" alt="view"/>
+              <div className="post-article-view">{post.fields.viewCount}</div>        
+              </div>
+          </header>
+          {true && 
+          <section style={{display: "flex", justifyContent: "left"}}>
+            <GatsbyImage className="blog-post-article-image" image={thumbnail} alt="thumbnail"/>
+          </section>}
 
-        {post.frontmatter.type === 'book' && 
-        <section style={{display: "flex", justifyContent: "center"}}>
-          <GatsbyImage className="book-post-article-image" image={thumbnail} alt="thumbnail"/>
-        </section>}
+          {/* {post.frontmatter.type === 'book' && 
+          <section style={{display: "flex", justifyContent: "center"}}>
+            <GatsbyImage className="book-post-article-image" image={thumbnail} alt="thumbnail"/>
+        </section>} */}
+        </div>
+        {/* <span><h3>≣ 목차</h3></span> */}
+        <section className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} itemProp="articleBody"/>
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
         <Utterances repo={"geunskoo/tech-blog"}/>
@@ -98,6 +103,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      tableOfContents
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       excerpt(pruneLength: 160)
