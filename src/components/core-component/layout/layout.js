@@ -70,7 +70,7 @@ const Layout = ({ location, children }) => {
       <div className="layout-wrapper">
         <header className={`layout-header ${hideHeader ? 'header-hidden' : ''}`}>
         <Link className="layout-header-title" to="/bio/">
-          <span>태근 후 태근</span>
+          <span>태근 후 글쓰기</span>
           </Link>
           <nav className="layout-nav-container">
             <NavButton to="/bio/">Bio</NavButton>
