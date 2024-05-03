@@ -116,11 +116,7 @@ public @interface LoginUser {
 SpringSecurity 프레임워크를 이용해서 유저의 인증/인가를 구현했다. 그리고 해당정보를 가져오기 위해서 SecurityContextHolder에서 Autentication을 
 가져와서 유저의 정보를 가져와서 세팅하도록 처리했다.(뒷단의 서비스코드에서 공통적으로 발생하던 코드를 한곳에서 처리가 가능해짐)
 ```java:title=LoginUserMethodArgumentResolver.java
-@Component
-@RequiredArgsConstructor
 public class LoginUserMethodArgumentResolver implements HandlerMethodArgumentResolver {
-
-    private final IUserRepository iUserRepository;
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
@@ -131,9 +127,10 @@ public class LoginUserMethodArgumentResolver implements HandlerMethodArgumentRes
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
         NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User loginUser = iUserRepository.findByEmail(authentication.getName())
-            .orElseThrow(() -> new BusinessException(MsgCd.NO_CONTENT, HttpStatus.NO_CONTENT));
-        return loginUser;
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            return User.withUserDetail(userDetail)
+        }
     }
 }
 ```
