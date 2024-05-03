@@ -50,6 +50,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
+            margin: `var(--spacing-0)`
           }}
         >
           <li style={{width: "45%", marginLeft:"0rem"}}>

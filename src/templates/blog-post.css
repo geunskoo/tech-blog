@@ -22,9 +22,6 @@
     font-size: var(--fontSize-2);
     font-family: var(--fontFamily-jua);
 }
-.blog-post-nav ul {
-    margin: var(--spacing-0);
-}
 .blog-post-article-image{
     border-radius: var(--radius-0);
     margin-bottom: 0rem;
