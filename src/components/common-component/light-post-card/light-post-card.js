@@ -21,7 +21,6 @@ const LightPostCard = ({ post }) => {
 
   return (
     <div className="light-post-wrapper">
-      <li key={post.fields.slug}>
         <Link className="light-post-link-container" to={post.fields.slug} itemProp="url">
           <article className="light-post-article" itemScope itemType="http://schema.org/Article">
             {/* 썸네일 */}
@@ -40,7 +39,6 @@ const LightPostCard = ({ post }) => {
             </div>
           </article>
         </Link>
-      </li>
     </div>
   );
 };

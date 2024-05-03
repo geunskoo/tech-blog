@@ -66,20 +66,14 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
       }
       transition: opacity 0.5s ease-in-out ;
     }
-    .blog-post-nav {
-      ul {
-        display: flex ;
-        width: 100% ;
-        flex-wrap: wrap ;
-        justify-content: space-between ;
-        list-style: none ;
-        margin: var(--spacing-0) ;
-      }
-      li {
-        width: 48% ;
-        margin-left: 0rem ;
-      }
-    }
+  .blog-post-nav-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+  }
+  .blog-post-nav {
+    width: 48%
+  }
   .prev-article-title{
     display: flex;
   }
@@ -88,15 +82,10 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
     flex-direction: row-reverse;
   }  
   .light-post-wrapper {
+    width: 100%;
     transition: transform 0.5s ease;
     border-radius: 1.25rem; 
-  }
-  
-  .light-post-wrapper > li {
-      margin: 0 0 0 0rem;
-      width: 100% !important;
-  }
-    
+  }  
   .light-post-wrapper:hover {
     transform: scale(1.05);
     border-radius: 1.25rem; 

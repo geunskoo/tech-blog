@@ -39,17 +39,15 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
         <Utterances repo={"geunskoo/tech-blog"}/>
-        <nav className="blog-post-nav">
-        <ul>
-          <li>
+        <nav className="blog-post-nav-wrapper">
+          <div className="blog-post-nav">
             {previous && <span className="prev-article-title">❮ 이전 글</span>}
             {previous && <LightPostCard post={previous}/>}
-          </li>
-          <li>
+          </div>
+          <div className="blog-post-nav">
             {next && <span className="next-article-title">다음 글 ❯</span>}
             {next && <LightPostCard post={next}/>}
-          </li>
-        </ul>
+          </div>
       </nav>
       </article>
     </div>
