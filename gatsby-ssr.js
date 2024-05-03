@@ -14,7 +14,7 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
 
   const criticalCss = `
     .blog-post-wrapper {
-        flex-direction: column;
+        width: 100% ;
     }
     .blog-head-wrapper {
         position: relative ;
@@ -80,6 +80,96 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
         margin-left: 0rem ;
       }
     }
+  .prev-article-title{
+    display: flex;
+  }
+  .next-article-title{
+    display: flex;
+    flex-direction: row-reverse;
+  }  
+  .light-post-wrapper {
+    transition: transform 0.5s ease;
+    border-radius: 1.25rem; 
+  }
+  
+  .light-post-wrapper > li {
+      margin: 0 0 0 0rem;
+      width: 100% !important;
+  }
+    
+  .light-post-wrapper:hover {
+    transform: scale(1.05);
+    border-radius: 1.25rem; 
+  }
+  
+  .light-post-link-container {
+    text-decoration: none;
+    color: inherit
+  }
+  
+  .light-post-article {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: var(--border-light);
+    border-radius: var(--radius-1); 
+    box-shadow: 0 4px 8px var(--color-gray);
+  }
+  
+  .light-post-article-thumbnail{
+    width: 120px;
+  }
+  
+  .light-post-article-content {
+    padding: 1rem;
+    margin: 0 0 0 0;
+  }
+  
+  /* 포스트 카드 제목 */
+  .light-post-article-content h3{
+    margin: 0 0 0.5rem 0;
+  }
+  /* 포스트 카드 요약 */
+  .light-post-article-content p{
+    font-size: var(--fontSize-0);
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .light-post-article-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .light-post-article-date{
+    font-size: var(--fontSize-0);
+    color: var(--color-deep-gray);
+  
+    margin: 0 1rem 0 0;
+  }
+  
+  .light-post-article-view{
+    color: var(--color-deep-gray);
+    font-size: var(--fontSize-0);
+  }
+  
+  @media (max-width: 520px){
+  
+    .light-post-article {
+      height: 100px;
+    }
+    
+    .light-post-article-thumbnail{
+      width: 100px;
+    }
+  
+    .light-post-article-content > section {
+      display: none;
+    }
+  }
+    
   `;
 
   setHeadComponents([

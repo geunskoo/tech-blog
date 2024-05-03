@@ -42,11 +42,11 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
         <nav className="blog-post-nav">
         <ul>
           <li>
-            {previous && <span style={{display: "flex"}}>❮ 이전 글</span>}
+            {previous && <span className="prev-article-title">❮ 이전 글</span>}
             {previous && <LightPostCard post={previous}/>}
           </li>
           <li>
-            {next && <span style={{display: "flex", flexDirection:"row-reverse"}}>다음 글 ❯</span>}
+            {next && <span className="next-article-title">다음 글 ❯</span>}
             {next && <LightPostCard post={next}/>}
           </li>
         </ul>
