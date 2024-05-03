@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: var(--fontFamily-dohyeon);
     font-weight: var(--fontWeight-bold);
     color: var(--color-black);
