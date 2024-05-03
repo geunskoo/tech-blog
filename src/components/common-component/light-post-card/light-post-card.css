@@ -5,6 +5,7 @@
 
 .light-post-wrapper > li {
     margin: 0 0 0 0rem;
+    width: 100% !important;
 }
   
 .light-post-wrapper:hover {
