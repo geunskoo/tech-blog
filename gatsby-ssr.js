@@ -14,9 +14,7 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
 
   const criticalCss = `
     .blog-post-wrapper {
-        display: flex;
         flex-direction: column;
-        width: 100% ;
     }
     .blog-head-wrapper {
         position: relative ;

@@ -1,7 +1,5 @@
 .blog-post-wrapper {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 .blog-head-wrapper{
     position: relative;

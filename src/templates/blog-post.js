@@ -39,10 +39,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
         <Utterances repo={"geunskoo/tech-blog"}/>
-        <footer>
-        </footer>
-      </article>
-      <nav className="blog-post-nav">
+        <nav className="blog-post-nav">
         <ul>
           <li>
             {previous && <span style={{display: "flex"}}>❮ 이전 글</span>}
@@ -54,6 +51,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
           </li>
         </ul>
       </nav>
+      </article>
     </div>
   )
 }
