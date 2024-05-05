@@ -1,6 +1,6 @@
 .layout-wrapper {
     margin: 0 auto;
-    max-width: 1000px; /* 맥북에서 사용하기 좋은 최대 너비 */
+    max-width: 1050px; /* 맥북에서 사용하기 좋은 최대 너비 */
     padding: 10px 5%; /* 좌우 여백을 전체 너비의 5%로 설정 */
 }
 .layout-header {
