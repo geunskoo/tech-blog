@@ -1,0 +1,22 @@
+.about-wrapper {
+    width: 100%;
+}
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 300px; /* 화면에 보여질 박스의 너비 */
+    height: 300px; /* 화면에 보여질 박스의 높이 */
+}
+
+.slider {
+    display: flex;
+    width: calc(300px * 4); /* 전체 슬라이더의 너비 */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 300px; /* 각 슬라이드의 너비 */
+    transition: transform 0.5s ease-in-out;
+}
+  

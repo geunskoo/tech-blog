@@ -33,7 +33,7 @@ const Education = () => {
       {/* 외부교육 */}
       <div className="education-card-container">
         <h5 className="education-card-title">🏃🏻 외부교육</h5>
-        <HistCard startDate="2023.02.13" endDate="2022.06.22" content="신세계 아이앤씨, Spharos Academy 2기"/> 
+        <HistCard startDate="2023.02.13" endDate="2023.06.22" content="신세계 아이앤씨, Spharos Academy 2기"/> 
       </div>
     </div>
   )

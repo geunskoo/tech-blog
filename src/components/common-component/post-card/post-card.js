@@ -57,7 +57,7 @@ const PostCard = ({ post, lastPost }) => {
                 <h3><span itemProp="headline">{title}</span></h3>
               </header>
               <section>
-                <p style={{fontFamily: "var(--fontFamily-jua)"}} dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }} itemProp="description"/>
+                <p style={{fontFamily: "var(--fontFamily-arial)"}} dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }} itemProp="description"/>
               </section>
               <section>
                 <ArticlePostCategory categorys={post.frontmatter.category} />

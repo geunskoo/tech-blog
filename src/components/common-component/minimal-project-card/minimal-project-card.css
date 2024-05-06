@@ -1,0 +1,30 @@
+.minimal-project-container{
+    max-width: 550px;
+}
+.project-title{
+    margin: 0 0 0.5rem 0;
+}
+.project-role{
+    margin: 0 0 0 0.1rem;
+    font-family: var(--fontFamily-dohyeon);
+    font-size: var(--fontSize-1);
+
+}
+.project-date{
+    color: var(--color-deep-gray);
+    font-size: var(--fontSize-0);
+    margin: 0 0 1rem 0.1rem;
+}
+.project-description{
+    margin: 0 0 0.5rem 0;
+}
+.project-skill{
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-content-container{
+    margin: 0 0 1rem 0.5rem;
+}
+.project-content{
+    margin: 0 0 0.5rem 0;
+}

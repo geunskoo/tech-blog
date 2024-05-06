@@ -23,6 +23,8 @@
   --fontSize-6: 2.5rem;
   --fontSize-7: 2.65rem;
   --fontSize-8: 2.75rem;
+  --fontSize-10: 3.5rem;
+  --fontSize-11: 4.15rem;
   
   /* 여백 변수 */
   --spacing-px: 1px;
@@ -55,7 +57,9 @@
   --color-light-green: #f8fdfd;
   --color-dark-green: #25897b;
   --color-deep-green: #254653;
-  --color-blue: #074d89;
+  /* --color-blue: #074d89; */
+
+  --color-blue: #1881f3;
 
   --color-primary: #2e353f;
   --color-primary-light: #3e4756;

@@ -1,0 +1,96 @@
+.minimal-career-wrapper{
+    margin: 0 0 10rem 0;
+}
+.minimal-career-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    border: var(--border-light);
+    border-radius: var(--radius-1);
+    transition: var(--transition-ease);
+    /* box-shadow: 0 4px 8px var(--color-gray); */
+
+    padding: 1rem;
+    margin: 0 0 2.5rem 0;
+}
+
+.minimal-career-card-wrapper:hover {
+    transform: var(--transform-scale);
+}
+.company-info-container{
+    display: flex;
+}
+.company-info{
+    margin: 1.5rem 0 0 1rem;
+}
+.minimal-career-card-content-container{
+    display: flex;
+    padding: 1rem 1rem 1rem 7rem;
+}
+
+.minimal-career-card-title {
+    margin: 0 0 0.5rem 0;
+}
+.minimal-career-card-job-duty{
+    font-family: var(--fontFamily-dohyeon);
+    font-size: var(--fontSize-1);
+    margin: 0 0 0 0;
+}
+.minimal-career-card-date {
+    color: var(--color-deep-gray);
+    font-size: var(--fontSize-0);
+    margin: 0 0 1rem 0;
+}
+.minimal-career-card-content p {
+    color: var(--color-light-black);
+    margin-bottom: 1rem;
+}
+.minimal-career-card-skill{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0rem 0rem 0rem 7rem;
+
+}
+
+@media (max-width: 520px) {
+
+    .minimal-career-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+
+    .minimal-career-card-image-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .minimal-career-card-content-container{
+        border: var(--border-light);
+        border-radius: var(--radius-1);
+    }
+
+    .minimal-career-card-container {
+        display: flex;
+        flex-direction: column;
+        border: var(--border-light);
+        border-radius: var(--radius-1);
+
+        padding: 1rem;
+    }
+  
+    .minimal-career-card-title {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .minimal-career-card-date {
+        display: flex;
+        justify-content: center;
+        color: var(--color-deep-gray);
+        font-size: var(--fontSize-0);
+        margin-bottom: 0.8rem;
+    }
+  }
