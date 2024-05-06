@@ -23,6 +23,8 @@
     flex-wrap: wrap;
 }
 .project-content-container{
+    max-width: 550px;
+    min-width: 550px;
     margin: 0 0 1rem 0.5rem;
 }
 .project-content{
