@@ -4,12 +4,10 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const MinimalAboutMe = () => {
 
-  const sectionCardTitle = "AboutMe";
-
   return (
-    <div className="about-wrapper">
+    <div className="minimal-about-wrapper">
       <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>제가 가진 대표적인 개발 역량 입니다!</h1>
-      <div style={{ display: "flex", flexDirection:"row", flexWrap: "wrap", gap: "3rem"}}>
+      <div style={{ display: "flex", flexDirection:"row", flexWrap: "wrap", gap: "50px"}}>
         <div style={{ maxWidth: "550px", alignContent:"center"}}>
           <p>Java와 Spring 프레임 워크와 객체지향적인 사고를 통해 클린코드를 작성할 수 있습니다.</p>
           <p>외부 API를 이용하여 결제시스템을 구축해본 경험이 있습니다.</p>

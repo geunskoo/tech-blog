@@ -4,9 +4,9 @@ import Skill from "../skill/skill";
 import MinimalSlider from "../../section-component/minimal-slider/minimal-slider";
 
 const MinimalProjectCard = ({ project }) => {
-  
+
   return (
-    <div style={{display: "flex", flexWrap:"wrap", gap:"3rem", marginBottom:"10rem"}}>
+    <div style={{display: "flex", flexWrap:"wrap", gap:"50px", marginBottom:"10rem"}}>
       <MinimalSlider images={project.images}/>
       <div className="minimal-project-container">
         <h4 className="project-title">{project.name}</h4>
