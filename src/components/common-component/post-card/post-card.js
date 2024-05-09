@@ -1,5 +1,6 @@
 import React from 'react';
 import NewTag from '../../../images/newtag.svg'
+import View from '../../../images/view.svg'
 import "./post-card.css";
 
 import { Link } from 'gatsby';
@@ -35,7 +36,6 @@ const PostCard = ({ post, lastPost }) => {
 
   const grayViewSrc = "../../../images/grayView.png";
   const grayViewStyle = {
-    marginBottom: "0.15rem",
     marginRight: "0.2rem",
     width: "15px",
     height: "15px"
@@ -66,7 +66,7 @@ const PostCard = ({ post, lastPost }) => {
               </section>
               <div className="post-article-footer">
                 <div className="post-article-date">{post.frontmatter.date}</div>
-                <StaticImage style={grayViewStyle} src={grayViewSrc} alt="view"/>
+                <img style={grayViewStyle} src={View} alt="view"/>
                 <style>{grayViewMobileStyle}</style>
                 <div className="post-article-view">{post.fields.viewCount}</div>
               </div>

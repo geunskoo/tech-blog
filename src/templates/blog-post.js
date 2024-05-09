@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import WhiteView from '../images/WhiteView.svg'
+
 import "./blog-post.css";
 
 import { graphql } from "gatsby"
@@ -20,7 +22,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <div style={{display: "flex", alignItems:"center", justifyContent: "flex-end"}}>
               <div style={{marginRight: "1rem", color:"var(--color-white)"}}>{post.frontmatter.date}</div>
-              <StaticImage style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src="../images/white-view.png" alt="view"/>
+              <img style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src={WhiteView} alt="view"/>
               <div className="post-article-view" style={{color: "var(--color-white)"}}>{post.fields.viewCount}</div>        
               </div>
           </header>
