@@ -28,20 +28,20 @@
 .banner-container img {
   position: absolute;
   animation: flyRocket 1.5s linear 1; /* 애니메이션 적용 */
-  left: 850px;
-  bottom: 420px;
+  left: 60%;
+  bottom: 55%;
   width: 75px;
 }
 
 @keyframes flyRocket {
   from {
-    left: 500px;
-    bottom: 300px;
+    left: 40%;
+    bottom: 40%;
     width: 50px;
   }
   to {
-    left: 850px;
-    bottom: 420px;
+    left: 60%;
+    bottom: 55%;
     width: 75px;
   }
 }
