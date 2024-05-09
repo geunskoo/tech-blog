@@ -1,5 +1,9 @@
+.index-wrapper{
+    width: 60%;
+}
+
 .flex-row {
-display: flex;
+    display: flex;
 }
 
 .column-container {

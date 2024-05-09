@@ -1,7 +1,7 @@
 .layout-wrapper {
-    margin: 0 auto;
-    max-width: 1050px; /* 맥북에서 사용하기 좋은 최대 너비 */
-    padding: 10px;
+    margin: 0;
+    max-width: 100%;
+    padding: 2rem 0 0 0;
 }
 .layout-header {
     max-width: calc(1000px - 10%);

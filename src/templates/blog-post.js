@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import WhiteView from '../images/WhiteView.svg'
 
+
 import "./blog-post.css";
 
 import { graphql } from "gatsby"

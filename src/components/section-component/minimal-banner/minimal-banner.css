@@ -2,42 +2,48 @@
   text-align: center;
   border: var(--border-light);
   border-radius: var(--radius-1); 
-  transition: var(--transition-ease);
 
   padding: 2rem;
-  margin: 5rem 0rem 20rem 0rem;
+  margin: 5rem 0rem 0rem 0rem;
 }
 
 .banner-container:hover {
-  transform: var(--transform-scale);
 }
 
 .banner-title {
   font-size: var(--fontSize-10);
   font-weight: bold;
   text-align: center;
+  position: relative; /* 폰트가 로켓 이미지 위로 오도록 설정 */
+  z-index: 1;
 }
-.gradient-title{
-  font-size: var(--fontSize-11);
-  background: linear-gradient(to right, #18b5f4, #BA55D3, #FFB6C1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  .gradient-title{
+    font-size: var(--fontSize-11);
+    background: linear-gradient(to right, #18b5f4, #BA55D3, #FFB6C1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+.banner-container img {
+  position: absolute;
+  animation: flyRocket 1.5s linear 1; /* 애니메이션 적용 */
+  left: 850px;
+  bottom: 420px;
+  width: 75px;
 }
 
-.banner-typing {
-  font-size: var(--fontSize-7);
-  font-family: var(--fontFamily-dohyeon)
-}
-
-.banner-typing::after {
-  content: '';
-  animation: cursor 0.9s infinite steps(2);
-
-  margin: 0rem 0rem 0rem 0.6rem;
-}
-
-.banner-paragraph {
-  font-size: var(--fontSize-2);
+@keyframes flyRocket {
+  from {
+    left: 500px;
+    bottom: 300px;
+    width: 50px;
+  }
+  to {
+    left: 850px;
+    bottom: 420px;
+    width: 75px;
+  }
 }
 
 @media (max-width: 520px) {

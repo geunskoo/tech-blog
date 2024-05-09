@@ -2,4 +2,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 15rem;
 }
+.fade-in-section {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+.fade-in-visible {
+    opacity: 1;
+}
+  

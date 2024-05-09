@@ -6,9 +6,9 @@ const MinimalAboutMe = () => {
 
   return (
     <div className="minimal-about-wrapper">
-      <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>제가 가진 대표적인 개발 역량 입니다!</h1>
+      <h1 style={{  textAlign: "center", marginBottom:"5rem", color:"white"}}>제가 가진 대표적인 <span className="gradient-subtitle">개발 역량</span> 입니다!</h1>
       <div style={{ display: "flex", flexDirection:"row", flexWrap: "wrap", gap: "150px", justifyContent:"center"}}>
-        <div style={{ maxWidth: "550px", alignContent:"center"}}>
+        <div style={{ maxWidth: "550px", alignContent:"center", fontSize:"var(--fontSize-1-0)"}}>
           <p>Java와 Spring 프레임 워크와 객체지향적인 사고를 통해 클린코드를 작성할 수 있습니다.</p>
           <p>외부 API를 이용하여 결제시스템을 구축해본 경험이 있습니다.</p>
           <p>팀원들과 활성화된 코드리뷰 환경을 조성하여, 적극적인 코드 품질 개선 활동경험이 있습니다.</p>

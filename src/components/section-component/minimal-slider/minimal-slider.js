@@ -64,7 +64,7 @@ const imageSrc = images.map(name => {
   }, []);
 
   return (
-    <div className="minimal-education-wrapper">
+    <div className="slider-wrapper">
       <div className="slider-container">
         <div className="slider" ref={sliderRef}>
           <div className="slide"><GatsbyImage image={getImage(imageSrc[0])} alt="Image 1" width={300} height={300} style={{borderRadius: "0.8rem"}}/></div>

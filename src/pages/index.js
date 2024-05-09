@@ -6,7 +6,7 @@ import "./index.css"; // CSS 파일 경로 확인
 
 const BlogIndex = () => {
   return (
-    <div>
+    <div className="index-wrapper">
       <div className="flex-row">
         <Link to="/bio" className="image-container"> {/* Bio 페이지로의 링크 */}
           <StaticImage src="../images/geun4.png" alt="Description of the image" layout="constrained" width={650} height={650}/>
