@@ -16,7 +16,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
 
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
-    <div className="blog-post-wrapper">
+    <div className="blog-post-wrapper" style={{width:"65%"}}>
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <div className="blog-head-wrapper">
           <header className="blog-head-line">
