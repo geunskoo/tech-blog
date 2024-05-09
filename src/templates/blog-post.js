@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import WhiteView from '../images/WhiteView.svg'
+import WhiteView from '../images/whiteView.svg'
 
 
 import "./blog-post.css";
