@@ -11,6 +11,7 @@ const MinimalEducation = () => {
       <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>배움의 과정</h1>
 
       {/* 학교 */}
+      <div>
       <div className="minimal-education-card-container">
         <h5 className="minimal-education-card-title">🎓 학교</h5>
         <HistCard startDate="2016.03.01" endDate="2024.02.23" content="부산대학교 수학과"/> 
@@ -34,6 +35,7 @@ const MinimalEducation = () => {
         <h5 className="minimal-education-card-title">🏃🏻 외부교육</h5>
         <HistCard startDate="2023.02.13" endDate="2022.06.22" content="신세계아이앤씨, Spharos Academy 2기(수료)"/> 
       </div>
+    </div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import NewTag from '../../../images/newtag.svg'
 import "./post-card.css";
 
 import { Link } from 'gatsby';
@@ -11,10 +12,11 @@ const PostCard = ({ post, lastPost }) => {
 
 
   /* Static Image는 .css파일 관리가 안되어서 변수로 추출 */
-  const newTagSrc = "../../../images/newtag.png";
+  // const newTagSrc = "../../../images/newtag.svg";
   const newTagStyle = {
-    zIndex: 2,
-    marginBottom: '-5.25rem',
+    zIndex: "2",
+    position: "relative",
+    marginBottom: '-5.75rem',
     marginLeft: '-0.25rem',
     width: '60px',
     height: '60px',
@@ -42,7 +44,7 @@ const PostCard = ({ post, lastPost }) => {
 
   return (
     <div className="post-wrapper">
-      {lastPost && (<StaticImage style={newTagStyle} src={newTagSrc} alt="newtag" layout="fixed"/>)}
+      {lastPost && (<img style={newTagStyle} src={NewTag} alt="newtag" layout="fixed"/>)}
       <li key={post.fields.slug}>
         <Link className="post-link-container" to={post.fields.slug} itemProp="url">
           <article className="post-article" itemScope itemType="http://schema.org/Article">
