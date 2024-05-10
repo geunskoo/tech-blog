@@ -1,6 +1,6 @@
 .minimal-project-container{
     max-width: 550px;
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +25,9 @@
 .project-skill{
     display: flex;
     flex-wrap: wrap;
+    gap: 0.25rem;
     margin: 0.5rem 0 1rem 0;
-
+    
 }
 .project-content-container{
     max-width: 400px;
@@ -34,5 +35,6 @@
     margin: 0 0 1rem 0.5rem;
 }
 .project-content{
-    margin: 0 0 0.5rem 0;
+    font-size: var(--fontSize-0);
+    margin: 0 0 0 0;
 }

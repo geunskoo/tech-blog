@@ -6,7 +6,7 @@ const MinimalAboutMe2 = () => {
 
   return (
     <div className="minimal-about2-wrapper">
-      <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>이런 능력도 있어요!</h1>
+      <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>이런 <span style={{textEmphasis: "filled dot"}}>능력</span>도 있어요!</h1>
       <div style={{ display: "flex", flexDirection:"row", flexWrap: "wrap",  gap: "150px", justifyContent:"center", fontSize:"var(--fontSize-1-0)"}}>
         <StaticImage  alt="Profile picture" src="../../../images/horse2.png" layout="constrained" width={300} height={300} quality={100} style={{borderRadius: "0.8rem"}}/>
         <div style={{ maxWidth: "550px", alignContent: "center"}}>

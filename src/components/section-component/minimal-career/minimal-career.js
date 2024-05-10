@@ -36,7 +36,7 @@ const MinimalCareer = () => {
           </div>
           <div className="minimal-career-card-content-container">
             <div className="minimal-career-card-content">
-              <p>신세계아이앤씨 안전관리시스템구축TF에서 [ 중대재해 예방 안전관리 플랫폼: 스파로스 세이프티 ]를 개발에 참여하였습니다. <br/>
+              <p>신세계아이앤씨 안전관리시스템구축TF에서 [ 중대재해 예방 안전관리 플랫폼: 스파로스 세이프티 ] 개발에 참여하였습니다. <br/>
                 화면개발 및 서버 개발을 담당하였습니다.
               </p>
             </div>

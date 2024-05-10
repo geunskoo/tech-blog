@@ -24,7 +24,8 @@ const MinimalProject = () => {
         "myblog.png",
         "myblog2.png",
         "myblog3.png"
-      ]
+      ],
+      link:"https://geunskoo.com"
     },
     {
       imageName: "blocktoon",
@@ -49,7 +50,8 @@ const MinimalProject = () => {
         "blocktooneventstorm4.png",
         "blocktooneventstorm2.png",
         "webtoon2.png"
-      ]
+      ],
+      link:"https://github.com/N0T-BAD"
     },
     {
       imageName: "starbucks",
@@ -72,7 +74,9 @@ const MinimalProject = () => {
         "starbucksClone3.png",
         "starbucksClone2.png",
         "starbucksClone1.png"
-      ]
+      ],
+      link:"https://github.com/spharos-clone-6"
+
     },
     {
       imageName: "keeper",
@@ -95,7 +99,8 @@ const MinimalProject = () => {
         "keeper2.png",
         "keeper.png",
         "keeper2.png"
-      ]
+      ],
+      link:"https://keeper.or.kr"
     },
     {
       imageName: "warehouse",
@@ -116,14 +121,16 @@ const MinimalProject = () => {
         "ffm.png",
         "warehouse.png",
         "ffm2.png",
-      ]
+      ],
+      link:"https://github.com/geunskoo/ffm-logistics-planning"
     },
   ]
 
   return (
     <div className="minimal-project-wrapper">
-      <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>저를 성장시켜준 <span className="gradient-subtitle">프로젝트</span>를 소개합니다.</h1>
-      <div style={{ display: "flex", overflow:"auto", gap: "8rem", padding: "2rem 2rem 2rem 2rem"}}>
+      <h1 style={{  textAlign: "center", marginBottom:"5rem"}}>저를 성장시켜준 <span className="gradient-subtitle" style={{fontSize: "var(--fontSize-8)"}}>프로젝트</span>를 소개합니다.</h1>
+      <span style={{fontSize:"var(--fontSize-0-0)", display: "flex", flexDirection: "row-reverse"}}>ℹ.옆으로 슬라이드 해보세요!</span>
+      <div style={{ display: "flex", overflow:"auto", gap: "6rem", padding: "2rem 2rem 2rem 2rem"}}>
         {projects.map(project => {return <MinimalProjectCard project={project}/>})}
       </div>
     </div>
