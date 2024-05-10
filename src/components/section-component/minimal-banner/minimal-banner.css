@@ -24,16 +24,27 @@
     -webkit-text-fill-color: transparent;
   }
 
-
 .banner-container img {
+  animation: flyRocket 1.5s linear 1;
+  top: 250px;
+  right: 40%;
+  width: 100px;
   position: absolute;
-  animation: flyRocket 1.5s linear 1; /* 애니메이션 적용 */
-  left: 60%;
-  bottom: 55%;
-  width: 75px;
 }
 
 @keyframes flyRocket {
+  from {
+    top: 500px;
+    right: 55%;
+    width: 50px;
+  }
+  to {
+    top: 250px;
+    right: 40%;
+    width: 100px;
+  }
+}
+/* @keyframes flyRocket {
   from {
     left: 40%;
     bottom: 40%;
@@ -44,7 +55,7 @@
     bottom: 55%;
     width: 75px;
   }
-}
+} */
 
 @media (max-width: 520px) {
 
