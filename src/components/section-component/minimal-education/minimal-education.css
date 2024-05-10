@@ -4,3 +4,8 @@
   align-items: center;  
   margin: 0 0 10rem 0;
 }
+
+.minimal-education-card-container{
+  margin: 0 0 4rem 0;
+  font-size: var(--fontSize-1-0);
+}

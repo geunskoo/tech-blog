@@ -1,4 +1,7 @@
-
+.slider-wrapper{
+    width: 300px;
+    height: 300px;
+}
 .slider-container {
     overflow: hidden;
     position: relative;

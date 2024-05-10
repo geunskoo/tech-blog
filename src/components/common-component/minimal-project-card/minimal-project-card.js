@@ -6,20 +6,20 @@ import MinimalSlider from "../../section-component/minimal-slider/minimal-slider
 const MinimalProjectCard = ({ project }) => {
 
   return (
-    <div style={{display: "flex", flexWrap:"wrap", gap:"100px", marginBottom:"6rem", justifyContent:"center"}}>
+    <div style={{display: "flex", flexWrap:"wrap", gap:"50px", justifyContent:"center", boxShadow: "0 4px 8px var(--color-gray)", borderRadius:"0.85rem", padding:"1rem"}}>
       <MinimalSlider images={project.images}/>
       <div className="minimal-project-container">
         <h4 className="project-title">{project.name}</h4>
         <p className="project-description">{project.description}</p>
         <p className="project-date">{project.startDate} ~ {project.endDate}</p>
         
+        <div className="project-skill">
+          {project.skills.map((name, index) => <Skill key={index} name={name}/>)}
+        </div>
         <div className="project-content-container">
           {project.activities.map(content => <p className="project-content">{content}</p>)}
         </div>
 
-        <div className="project-skill">
-          {project.skills.map((name, index) => <Skill key={index} name={name}/>)}
-        </div>
       </div>
     </div>
   );

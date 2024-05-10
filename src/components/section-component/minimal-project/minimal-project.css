@@ -1,5 +1,6 @@
 .minimal-project-wrapper {
     width: 100%;
+    padding: 2rem 4rem 0rem 4rem;
 }
 
 .about-container {
@@ -16,6 +17,11 @@
 
 .about-container:hover {
   transform: var(--transform-scale);
+}
+.gradient-subtitle{
+    background: linear-gradient(to right, #18b5f4,#FFB6C1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* 모바일 버전 */

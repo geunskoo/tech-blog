@@ -36,7 +36,9 @@ const MinimalCareer = () => {
           </div>
           <div className="minimal-career-card-content-container">
             <div className="minimal-career-card-content">
-              <p>&nbsp; 신세계아이앤씨 안전관리시스템구축TF 에서 신규 서비스를 개발했습니다. Angular와 Spring 프레임워크를 이용한 풀스택 개발을 담당했습니다.</p>
+              <p>신세계아이앤씨 안전관리시스템구축TF에서 [ 중대재해 예방 안전관리 플랫폼: 스파로스 세이프티 ]를 개발에 참여하였습니다. <br/>
+                화면개발 및 서버 개발을 담당하였습니다.
+              </p>
             </div>
           </div>
         </div>

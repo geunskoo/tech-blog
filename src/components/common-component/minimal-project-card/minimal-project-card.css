@@ -1,5 +1,9 @@
 .minimal-project-container{
     max-width: 550px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .project-title{
     margin: 0 0 0.5rem 0;
@@ -13,7 +17,7 @@
 .project-date{
     color: var(--color-deep-gray);
     font-size: var(--fontSize-0);
-    margin: 0 0 1rem 0.1rem;
+    margin: 0 0 0 0;
 }
 .project-description{
     margin: 0 0 0.5rem 0;
@@ -21,10 +25,12 @@
 .project-skill{
     display: flex;
     flex-wrap: wrap;
+    margin: 0.5rem 0 1rem 0;
+
 }
 .project-content-container{
-    max-width: 550px;
-    min-width: 550px;
+    max-width: 400px;
+    min-width: 400px;
     margin: 0 0 1rem 0.5rem;
 }
 .project-content{
