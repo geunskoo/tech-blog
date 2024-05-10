@@ -13,7 +13,7 @@ const MinimalBanner = () => {
           <span>김태근입니다.</span>
         </p>
       </h1>
-        <img src={Rocket} alt="Rocket Flying Animation"/>
+        <img className="rocket" src={Rocket} alt="Rocket Flying Animation"/>
     </div>
   );
 };

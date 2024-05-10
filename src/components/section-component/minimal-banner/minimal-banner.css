@@ -24,26 +24,23 @@
     -webkit-text-fill-color: transparent;
   }
 
-.banner-container img {
-  animation: flyRocket 1.5s linear 1;
-  top: 250px;
-  right: 40%;
-  width: 100px;
-  position: absolute;
-}
-
-@keyframes flyRocket {
-  from {
-    top: 500px;
-    right: 55%;
-    width: 50px;
-  }
-  to {
-    top: 250px;
-    right: 40%;
+  .rocket {
+    animation: flyRocket 1.5s linear 1;
+    transform: translateX(100px) translateY(-220px);
     width: 100px;
+    position: absolute;
   }
-}
+  
+  @keyframes flyRocket {
+    from {
+      transform: translateX(-200px) translateY(-50px) scale(0.5);
+    }
+    to {
+      transform: translateX(100px) translateY(-220px) scale(1);
+    }
+  }
+  
+  
 /* @keyframes flyRocket {
   from {
     left: 40%;
