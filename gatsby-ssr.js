@@ -158,6 +158,13 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
       display: none;
     }
   }
+  .minimal-project-container{
+    max-width: 550px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
     
   `;
 
