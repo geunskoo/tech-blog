@@ -6,7 +6,6 @@ import "./blog-post.css";
 
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/core-component/seo"
 import Utterances from "../components/core-component/Utterances"
@@ -16,7 +15,7 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
 
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData)
   return (
-    <div className="blog-post-wrapper" style={{width:"65%"}}>
+    <div className="blog-post-wrapper">
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <div className="blog-head-wrapper">
           <header className="blog-head-line">

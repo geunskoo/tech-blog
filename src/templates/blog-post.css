@@ -2,18 +2,19 @@
     width: 60%;
 }
 .blog-head-wrapper{
-    position: relative;
+    display: flex;
+    align-items: center;
     margin: 0 0 2rem 0;
 }
 .blog-head-line{
-    position: absolute;
-    z-index: 1;
-    top: 40%;
-    left: 50%;        
-    transform: translateX(-50%);
+    max-width: 80%;
+    position: absolute ;
+    z-index: 1 ;
+    top: 40% ;
+    left: 50% ;        
+    transform: translateX(-50%) ;    
 }
 .blog-post header h1 {
-    width: 600px;
     color: var(--color-white);
     font-size: var(--fontSize-8);
     margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
@@ -35,6 +36,16 @@
     margin-bottom: 0rem;
     width: 200px;
 }
+.blog-post-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 4rem 0 4rem 0;
+  }
+  .blog-post-nav {
+    width: 48%
+  }
 /* .toc-button{
     background-color: transparent;
     border: 0px;
@@ -67,6 +78,20 @@
         margin: 0 0 0 0;
     }
     transition: opacity 0.5s ease-in-out;
+}
+
+/* 모바일 버전 */
+@media (max-width: 520px) {
+    .blog-post-wrapper{
+        width: 90%;
+        gap: 20px;
+    }   
+    .blog-head-line{
+        max-width: 90%;
+    }
+    .blog-post-nav {
+        width: 80%;   
+    }
 }
 /* .toc.visible{
     animation: moveLeft 0.8s forwards;

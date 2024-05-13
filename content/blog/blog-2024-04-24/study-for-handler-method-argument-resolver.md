@@ -1,5 +1,5 @@
 ---
-title: HandlerMethodArgumentResolver를 통한 업무효율 높이기!
+title: HandlerMethod Argument Resolver를 통한 업무효율 높이기!
 date: "2024-04-24T18:00:00"
 type: blog
 description: 어노테이션과 함께 활용하여 인증된 유저 정보를 가져와보자

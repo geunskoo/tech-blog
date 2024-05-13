@@ -20,15 +20,7 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
         position: relative ;
         margin: 0 0 2rem 0 ;
     }
-    .blog-head-line {
-        position: absolute ;
-        z-index: 1 ;
-        top: 40% ;
-        left: 50% ;        
-        transform: translateX(-50%) ;
-    }
     .blog-post header h1 {
-        width: 600px ;
         color: var(--color-white) ;
         font-size: var(--fontSize-8) ;
         margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0) ;
@@ -66,20 +58,17 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
       }
       transition: opacity 0.5s ease-in-out ;
     }
-  .blog-post-nav-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between ;
-  }
   .blog-post-nav {
     width: 48%
   }
   .prev-article-title{
     display: flex;
+    margin-bottom: 0.5rem;
   }
   .next-article-title{
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 0.5rem;
   }  
   .light-post-wrapper {
     width: 100%;

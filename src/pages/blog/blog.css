@@ -1,3 +1,9 @@
 .blog-wrapper {
     width: 60%;
 }
+/* 모바일 버전 */
+@media (max-width: 520px) {
+    .blog-wrapper{
+        width: 90%;
+    }   
+}

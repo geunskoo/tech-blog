@@ -8,15 +8,6 @@ const LightPostCard = ({ post }) => {
   const title = post.frontmatter.title;
   const thumbnail = getImage(post.frontmatter.thumbnail?.childImageSharp?.gatsbyImageData);
 
-  const thumbnailStyle = {
-    zIndex: "1",
-    borderRadius: "1rem",
-    border: "1px solid #ddd",
-    marginBottom: "0px",
-    marginRight: "1.5rem",
-    width: "120px",
-    height: "120px"
-  }
   const thumbnailMobileStyle = `@media (max-width: 520px) {.post-article .gatsby-image-wrapper {width: 100px !important; min-width: 100px !important; height: 100px !important; margin-right: 0.5rem !important;}}`
 
   return (
@@ -25,7 +16,7 @@ const LightPostCard = ({ post }) => {
           <article className="light-post-article" itemScope itemType="http://schema.org/Article">
             {/* 썸네일 */}
             <div className='light-post-article-thumbnail'>
-              <GatsbyImage image={thumbnail} alt="thumbnail" style={thumbnailStyle} />
+              <GatsbyImage image={thumbnail} alt="thumbnail"  className="light-post-card-thumbnail" />
               <style>{thumbnailMobileStyle}</style>
             </div>
             {/* 내용 */}
