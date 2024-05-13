@@ -163,6 +163,11 @@
     transform: scale(1.15);
 }
 
+.chat-button{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
 
 /* 모바일 화면 */
 @media (max-width: 520px) {
@@ -176,15 +181,19 @@
         padding-left: 0.2rem;
         padding-right: 0.2rem;
     }
-
     .layout-header-title {
         font-size: 1.4rem;
         margin-bottom: 1rem;
         margin-left: 0rem;
     }
-    
     .layout-nav-container{
         margin-right: 0rem;
+    }
+    .chat-button{
+        display: none;
+    }
+    .github{
+        display: none;
     }
 }
 
