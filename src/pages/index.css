@@ -1,32 +1,26 @@
 .index-wrapper{
     width: 60%;
 }
-
 .flex-row {
     display: flex;
 }
-
 .column-container {
     display: flex;
     flex-direction: column;
 }
-
 .image-container {
     position: relative;
     margin: 5px;
     overflow: hidden;
     border-radius: 0.5rem;
 }
-
 .gatsby-image-wrapper {
     transition: filter 0.3s ease;
 }
-
 .image-container:hover .gatsby-image-wrapper {
     filter: brightness(50%);
     cursor: pointer;
 }
-
 .image-text {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -34,7 +28,6 @@
     text-align: center;
     transition: opacity 0.3s ease;
 }
-
 .image-text.always-show {
     top: 10px;
     left: 10px;
@@ -45,18 +38,19 @@
     visibility: visible;
     opacity: 1;
 }
-.main-image-text {
-    /* font-size: 3rem !important; */
-}
-
 .image-text.hover-show {
-top: 50%;
-left: 50%;
-visibility: hidden;
-opacity: 0;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
 }
-
 .image-container:hover .hover-show {
-visibility: visible;
-opacity: 1;
+    visibility: visible;
+    opacity: 1;
+}
+/* 모바일버전 기준 */
+@media (max-width: 520px){
+    .index-wrapper{
+        width: 90%;
+    }
 }

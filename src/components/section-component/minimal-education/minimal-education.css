@@ -9,3 +9,13 @@
   margin: 0 0 4rem 0;
   font-size: var(--fontSize-1-0);
 }
+/* 모바일 버전 */
+@media (max-width: 520px) {
+  .minimal-project-wrapper {
+      width: 100%;
+      padding: 2rem 1rem 0rem 1rem;
+  }
+  .minimal-education-card-title{
+    padding: 0 0 0 1rem;
+  }
+}

@@ -68,29 +68,6 @@
     
 
     .minimal-career-card-content-container{
-        border: var(--border-light);
-        border-radius: var(--radius-1);
-    }
-
-    .minimal-career-card-container {
-        display: flex;
-        flex-direction: column;
-        border: var(--border-light);
-        border-radius: var(--radius-1);
-
-        padding: 1rem;
-    }
-  
-    .minimal-career-card-title {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .minimal-career-card-date {
-        display: flex;
-        justify-content: center;
-        color: var(--color-deep-gray);
-        font-size: var(--fontSize-0);
-        margin-bottom: 0.8rem;
+        padding: 1rem 1rem 1rem 7rem;
     }
   }
