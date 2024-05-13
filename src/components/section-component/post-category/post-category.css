@@ -48,15 +48,20 @@
     justify-content: flex-start;
     overflow: hidden; /* 내용이 나타나지 않도록 함 */
     transition: max-height 0.3s ease-in-out; 
+    padding: 0 1rem 0 1rem;
   }
 
   .category-button-container.none{
     max-height: 0;
   }
+  .category-button:hover {
+    transform: translateY(0px);
+  }
 
   .category-button {
     width: 100%;
     padding: 0.2rem;
+    margin: 0 0 0.5rem 0;
     color: var(--color-primary);
   }
 }
