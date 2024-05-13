@@ -42,10 +42,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin: 4rem 0 4rem 0;
-  }
-  .blog-post-nav {
-    width: 48%
 }
+
 .toc{
     max-height: 400px;
     overflow: auto;

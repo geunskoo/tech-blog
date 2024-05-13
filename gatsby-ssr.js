@@ -25,7 +25,7 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
       max-width: 80%;
       position: absolute ;
       z-index: 1 ;
-      top: 40% ;
+      top: 50% ;
       left: 50% ;        
       transform: translateX(-50%) ;    
   }
@@ -99,11 +99,8 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
           max-width: 90%;
       }
       .blog-post-nav {
-          width: 80%;   
+          width: 80% !important;   
       }
-  }
-  .blog-post-nav {
-    width: 48%
   }
   .prev-article-title{
     display: flex;
