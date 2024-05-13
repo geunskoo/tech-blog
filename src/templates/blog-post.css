@@ -45,13 +45,7 @@
   }
   .blog-post-nav {
     width: 48%
-  }
-/* .toc-button{
-    background-color: transparent;
-    border: 0px;
-    color: var(--color-deep-gray);
-    font-size: var(--fontSize-0);
-} */
+}
 .toc{
     max-height: 400px;
     overflow: auto;

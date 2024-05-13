@@ -13,51 +13,95 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
   setHtmlAttributes({ lang: `en` });
 
   const criticalCss = `
-    .blog-post-wrapper {
-        width: 100% ;
+  .blog-post-wrapper {
+    width: 60%;
+  }
+  .blog-head-wrapper{
+      display: flex;
+      align-items: center;
+      margin: 0 0 2rem 0;
+  }
+  .blog-head-line{
+      max-width: 80%;
+      position: absolute ;
+      z-index: 1 ;
+      top: 40% ;
+      left: 50% ;        
+      transform: translateX(-50%) ;    
+  }
+  .blog-post header h1 {
+      color: var(--color-white);
+      font-size: var(--fontSize-8);
+      margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  }
+  .blog-post header p {
+      font-size: var(--fontSize-2);
+      font-family: var(--fontFamily-jua);
+  }
+  .blog-post-article-image{
+      border-radius: var(--radius-0);
+      margin-bottom: 0rem;
+      width: 100%;
+      height: 60vh;
+      filter: brightness(50%);
+      object-fit: cover; 
+      object-position: center;
+  }
+  .book-post-article-image{
+      margin-bottom: 0rem;
+      width: 200px;
+  }
+  .blog-post-nav-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 4rem 0 4rem 0;
     }
-    .blog-head-wrapper {
-        position: relative ;
-        margin: 0 0 2rem 0 ;
-    }
-    .blog-post header h1 {
-        color: var(--color-white) ;
-        font-size: var(--fontSize-8) ;
-        margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0) ;
-    }
-    .blog-post-article-image{
-        border-radius: var(--radius-0) ;
-        margin-bottom: 0rem ;
-        width: 100% ;
-        height: 60vh ;
-        filter: brightness(50%) ;
-        object-fit: cover ; 
-        object-position: center ;
-    }
-    .toc{
-      max-height: 400px ;
-      overflow: auto ;      
-      border: calc(1.5 * var(--spacing-px)) dashed var(--color-deep-gray) ;
-      font-size: var(--fontSize-0) ;
-      border-radius: var(--radius-0) ;
-      margin: 0 0 4rem 0 ;
-      padding: 1.5rem 1rem 1rem 1.5rem ;
-  
+    .blog-post-nav {
+      width: 48%
+  }
+  .toc{
+      max-height: 400px;
+      overflow: auto;
+      
+      /* background: var(--color-super-light-gray); */
+      border: calc(1.5 * var(--spacing-px)) dashed var(--color-deep-gray);
+      font-size: var(--fontSize-0);
+      border-radius: var(--radius-0);
+      /* border: 2px solid var(--color-light-gray); */
+      margin: 0 0 4rem 0;
+      padding: 1.5rem 1rem 1rem 1.5rem;
+
       a {
-          text-decoration: none ;
+          text-decoration: none;
       }
       li {
-          list-style-type: none ;
-          margin: 0 0 0.4rem 0 ;
+          list-style-type: none;
+          margin: 0 0 0.4rem 0;
       }
       ul {
-          margin: 0 0 0 1rem ;   
+          margin: 0 0 0 1rem;   
       }
       p {
-          margin: 0 0 0 0 ;
+          margin: 0 0 0 0;
       }
-      transition: opacity 0.5s ease-in-out ;
-    }
+      transition: opacity 0.5s ease-in-out;
+  }
+
+  /* 모바일 버전 */
+  @media (max-width: 520px) {
+      .blog-post-wrapper{
+          width: 90%;
+          gap: 20px;
+      }   
+      .blog-head-line{
+          max-width: 90%;
+      }
+      .blog-post-nav {
+          width: 80%;   
+      }
+  }
   .blog-post-nav {
     width: 48%
   }
