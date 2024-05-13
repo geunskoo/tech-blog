@@ -17,8 +17,6 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
     width: 60%;
   }
   .blog-head-wrapper{
-      display: flex;
-      align-items: center;
       margin: 0 0 2rem 0;
   }
   .blog-head-line{
