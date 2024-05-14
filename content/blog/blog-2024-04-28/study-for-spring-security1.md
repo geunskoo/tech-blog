@@ -27,10 +27,10 @@ Spring Security를 도입하게 되면 주로 jwt와 함께 적용된 예제코�
 #### 2.1. 정의
 
 > `Spring Security`  
-> "Spring Security is a framework that provides authentication, authorization, and protection against common attacks."  
+> Spring Security is a framework that provides authentication, authorization, and protection against common attacks.  
 > "스프링 시큐리티는 인증, 권한 부여 및 일반적인 공격으로부터 보호를 제공하는 프레임워크이다."  
 
-처음에는 스프링 시큐리티는 라이브러리인줄 알았으나, 자신들이 세워둔 구조의 가이드아래에 사용자가 원하는 동작을 작성하면 제어권을 가지고 동작을하는 프레임워크였다.
+처음에는 스프링 시큐리티는 라이브러리인줄 알았으나, 그들이 만들어 놓은 구조 아래에 사용자가 원하는 동작을 작성하면, 스스로 제어권을 가지고 동작을하는 프레임워크였다.
 
 <br/>
 
@@ -44,8 +44,8 @@ dependencies {
 
 <br/>
 
-만약에, 스프링 시큐리티가 의존성 설정하자마자 즉시 동작하는 것을 원치 않는다면 application.yml에 아래의 값을 세팅하면 된다.
-자동구성 설정에서 제외를 시켜서 스프링부트가 SecurityAutoConfiguration 빈으로 등록하지 못하게 하는 것이다.
+만약에, 스프링 시큐리티가 의존성 설정하자마자 즉시 동작하는 것을 원치 않는다면 application.yml에 아래의 값을 세팅하면 된다.  
+이 설정은 자동구성에서 스프링 시큐리티를 제외시켜서, 스프링부트가 SecurityAutoConfiguration 빈으로 등록하지 못하게 하는 것이다.
 ```yaml:title=application.yml
 spring:
   autoconfigure:
@@ -147,7 +147,7 @@ public class SecurityConfig {
 
 <br/>
 
-InMemoryUserDetailManager 객체는 데이터베이스와 같은 저장장치 없이 간단하게 인메모리를 활용한 테스트 목적의 객체이다. 다음과 같이 InMemoryUserDetailManager에 내가 저장하고 싶은 객체를 넣어두면 된다.  
+InMemoryUserDetailManager 객체는 데이터베이스같은 저장장치 없이 간단하게 인메모리를 이용하여 유저의 정보를 저장할 수 있는 테스트 목적의 객체이다. 다음과 같이 InMemoryUserDetailManager에 내가 저장하고 싶은 객체를 넣어두면 된다.  
 
 계정은 geunskoo, 비밀번호 1, 권한 유저, 관리자 로 생성했다.
 
