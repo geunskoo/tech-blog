@@ -12,7 +12,7 @@ const MinimalSlider = ({images}) => {
       edges {
         node {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, width: 300, height: 300)
+            gatsbyImageData(layout: CONSTRAINED, width: 250, height: 250)
           }
           base
         }
@@ -27,17 +27,17 @@ const imageSrc = images.map(name => {
 })
 
 
-  const sliderRef = useRef(null);  // Create a ref for the slider
+  const sliderRef = useRef(null); 
   useEffect(() => {
-    const slider = sliderRef.current;  // Access the current slider via ref
+    const slider = sliderRef.current; 
     let isTransitioning = false;
 
     const interval = setInterval(() => {
       if (!isTransitioning && slider) {
         isTransitioning = true;
-        slider.style.transform = 'translateX(-300px)';
+        slider.style.transform = 'translateX(-250px)';
       }
-    }, 3000); // Every 3 seconds
+    }, 4000);
 
     const handleTransitionEnd = () => {
       // Move the first slide to the end
@@ -67,10 +67,10 @@ const imageSrc = images.map(name => {
     <div className="slider-wrapper">
       <div className="slider-container">
         <div className="slider" ref={sliderRef}>
-          <div className="slide"><GatsbyImage image={getImage(imageSrc[0])} alt="Image 1" width={300} height={300} style={{borderRadius: "0.8rem"}}/></div>
-          <div className="slide"><GatsbyImage image={getImage(imageSrc[1])} alt="Image 2" width={300} height={300} style={{borderRadius: "0.8rem"}}/></div>
-          <div className="slide"><GatsbyImage image={getImage(imageSrc[2])} alt="Image 3" width={300} height={300} style={{borderRadius: "0.8rem"}}/></div>
-          <div className="slide"><GatsbyImage image={getImage(imageSrc[3])} alt="Image 4" width={300} height={300} style={{borderRadius: "0.8rem"}}/></div>
+          <div className="slide"><GatsbyImage image={getImage(imageSrc[0])} alt="Image 1" width={250} height={250} style={{borderRadius: "0.8rem"}}/></div>
+          <div className="slide"><GatsbyImage image={getImage(imageSrc[1])} alt="Image 2" width={250} height={250} style={{borderRadius: "0.8rem"}}/></div>
+          <div className="slide"><GatsbyImage image={getImage(imageSrc[2])} alt="Image 3" width={250} height={250} style={{borderRadius: "0.8rem"}}/></div>
+          <div className="slide"><GatsbyImage image={getImage(imageSrc[3])} alt="Image 4" width={250} height={250} style={{borderRadius: "0.8rem"}}/></div>
         </div>
       </div>
     </div>

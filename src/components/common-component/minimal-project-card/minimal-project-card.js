@@ -6,7 +6,7 @@ import MinimalSlider from "../../section-component/minimal-slider/minimal-slider
 const MinimalProjectCard = ({ project }) => {
 
   return (
-    <div style={{display: "flex", flexWrap:"wrap", gap:"20px", justifyContent:"center", boxShadow: "0 4px 8px var(--color-gray)", borderRadius:"0.85rem", padding:"1rem", backgroundColor:"white"}}>
+    <div style={{width:"360px", display: "flex", flexWrap:"wrap", gap:"20px", justifyContent:"center", boxShadow: "0 4px 8px var(--color-gray)", borderRadius:"0.85rem", padding:"1rem", backgroundColor:"white"}}>
       <MinimalSlider images={project.images}/>
       <div className="minimal-project-container">
         <a href={project.link} target="_blank" style={{textDecoration:"none"}}><h4 className="project-title">{project.name} ⇱ </h4></a>

@@ -24,11 +24,15 @@ const BlogPostTemplate = ({data: { previous, next, site, markdownRemark: post },
               <div style={{marginRight: "1rem", color:"var(--color-white)"}}>{post.frontmatter.date}</div>
               <img style={{ marginBottom: "0.1rem", marginRight: "0.2rem",width: "15px", height: "15px"}} src={WhiteView} alt="view"/>
               <div className="post-article-view" style={{color: "var(--color-white)"}}>{post.fields.viewCount}</div>        
-              </div>
+            </div>
           </header>
-          {true && 
+          {post.frontmatter.type === 'blog' &&  
           <section style={{display: "flex", justifyContent: "left"}}>
             <GatsbyImage className="blog-post-article-image" image={thumbnail} alt="thumbnail"/>
+          </section>}
+          {post.frontmatter.type === 'book' &&  
+          <section style={{display: "flex", justifyContent: "center"}}>
+            <GatsbyImage className="book-post-article-image" image={thumbnail} alt="thumbnail"/>
           </section>}
 
           {/* {post.frontmatter.type === 'book' && 

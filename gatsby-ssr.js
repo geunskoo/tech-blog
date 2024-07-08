@@ -46,8 +46,6 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
       object-position: center;
   }
   .book-post-article-image{
-      margin-bottom: 0rem;
-      width: 200px;
   }
   .blog-post-nav-wrapper {
       display: flex;
@@ -187,7 +185,7 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
     }
   }
   .minimal-project-container{
-    max-width: 550px;
+    max-width: 300px;
     min-height: 300px;
     display: flex;
     flex-direction: column;

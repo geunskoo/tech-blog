@@ -48,11 +48,9 @@
     max-height: 400px;
     overflow: auto;
     
-    /* background: var(--color-super-light-gray); */
-    border: calc(1.5 * var(--spacing-px)) dashed var(--color-deep-gray);
+    border: calc(1 * var(--spacing-px)) dashed var(--color-deep-gray);
     font-size: var(--fontSize-0);
     border-radius: var(--radius-0);
-    /* border: 2px solid var(--color-light-gray); */
     margin: 0 0 4rem 0;
     padding: 1.5rem 1rem 1rem 1.5rem;
 

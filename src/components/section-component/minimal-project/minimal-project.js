@@ -130,12 +130,13 @@ const MinimalProject = () => {
     <div className="minimal-project-wrapper">
       <h1 className="minimal-project-title">저를 성장시켜준 <span className="gradient-subtitle" style={{fontSize: "var(--fontSize-7)"}}>프로젝트</span>를 소개합니다.</h1>
       <span className="minimal-project-info">ℹ.옆으로 슬라이드 해보세요!</span>
-      <div style={{ display: "flex", overflow:"auto", gap: "4rem", padding: "2rem 2rem 2rem 2rem"}}>
+      <div className="minimal-project-grid">
         {projects.map(project => {return <MinimalProjectCard project={project}/>})}
         
       </div>
     </div>
   )
 }
+
 
 export default MinimalProject
