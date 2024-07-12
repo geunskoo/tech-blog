@@ -14,6 +14,8 @@ thumbnail: "./thumbnail.png"
 ---
 [현대 소프티어: Lv3. 나무 조경](https://softeer.ai/practice/7594)
 
+<br/>
+<br/>
 
 ### 2. 아이디어 도출 과정
 ---
@@ -41,6 +43,8 @@ thumbnail: "./thumbnail.png"
 
 의 과정으로 정리할 수 있었다.
 
+<br/>
+<br/>
 
 ### 3. 코드
 ---
@@ -100,6 +104,9 @@ for treeComb in treeCombs:
     
 print(maxValue)
 ```
+
+<br/>
+<br/>
 
 ### 4. 알게된 점
 ---
